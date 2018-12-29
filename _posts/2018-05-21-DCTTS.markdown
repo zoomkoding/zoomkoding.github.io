@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "DCTTS를 이용한 손석희 앵커 목소리 흉내내기"
+date:   2018-05-21 19:00:00 +0700
+author: Jin
+categories: Speech_Synthesis
+tags:	TTS Speech_Synthesis GenerativeModel DCTTS 손석희
+cover:  "/assets/instacode.png"
+---
+
+## DCTTS
++	Neural Speech Synthesis Model은 2016년에 구글의 WaveNet이 나온 이후 17년도에 상당히 좋은 모델이 우후죽순 쏟아져 나왔다.(WaveNet은 사실상 Vocoder로 쓰고있다)
++	대부분의 end-to-end neural speech synthesis model이 RNN을 사용했으나, DCTTS와 DeepVoice3는 RNN을 사용하지 않고 Convolution으로 구성했다. 
++	DCTTS는 그 중에서도 상당히 빠른 시간에 학습하면서(Tacotron보다 수 배 이상 빠르다), 학습 완료후 Synthesize를 할 때도 합리적인 시간 내에 wav를 만들어 낸다. 물론, 성능도 Training Data만 좋으면 Griffin Lim Vocoder를 사용해도 충분히 그럴듯하다.
++	DCTTS model 코드는 카카오브레인의 Kyubyong님의 코드가 가장 깔끔하게 Tensorflow로 쓰여져있다.
+
+
+## 손석희 앵커의 JTBC 뉴스룸 데이터
++	이전까지는 대부분이 LJSpeech 혹은 Blizzard Challenge dataset 등을 사용한 영어 기반의 TTS 모델들과 Sample들만 돌아다녔다.
++	그러나 Taehoon Kim(github carpedm20)님이 Multi-speaker tacotron tensorflow를 Github에 업로드함과 동시에 샘플을 본인 홈페이지에 올리면서(손석희 앵커 외 유명인(?) 2명) 엄청난 주목을 받았다. 다소 noise와 기계음은 있었지만, 단순히 웹 상의 데이터를 크롤링하고 손쉽게(?) Tensorflow로 학습하여 그럴듯한 목소리의 오디오를 만들어 냈다. 물론, 전체 코드는 그렇게 단순하지 않다. 모델 코드는 비교적 쉬운편.
++	현재는 저작권 문제로 일부 코드와 데이터가 제거되었으나, 손석희 앵커의 데이터를 크롤링하는 코드는 아직 있고 아주 유용하다. 이런 코드는 직접 짜려면 많은 시행착오를 필요로 하더라...
+
+
+## 샘플 오디오
++	Kyubyong님의 DCTTS 모델과 Taehoon님의 크롤링 데이터를 이용해 학습한 모델이다.
++	전처리 작업을 몇가지 테스트 중이나 기본적인 몇가지만 넣은 상태이므로 개선의 여지가 있다.
++	다른 모델도 마찬가지겠지만, 데이터의 Quality가 상당히 중요해 보인다. Audio fidelity뿐만 아니라, transcript도...
+
+<audio src="https://raw.githubusercontent.com/yangyangii/yangyangii.github.io/master/assets/_posts/audios/son_1.mp3" controls loop> Unable to load song. </audio>
+"오늘 여러분을 이렇게 목소리로 만나게 되어 반갑습니다."
+
+<audio src="https://raw.githubusercontent.com/yangyangii/yangyangii.github.io/master/assets/_posts/audios/son_2.mp3" controls loop> Unable to load song. </audio>
+"저의 블로그에 찾아와주셔서 정말 감사합니다."
+
+<audio src="https://raw.githubusercontent.com/yangyangii/yangyangii.github.io/master/assets/_posts/audios/son_3.mp3" controls loop> Unable to load song. </audio>
+"사랑합니다 여러분 뿌잉뿌잉."
+
+
+## 결론
++	현재 데이터의 Transcript가 불완전한 것(실험에서 뉴스 자막 없이 ASR 결과만으로 사용했다)과 음질 상태가 Sample의 quality에 좋지 않은 영향을 주고 있는 것 같다.(KSS로 학습시에는 매우 깔끔하다)
++	특히 Training 데이터에 없었던 발음이 나올 경우에는 전체 문장이 불안정해지기도 한다.
++	뭐 어찌됐든, 비교적(?) 간단한 작업만으로 정말 흉내는 낸다. 2-3번 들으면 무슨말인지도 알아들을 수 있다.
+
+
+## References
++   <em>[DCTTS [Tachibana, H., et al./ 2017]](https://arxiv.org/pdf/1710.08969)</em>
++	<em>[Kyubyong's KSS](https://github.com/Kyubyong/kss)</em>
++	<em>[carpedm20's Multi-speaker-tacotron-tensorflow](https://github.com/carpedm20/multi-speaker-tacotron-tensorflow)</em>
