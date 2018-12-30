@@ -20,6 +20,8 @@ description: >
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://zoomKoding.github.io" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap
 cover: "/assets/header_image.jpeg"
 logo: "/assets/Crewcials.jpeg"
 
