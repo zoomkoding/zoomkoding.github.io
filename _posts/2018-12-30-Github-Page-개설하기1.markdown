@@ -23,6 +23,10 @@ cover: "/assets/instacode.png"
 깃헙에 들어가서 로그인 한 후에 **new Repository 생성**한다.
 
 ![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Github-Page-1.png) 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f372aad4b577734d73debd09e9ef157cc3b572bf
 
 보는 것과 같이 자신의 이름을 기반으로 **[이름.github.io]** 라는 이름의 페이지를 만들면 된다.
 
@@ -78,7 +82,11 @@ cover: "/assets/instacode.png"
 
 그 후 다시 commit을 진행하게 되면 내 깃헙 페이지의 내용이 **자신이 지정한 내용으로** 수정되게 될 것이다. 
 
+<<<<<<< HEAD
 ![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Github-Page-2.png) 
+=======
+![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Github-Page-2.png)  
+>>>>>>> f372aad4b577734d73debd09e9ef157cc3b572bf
 
 
 자 이제 일차적인 과정을 완료해보았다. 그 후 **페이지 정리 및 커스터마이징 과정**은 다음 게시글을 읽어보도록 하자!
