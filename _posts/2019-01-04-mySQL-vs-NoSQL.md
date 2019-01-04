@@ -46,16 +46,16 @@ one to May의 예는 하나의 유저가 여러개의 item을 like했을때로 �
 ![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/mySQL-vs-NoSQL-2.png) 
  
  
- ## NoSQL(MongoDB)
+## NoSQL(MongoDB)
  
  요즘 가장 많이 쓰이는 디비는 MongoDB는 Humongous(거대한)이라는 단어에서 나온 것으로
  
  말 그대로 데이터를 엄청 많이 담을 수 있다고 한다.
  
  
- #### 이 디비의 특징
+### 이 디비의 특징
  
- ###### No Schema & No Relation!!
+#### No Schema & No Relation!!
  
  이 DB는 Collection이 존재하고 그 컬렉션 하위에 Document를 보관하는 식으로 되어있다.
  
@@ -65,7 +65,7 @@ one to May의 예는 하나의 유저가 여러개의 item을 like했을때로 �
  ![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/mySQL-vs-NoSQL-3.png) 
  
  
- ### no Schema
+### no Schema
  이 친구는 그렇기 때문에 하위에 들어가는 same schema, 즉 같은 틀을 쓰지 않아도 된다. 
  
 ![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/mySQL-vs-NoSQL-4.png) 
