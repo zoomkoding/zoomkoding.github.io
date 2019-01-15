@@ -1,16 +1,13 @@
-# 2019-01-07-Node-introduction-1
-
-----------
-
-title: “(Web개발) Node.js 입문기(1) - Nodejs란?"
+---
+title: (Web개발) Node.js 입문기(1) - Nodejs란?
 layout: post
 date: '2019-01-07 02:00:00'
 author: 줌코딩
 tag: Nodejs 노드js
 cover: "/assets/instacode.png"
 categories: Web개발 nodejs
+---
 
-----------
 ## 18년도 가장 핫한 FrameWork
 
 Node.js... 말로는 많이 들어봤다. 웹에 누구보다 압도적인 점유율을 가지고 있는 어떠한 것(?)이고 들었다.
