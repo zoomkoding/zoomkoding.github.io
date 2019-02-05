@@ -25,16 +25,19 @@ Shell이란 키보드 커맨드를 OS가 이해할 수 있게 전달해주는 �
 
 
 1. date
+
 이 친구는 현재 시간이랑 날짜를 보여주는 역할을 한다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/2.png)
 
 2. cal
+
 이 친구는 이번 달의 달력을 보여준다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/3.png)
 
 3. df
+
 이 친구는 현재 디스크 드라이브의  free space를 보여준다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/4.png)
@@ -42,13 +45,15 @@ Shell이란 키보드 커맨드를 OS가 이해할 수 있게 전달해주는 �
 
 (저기 저 permission denied 가 거슬리지만... 일단 넘어가보자)
 
-4.  free
+4. free
+
 이 친구는 df와 비슷하게 free memory의 양을 보여준다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/5.png)
 
 
 5. exit
+
 이 친구는  terminal session을 종료하는 수단으로, 세션 종료 방법으로는 그냥 창을 닫거나 exit을 입력하는 것 두가지 방법이 있다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/6.png)
@@ -66,6 +71,7 @@ Linux는 file system tree가 각각 있는 Windows와 달리 하나의 file syst
 그럼 이때 우리가 쓸 수 있는 커맨드를 알아보자.
 
 1. pwd
+
 이 친구는 현재 위치한 디렉토리를 보여준다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/7.png)
@@ -74,6 +80,7 @@ Linux는 file system tree가 각각 있는 Windows와 달리 하나의 file syst
 현재 내가 속한 위치는 home에 안에 있는 u21500670이라는 디렉토리라는 것을 보여준다.
 
 2. ls
+
 이 친구는 현재 위치한 디렉토리에 있는 파일과 디렉토리를 리스팅해준다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/8.png)
@@ -82,6 +89,7 @@ Linux는 file system tree가 각각 있는 Windows와 달리 하나의 file syst
 현재 내가 속한 u21500670 디렉토리를 속에는 examples.desktop, gitroom, test 가 있다고 보여주고 있다.
 
 3. cd
+
 이 친구는 working directory를 바꾸고 싶을 때 사용한다. 
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/9.png)
@@ -107,7 +115,6 @@ Relative Pathname- 현위치가 /home/u21500670이라면
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/11.png)
 
-
 <cd other Shortcuts>
 cd - : 방금 전 working directory로 이동한다.
 
@@ -121,6 +128,7 @@ cd ~user_name : working directory가 다른 유저의 home directory로 바뀐�
 리눅스 시스템에 대해 본격적으로 시작하기 전에!! 기초 배웠는데 응용안하면 섭하다. 배운 
 
 1. ls 응용
+
 ls 디렉토리_이름 : 해당 디렉토리에 있는 파일과 디렉토리를 리스팅
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/13.png)
@@ -161,12 +169,14 @@ u21500670 : file 소유한 그룹명.
 example.desktop : 파일명
 
 2. file 
+
 이 친구는 파일의 컨텐츠를 보여주는 역할을 한다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/18.png)
 
 
 3. less 
+
 이 친구는 text 파일을 볼 수 있게 해준다.
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Linux-command/19.png)
@@ -179,6 +189,7 @@ Chapter 5. Manipulating Files And Directories
 그럼 일단 파일이랑 디렉토리를 다룰 자주 쓰이는 커맨드를 배워보자:)
 
 1. mkdir 디렉토리
+
 이 친구는 디렉토리를 생성할 때 사용한다.
 mkdir dir1 dir2 dir3 : 여러개의 디렉토리 생성도 가능하다.
 
@@ -186,6 +197,7 @@ mkdir dir1 dir2 dir3 : 여러개의 디렉토리 생성도 가능하다.
 
 
 2. cp item1 item2
+
 이 친구는 파일이나 디렉토리를 복사할 때 사용한다.
 사용법은 두가지이다.
 a. cp item1 item2 : 파일 복사하기(item2가 없으면 새로 생성하여 복사한다)
@@ -201,6 +213,7 @@ b. cp item... directory : 파일(들)을 복사하여 입력한 directory로 복
 cp -i item1 item2 : 파일이 존재할 경우 의사를 물어본다
 
 3. mv
+
 이 친구는 파일명을 변경하거나 파일을 다른 디렉토리로 옮기는 역할을 한다.
 
 a. 파일명을 변경할때,
@@ -214,6 +227,7 @@ b. 파일을 다른 디렉토리로 옮길 때,
 
 
 4. rm
+
 이 친구는 파일이나 디렉토리를 지울 때 사용한다.(복수 가능)
 디렉토리를 지우기 원한다면 반드시 -r를 사용해야한다.
 
@@ -221,6 +235,7 @@ b. 파일을 다른 디렉토리로 옮길 때,
 
 
 5. ln
+
 이 친구는 hard나 symblic links를 생성한다.
 hard link 생성시에는 ln file link,
 
