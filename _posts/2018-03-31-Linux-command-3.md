@@ -5,7 +5,7 @@ date: '2018-03-31 02:00:00'
 author: 줌코딩
 tag: 리눅스 리눅스명령어 Linux CommandLine Command
 cover: "/assets/instacode.png"
-categories: 리눅스명령어
+categories: Linux
 ---
 
 

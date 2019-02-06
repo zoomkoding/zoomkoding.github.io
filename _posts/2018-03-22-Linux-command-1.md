@@ -5,7 +5,7 @@ date: '2018-03-22 02:00:00'
 author: 줌코딩
 tag: 리눅스 리눅스명령어 Linux CommandLine
 cover: "/assets/instacode.png"
-categories: 리눅스명령어
+categories: Linux
 ---
 
 Linux를 배우기 시작한 지 일주차.. 이제 막 Putty를 깔고 여러 기초적인 command를 직접 써보고 있다. 아직 낯설고 뭐가 뭔지 모르겠다. 이럴 때 일 수록 기본 개념 정리부터 들어가자. 
