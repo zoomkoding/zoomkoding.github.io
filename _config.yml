@@ -9,9 +9,7 @@ title: 줌코딩의 코딩일기
 subtitle: Zoom in Coding
 email: gur5381@gmail.com
 name: Jinhyeok Jeong
-description: 'Zoom in Coding from the Basic.
-
-'
+description: 'Zoom in Coding from the Basic.'
 baseurl: ''
 url: https://zoomKoding.github.io
 plugins:
@@ -31,7 +29,7 @@ jekyll-archives:
   permalinks:
     category: "/category/:name/"
     tag: "/tag/:name/"
-disqus_shortname: ZoomKoding
+disqus_shortname: zoomKoding
 ga_tracking_id: UA-83878761-1
 descriptions:
 - cat: jekyll
