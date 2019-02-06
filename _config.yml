@@ -44,11 +44,11 @@ social:
   desc: Fork me on GitHub
   share: false
 protocols:
-  fb_image: "/assets/logo.png"
+  fb_image: "/assets/crewcials.jpeg"
   fb_image_width: 612
   fb_image_height: 605
   fb_image_type: image/png
-  twitter_image: "/assets/logo.png"
+  twitter_image: "/assets/crewcials.jpeg"
   os_repo: https://github.com/bencentra/centrarium.com
   os_rcs_type: git
   os_src: git@github.com:bencentra/centrarium.com.git
