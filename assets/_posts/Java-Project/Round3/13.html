@@ -1,0 +1,3851 @@
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html lang="ko">
+<head>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+
+
+<meta name="referrer" content="always" />
+
+
+
+
+
+
+<!--[if ie]>
+<style type="text/css">
+html {overflow: scroll; overflow-x: auto;}
+</style>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/t.static.blog/mylog/versioning/LayoutTopCommon-321774529_https.css" charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/t.static.blog/mylog/versioning//common/css/music/player-d3fc09e_https.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
+
+
+
+
+
+ 
+
+	
+		<meta property="og:title" content="3라운드. (자바 Mysql 연동 DB) 로그인 프로그램 만들기!"/>
+
+		
+			
+			
+			<meta property="og:image" content="https://blogthumb.pstatic.net/MjAxODA2MjhfMjYy/MDAxNTMwMTU0Mjk3NTE3.VHV3rglnEPe9ckwQvwb1fQH9H51zozLBmHfYGE1HQTkg.bevz0t3G4oV7ZmoFg0u7kB_sE9H8aZ8FD4pqPEvxPX8g.PNG.gur5381/image.png?type=w2"/>
+			
+				
+		<meta property="og:description" content="바로 쉬지 않고 달린다. 3라운드는 전혀 다른 DB관리이다. 그럼 바로 과제 내용을 소개하겠다. ACCO..."/>
+		
+		
+			<meta property="og:url" content="https://blog.naver.com/gur5381/221308517525"/>
+		
+	
+	
+
+<meta property="me:feed:serviceId" content="blog" />
+<style type="text/css">
+/*<![CDATA[*/
+
+
+/*
+	전체/상단 배경
+
+	url일경우
+	body {background-image: background-image:none; background-color:#FFFFFF;; background-color:transparent; }
+	색일경우
+	body {background-image:none; background-color:background-image:none; background-color:#FFFFFF;; }
+*/
+body {background-image:none; background-color:#FFFFFF;}
+#head-skin {background:transparent}
+
+/*그룹*/
+#wrapper .side-border {border-width:3px; border-color:#C9E4AF; border-style:solid;}
+#wrapper .side-head {height:0px; background:#FFFFFF;}
+#wrapper .side-body {padding:4px 0; background:#FFFFFF;}
+#wrapper .side-footer {height:0px; background:#FFFFFF;}
+
+/* 전체박스 */
+#whole-border {border-width:0px; border-color:#000000; border-style:solid; background:transparent;}
+#whole-head {height:0px; background:transparent}
+#whole-body {background:transparent}
+#whole-footer {height:0; background:transparent}
+
+/* GNB영역 */	
+#blog-gnb .link {color:#464646;}
+#blog-gnb .bar  {background:#464646;}
+#blog-gnb .logout {background:url(https://blogimgs.pstatic.net/nblog/skin4/gnb/0000_logout.gif);}
+#blog-gnb .login {background:url(https://blogimgs.pstatic.net/nblog/skin4/gnb/0000_login.gif);}
+#blog-gnb .go-down {background:url(https://blogimgs.pstatic.net/nblog/skin4/gnb/0000_down.png);}
+* html #blog-gnb .go-down {background:transparent; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=https://blogimgs.pstatic.net/nblog/skin4/gnb/0000_down.png, sizingMethod=crop)}
+#blog-gnb .go-up {background:url(https://blogimgs.pstatic.net/nblog/skin4/gnb/0000_up.png);}
+* html #blog-gnb .go-up {background:transparent; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=https://blogimgs.pstatic.net/nblog/skin4/gnb/0000_up.png, sizingMethod=crop)}
+
+/* 컨포넌트 공통 */
+#wrapper .cm-col1 {color:#333333;} /*기본색*/
+#wrapper .cm-arw {background:#333333;}
+#wrapper div.line {border-top-color:#333333;}
+#wrapper .cm-border {border-width:0px; border-color:#000000; border-style:solid;}
+#wrapper .cm-head {height:25px; background:#C9E4AF;}
+#wrapper .cm-body {background:transparent;}
+#wrapper .cm-footer {height:0; background:none;}
+#wrapper .cm-icol {color:#FFFFFF;}
+#wrapper h3 {font-family:돋움; font-size:12px; margin-left:14px; bottom:4px;}
+#wrapper .cmore {bottom:4px;}
+#blog-category .listimage {background-image:url(https://blogimgs.pstatic.net/nblog/skin4/infobox/0000_arw.gif);}
+#wrapper .buddyup {background-image:url(https://blogimgs.pstatic.net/nblog/skin4/infobox/0003_icon_down.gif);}
+#wrapper .buddydw {background-image:url(https://blogimgs.pstatic.net/nblog/skin4/infobox/0003_icon_up.gif);}
+
+
+#blog-gnb .login {background:url();}
+#blog-gnb .gnb_name {color:#464646;}
+#blog-gnb .btn_blog_login {background:url(https://blogimgs.pstatic.net/nblog/skins/gnb2014/0000_login.png) no-repeat 0 0;}
+#blog-gnb .gnb_icon {background:url(https://blogimgs.pstatic.net/nblog/skins/gnb2014/0000_menu.png) no-repeat 0 0 !important;}
+#blog-gnb .go-down {background:url(https://blogimgs.pstatic.net/nblog/skins/gnb2014/0000_down.png);}
+#blog-gnb .gnb_my_namebox {background: url(https://blogimgs.pstatic.net/nblog/skins/gnb2014/0000_down.png) no-repeat 100% 50% !important;}
+#blog-gnb .go-up {background:url(https://blogimgs.pstatic.net/nblog/skins/gnb2014/0000_up.png);}
+#blog-gnb .gnb_lyr_opened .gnb_my_namebox {background:url(https://blogimgs.pstatic.net/nblog/skins/gnb2014/0000_up.png) no-repeat 100% 50% !important;}
+#foldset .go-left {background:url(https://blogimgs.pstatic.net/nblog/skins/gnb2014/0000_left.png);}
+#foldset .go-right {background:url(https://blogimgs.pstatic.net/nblog/skins/gnb2014/0000_right.png);}
+
+
+
+/*2단좌측*/
+#body {width:789px; margin:0 0 0 8px; padding:0;}
+body, #head-skin, #bottom-skin {background-position:0 0;}
+#wrapper, #bottom-area {margin-top:8px;}
+#wrapper {width:773px;}
+#twocols {display:inline; float:left; width:773px;}
+#content-area {display:inline; float:right; width:580px; width:580px;}
+#left-area {float:left;}
+#wrapper .side-width {width:185px;}
+
+
+
+
+.itemfont, a.itemfont:link, a.itemfont:visited, a.itemfont:hover, a.itemfont:active {font-size:9pt;font-family:돋움, 굴림, seoul, verdana, arial;}
+a.itemTagfont:link, a.itemTagfont:visited {font-size:9pt;font-family:돋움, 굴림, seoul, verdana, arial;}
+a.itemTagfont:hover , a.itemTagfont:active {font-size:9pt;font-family:돋움, 굴림, seoul, verdana, arial; color:#418F21;}
+.itemSubjectfont   {font-size:9pt;font-family:돋움, 굴림, seoul, verdana, arial;}
+#post-area .post_adpost .itemSubjectfont {font-size:10pt !important;font-family:돋움, 굴림, seoul, verdana, arial;}
+
+
+
+/* 타이틀 */
+#blog-title {height:75px; background:url('https://blogimgs.pstatic.net/imgs/skin2/skin_00175_3.gif');}
+#blogTitleText {vertical-align:bottom; text-align:left;}
+#blogTitleName {display:inline; color:#FFFFFF; font-family:돋움; font-size:17px;}
+
+
+
+/* 메뉴스타일 */
+#blog-menu .border {height:36px; border-width:0px; border-color:#000000; border-style:dotted;}
+#blog-menu table {height:36px; background:#318916;}
+#blog-menu .on {color:#000000; font-family:돋움; font-size:12px}
+#blog-menu .off {color:#000000; font-family:돋움; font-size:12px}
+#blog-menu .bar {background:#000000;}
+
+
+/* 프로필 */
+#blog-profile .border {border-width:0px; border-color:#000000; border-style:solid;}
+#blog-profile .bg-head {height:5px; background:#FFFFFF;}
+#blog-profile .bg-body {padding:0px; background:#FFFFFF;}
+#blog-profile .bg-footer {height:5px; background:#FFFFFF;}
+#blog-profile .col {color:#333333;}
+#blog-profile .icon {background-image:url(https://blogimgs.pstatic.net/nblog/skin4/profile/0000_icon.gif);}
+#blog-profile .image {display:block;}
+#blog-profile .image img {width:155px;} 
+#blog-profile .align {text-align:left;}
+
+
+
+/* 뮤직 */
+#blog-music {}
+
+
+
+
+/* 달력 */
+#blog-calendar .border {border-width:1px; border-color:#E3E3E3; border-style:solid;}
+#blog-calendar .bg-head {background:#FFFFFF;}
+#blog-calendar .bg-body {background:#FFFFFF;}
+#blog-calendar .bg-footer{height:0; background:#FFFFFF;}
+#blog-calendar .mlv {height:35px;}
+#blog-calendar .col1 {color:#333333;}
+#blog-calendar .col2 {color:#EF4343;}
+#blog-calendar .col3 {color:#EF4343;}
+#blog-calendar .li1 {background:#EF4343;}
+#blog-calendar .li2 {background:#333333;}
+#blog-calendar .dis1 {display:block;}
+#blog-calendar .dis2 {display:none;}
+#blog-calendar .dis3 {display:none;}
+
+#blog-mapviewwidget {}
+
+#blog-librarywidget {}
+
+
+
+
+/* 카운터 */
+#blog-counter {height:27px; background-image:url(https://blogimgs.pstatic.net/nblog/skin4/counter/0101_back.gif);}
+#blog-counter .today {width:80px; text-align:left;}
+#blog-counter .cnt1 {margin:7px 0 0 39px; color:#6C6C6C; font-family:tahoma; font-size:10px; font-weight:bold;}
+#blog-counter .total {width:165px; text-align:left;}
+#blog-counter .cnt2 {margin:7px 0 0 108px; color:#6C6C6C; font-family:tahoma; font-size:10px; font-weight:bold;}
+
+
+
+/* RSS */
+#blog-rss {height:10px; background-image:url(https://blogimgs.pstatic.net/nblog/skin4/rss/0101_image.gif);}
+#blog-rss .rss1 {width:52px; height:10px; margin:0 0 0 10px;}
+#blog-rss .rss2 {width:48px; height:10px; margin:0 0 0 65px;}
+#blog-rss .rss3 {width:43px; height:10px; margin:0 0 0 118px;}
+
+
+/* POWERED BY */
+#blog-powered {height:14px; background-image:url(https://blogimgs.pstatic.net/nblog/skin4/logo/0102_image.gif);}
+#blog-powered .naver {width:33px; height:10px; margin:2px 0 0 85px;}
+#blog-powered .blog {width:26px; height:10px; margin:2px 0 0 117px;}
+
+
+/* 포스트 */
+#post-area .post {border-width:1px; border-color:#E3E3E3; border-style:solid;}
+#post-area .post-back {background:#FFFFFF;}
+#post-area .pcol1 {color:#333333; font-family:돋움; font-size:16px;}
+#post-area .pcol2 {color:#333333;}
+#post-area .pcol2b {background:#333333;}
+#post-area .cline {border-bottom-color:#333333;}
+#post-area .pcol3 {color:#FF7D29;}
+#post-area .dline {border-top-width:1px; border-top-color:#333333; border-top-style:dotted;}
+#post-area .htl {width:14px; height:14px; background:none;}
+#post-area .htc {height:14px; background:none;}
+#post-area .htr {width:14px; height:14px; background:none;}
+#post-area .bcl {width:14px; background:none;}
+#post-area .bcc {background:none;}
+#post-area .bcr {width:14px; background:none;}
+#post-area .ftl {width:14px; height:14px; background:none;}
+#post-area .ftc {height:14px; background:none;}
+#post-area .ftr {width:14px; height:14px; background:none;}
+#post-area .ico1 {background:url(https://blogimgs.pstatic.net/nblog/skin4/poststyle/0003_ico1_up.gif)}
+#post-area .ico2 {background:url(https://blogimgs.pstatic.net/nblog/skin4/poststyle/0003_ico1_down.gif)}
+#post-area .ico3 {background:url(https://blogimgs.pstatic.net/nblog/skin4/poststyle/0003_ico2.gif)}
+#post-area .comment {background:#FBFBFB;}
+#post-area .btn {background:url(https://blogimgs.pstatic.net/nblog/skin4/poststyle/0000_input.gif)}
+
+
+.post-back {background:#FFFFFF;}
+.pcol1 {color:#333333; font-family:돋움; font-size:16px;}
+.pcol2 {color:#333333;}
+.pcol2b {background:#333333;}
+.pcol3 {color:#FF7D29;}
+.bcc {background:none;}
+#post-area .sline {border-bottom-color:#333333;}
+
+
+	
+	
+/*]]>*/
+</style>
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning//common/js/global/RemoveSubDomain-dea9950_https.js"></script>
+<script>
+
+
+
+
+
+var mylogURL = 'https://blog.naver.com';
+var adminURL = 'https://admin.blog.naver.com';
+var noteURL = 'https://note.naver.com';
+var itemURL = 'http://item.naver.com';
+var cafeURL = 'http://cafe.naver.com';
+var profileURL = 'https://blog.naver.com';
+var blogURL = 'https://blog.naver.com';
+var blogURLHttp = 'https://blog.naver.com';
+var prologueURL = 'https://blog.naver.com';
+var sectionURL = 'https://section.blog.naver.com';
+var memologURL = 'https://blog.naver.com';
+var lifeURL = 'https://lifelog.blog.naver.com';
+var uploadURL = 'https://upload.blog.naver.com';
+var imageURL = 'https://blogimgs.pstatic.net';
+var attachURL = 'https://blogfiles.pstatic.net';
+var thumbnailURL = 'https://blogthumb.pstatic.net';
+var nonCachedThumbnailURL = 'https://blogthumb.pstatic.net';
+var filetransURL = 'http://filetrans.blog.naver.com';
+var item2_bridgeURL = 'http://bridge.item2.naver.com';
+var idURL = 'http://nid.naver.com';
+var idURLSecret = 'https://nid.naver.com';
+var mapviewURL = 'http://mapview.naver.com';
+var exifURL = 'https://exif-blog.ssl.phinf.net';
+var viewerImageUrl = imageURL + "/blog20/blog/layout_photo/viewer/";
+var domainURL = "";
+var greenReviewCampaignURL = 'http://campaign.naver.com';
+var writeURL = 'https://blog.naver.com';
+var spiURL = 'https://ssl.pstatic.net/spi';
+var blogProfileThumbnailUrl='https://blogpfthumb-phinf.pstatic.net';
+var naverCommentStaticURL = 'https://ssl.pstatic.net/static.cbox';
+var naverCommentApiURL = 'https://apis.naver.com/commentBox/cbox9';
+var itemImagesURL = 'https://itemimgs.pstatic.net';
+
+var sCssUrlForPhotoLayer = 'https://ssl.pstatic.net/t.static.blog/mylog/versioning//common/css/storyphoto_original_viewer-adf5d27_https.css';
+var commonStatDailyURL = 'https://blog.stat.naver.com';
+var lcs_SerName = 'https://lcs.naver.com';
+
+
+
+
+
+var blogId = 'gur5381' || 'gur5381';  
+var userId = ''; 
+var userNo = ''; 
+
+
+var isWritingBlocked = false;
+var isWritingBlockedBySpamIP = false;
+var isWritingBlockedBySpamIPManually = false;
+var isLoggedIn = false;
+var isShortestContentAreaWidth = true;
+
+var blogOwner = false; 
+
+var blogNo = '20125949';
+var nickName = '줌코딩';
+var isInitializingBlog = false;
+var rightClickOpenYn = false;
+var isMylogBlocked = false;
+var isBlogBlock = false;
+var blockOrWriteBlock = false;
+var autoSourcingYn = true;
+
+
+var isMemolog = false;
+var isMemologList = false;
+var isPrologue = false;
+
+
+var isBlogMe = false;
+
+var isUsingUrl = false;
+
+
+var isRequestFromIPad = false;
+
+
+var isOverIOS5_0Version = false;
+var isOverAndroidJellybeanVersion = false;
+var isCommingNaverApp = false;
+var isUsingNaverKitkatEngine = false;
+var isAndroidKitkatVersion = false;
+
+var defaultSmartEditorVersion = 2;
+
+
+
+
+
+
+var readOnlyStatus = false;
+var readOnlyStatusAll = false;
+var readOnlyLinkErrorMsg = '죄송합니다. 블로그 서비스 점검 중입니다. \n점검 시간 동안은 기능 이용이 제한됩니다. \n자세한 내용은 블로그 홈 공지사항을 참고해주세요.';
+var readOnlyCommentMsg = '12월 17일(월) 오전 0시~8시 서비스 점검으로 댓글 작성이 제한됩니다. \n더욱 안정적인 서비스로 찾아뵙겠습니다. 불편하시더라도 조금만 기다려주세요.';
+var sIsTagReadOnly = '';
+var sTagSorryText = '죄송합니다. 태그 서비스 점검 중입니다.\n점검 시간 동안은 일부 서비스 이용이 제한됩니다.\n자세한 내용은 공지사항을 참조하세요.';
+var blogQuickPostingUseType = "NOT_SET"; 
+
+
+
+
+var isCommentReadOnly = false;
+var sCommentReadOnlyBlockSubmit = '죄송합니다. 블로그 댓글, 답글 서비스 점검 중에는 이용이 제한됩니다.';
+var sCommentReadOnlyWriteMsg = '서비스 점검으로 댓글 작성이 제한됩니다.\n더욱 안정적인 서비스로 찾아뵙겠습니다. 불편하시더라도 조금만 기다려주세요.';
+ 
+
+
+
+
+
+
+var isJeagleDebug = false;
+
+
+
+
+
+var skinId = "0";
+var skinType = "C";
+
+var isEnglish = "false";
+
+var areaCode = "";
+var weatherType = "0";
+
+var currencySign = "ALL";
+
+var listNumVisitor = '5';
+var isVisitorOpen = true;
+var isCategoryOpen = true;
+var writingMaterialListType = '1'
+var previewCalType = '';
+
+
+
+var oExternalWidget = [];
+
+
+var calType = "";
+
+
+var curLog = 'https://blog.naver.com';
+var playerType = '0';
+var playerDesign = '1';
+
+
+var isCommentOpen = true;
+var listNumComment = 5;
+
+
+var isBuddyOpen = true;
+
+
+
+var userSelectMenu = '';
+
+
+var visitorgpData = '';
+var vigitorSetUrl = '/versioning//common/swf/Widget/visitorGP/VisitorGP-31a7b63.swf';
+var vigitorPropUrl = '/versioning//common/swf/Widget/visitorGP/VisitorGP-50a2c61.xml';
+var visitorgp_vars = {
+	setUrl    : vigitorSetUrl,
+	req_url   : '/NVisitorgp4Ajax.nhn?blogId=' + blogId,
+	prop_url  : vigitorPropUrl,
+	graphType : visitorgpData,
+	flashvars : function(){
+		return "req_url=" + this.req_url +"&prop_url=" + this.prop_url +"&graphType=" + this.graphType;
+	},
+	height    : 121
+};
+
+
+
+var watchData = '';
+var watch_design = {
+	name    : watchData.split('|')[0],
+	font    : watchData.split('|')[1],
+	color   : watchData.split('|')[2],
+	bgcolor : watchData.split('|')[3]
+}
+var watch_vars = {
+	blogId : blogId,
+	skinType : skinType,
+	skinId : skinId
+}
+
+
+var serviceId = '';
+var naverId = '';
+var happyBeanApiURL = '';
+var reqparam = '';
+var HAPPYBEAN_API_URL = "";
+var HAPPYBEAN_FUND_URL = "";
+//var HAPPYBEAN_MY_URL   = "";
+var HAPPYBEAN_DONATION_URL = "";
+
+
+
+
+var selectCategoryNo = "0";
+
+
+var aNonWidget = ['rss', 'powered','adpost','buddyconnect','greenreview'];
+<!-- var aWidget = ['gnb', 'externalwidget','music'];  -->
+var aWidget = [];
+
+
+aWidget.push('title');
+
+aWidget.push('menu');
+
+aWidget.push('profile');
+
+aWidget.push('music');
+
+aWidget.push('category');
+
+aWidget.push('tag');
+
+aWidget.push('calendar');
+
+aWidget.push('mapview');
+
+aWidget.push('search');
+
+aWidget.push('library');
+
+aWidget.push('comment');
+
+aWidget.push('visitor');
+
+aWidget.push('buddy');
+
+aWidget.push('counter');
+
+aWidget.push('stat');
+
+aWidget.push('rss');
+
+aWidget.push('powered');
+
+aWidget.push('content');
+
+aWidget.push('gnb');
+
+aWidget.push('externalwidget');
+
+var bIsRemocon = false;
+var bIsPreview = document.location.href.indexOf("PostPreview.nhn") > -1 || document.location.href.indexOf("MemologMemoPreview.nhn") > -1;
+
+var isTopLayoutEmpty = false;
+
+var openSideType = "1";
+var foldSideType = "2";
+
+var g_ContentShareObject = {
+	adPostPreview : false,
+	adPostPreviewSide : false,
+	adPostPreviewContent : false,
+	adPostAlign : "",
+	adPostCount : ""
+};
+
+var blogDomainUrl = "";
+var sAjaxFlashUrl = '/versioning//common/lib/ajax.flash/ajax-885363e.swf';
+var isHappyBeanLeverage = false;
+
+
+var doc = document.documentElement;
+doc.setAttribute('data-useragent',navigator.userAgent);
+
+</script>
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning/Jindo152-313837964_https.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning/LayoutTopCommon-1004631073_https.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning/JindoComponent-190469086_https.js" charset="utf-8"></script>
+
+
+
+
+
+	
+		<meta name="robots" content="index,follow"/>
+	
+	
+
+
+
+
+
+
+	
+
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta property="og:type" content="article"/>
+<meta property="og:article:author" content="네이버 블로그 | gur5381님의 블로그"/>
+<meta property="og:site_name" content="네이버 블로그 | gur5381님의 블로그" />
+<meta property="naverblog:nickname" content="줌코딩" />
+<meta property="naverblog:profile_image" content="https://ssl.pstatic.net/static/blog/m/img_default.gif" />
+<meta property="me2:post_body" content="&quot;3라운드. (자바 Mysql 연동 DB) 로그인 프로그램 만들기!&quot;:https://blog.naver.com/gur5381/221308517525"/>
+<meta property="me2:post_tag" content="네이버블로그 gur5381님의 블로그"/>
+<meta property="me:feed:serviceId" content="blog" />
+
+
+	
+		<title>3라운드. (자바 Mysql 연동 DB) 로그인 프로그램 만들기! : 네이버 블로그</title>
+	
+	
+
+
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/t.static.blog/mylog/versioning/PostView-888939352_https.css" charset="UTF-8" />
+
+	<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/static.editor/static/viewer/common/se_viewer_blog_pc.css?d=46e32499c4-20190121141405">
+
+
+<style type="text/css">
+/*<![CDATA[*/
+
+
+/* 포스트 */
+#post-area .post {border-width:1px; border-color:#E3E3E3; border-style:solid;}
+#post-area .post-back {background:#FFFFFF;}
+#post-area .pcol1 {color:#333333; font-family:돋움; font-size:16px;}
+#post-area .pcol2 {color:#333333;}
+#post-area .pcol2b {background:#333333;}
+#post-area .cline {border-bottom-color:#333333;}
+#post-area .pcol3 {color:#FF7D29;}
+#post-area .dline {border-top-width:1px; border-top-color:#333333; border-top-style:dotted;}
+#post-area .htl {width:14px; height:14px; background:none;}
+#post-area .htc {height:14px; background:none;}
+#post-area .htr {width:14px; height:14px; background:none;}
+#post-area .bcl {width:14px; background:none;}
+#post-area .bcc {background:none;}
+#post-area .bcr {width:14px; background:none;}
+#post-area .ftl {width:14px; height:14px; background:none;}
+#post-area .ftc {height:14px; background:none;}
+#post-area .ftr {width:14px; height:14px; background:none;}
+#post-area .ico1 {background:url(https://blogimgs.pstatic.net/nblog/skin4/poststyle/0003_ico1_up.gif)}
+#post-area .ico2 {background:url(https://blogimgs.pstatic.net/nblog/skin4/poststyle/0003_ico1_down.gif)}
+#post-area .ico3 {background:url(https://blogimgs.pstatic.net/nblog/skin4/poststyle/0003_ico2.gif)}
+#post-area .comment {background:#FBFBFB;}
+#post-area .btn {background:url(https://blogimgs.pstatic.net/nblog/skin4/poststyle/0000_input.gif)}
+
+ 
+ 
+.itemfont, a.itemfont:link, a.itemfont:visited, a.itemfont:hover, a.itemfont:active {font-size:9pt;font-family:돋움, 굴림, seoul, verdana, arial;}
+a.itemTagfont:link, a.itemTagfont:visited {font-size:9pt;font-family:돋움, 굴림, seoul, verdana, arial;}
+a.itemTagfont:hover , a.itemTagfont:active {font-size:9pt;font-family:돋움, 굴림, seoul, verdana, arial; color:#418F21;}
+.itemSubjectfont   {font-size:9pt;font-family:돋움, 굴림, seoul, verdana, arial;}
+#post-area .post_adpost .itemSubjectfont {font-size:10pt !important;font-family:돋움, 굴림, seoul, verdana, arial;}
+ 
+/*]]>*/
+</style>
+<style></style> 
+
+
+
+
+
+
+
+</head>
+<body class="contw-580">
+
+
+
+
+<script type="text/javascript">JEagleEyeClient.setEnable(isJeagleDebug);</script>
+<script type="text/javascript">$Ajax.SWFRequest.write(sAjaxFlashUrl);</script>
+
+    
+
+
+<div id="floating_area_header" class="floating_header">
+	<div class="inner">
+		<div class="area_logo">
+			<a href="http://www.naver.com" class="link_naver sp_blog" target="_blank" onclick="clickcr(this,'flt.naver','','',event);">NAVER</a>
+			<a href="https://blog.naver.com" class="link_blog sp_blog" target="_top" onclick="clickcr(this,'flt.blog','','',event);">블로그</a>
+			<i class="icon_bar"></i>
+		</div>
+		<div class="area_blog_name">
+			<a href="https://blog.naver.com/PostList.nhn?blogId=gur5381" class="link_user_blog" onclick="clickcr(this,'flt.blogname','','',event);">
+				<strong class="user_blog_name">gur5381님의 블로그</strong>
+			</a>
+		</div>
+		<div class="area_search" role="search">
+			<form id="floatingSearchForm" action="https://blog.naver.com/PostSearchList.nhn">
+				<fieldset>
+					<legend class="blind">블로그 검색</legend>
+					<div class="search_box">
+						<input type="text" id="this_blog_search" name="SearchText" class="text_box" title="이 블로그에서 검색" autocomplete="off" onclick="clickcr(this,'flt.search','','',event);">
+						<label id="this_blog_search_placeholder" for="this_blog_search" class="label_text_box">이 블로그에서 검색</label>
+						<div id="autocomplete_layer" class="autocomplete_layer" style="display: none">
+							<ul class="list_autocomplete">
+							</ul>
+						</div>
+						<input type="hidden" name="blogId" value="gur5381"/>
+						<a href="#" id="this_blog_floating_search_btn" class="btn_search" aria-label="검색" role="button" tabindex="0" onclick="clickcr(this,'flt.searchbtn','','',event); return false;"><i class="icon_search sp_blog"></i></a>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div class="area_category floating_area_btn_category_parent">
+			<a href="#" onclick="return false;" class="btn_category floating_area_btn_category" aria-label="카테고리 열기" role="button">
+						<span class="icon_category_group">
+							<i class="line"></i>
+							<i class="line"></i>
+							<i class="line"></i>
+						</span>
+				<i class="icon_category sp_blog"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div id="floating_side_area_info" class="floating_category">
+
+</div>
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning//common/js/mylog/floating/FloatingBarSearch-772760a_https.js"></script>
+
+	<div id="head-skin">
+		<div id="body">
+		  	
+
+
+
+
+<a href="#blog-menu" onclick="var t=document.getElementById('blog-menu');t.tabIndex=-1;t.focus();return false;" class="skip">메뉴 바로가기</a>
+<a href="#post_1" id="goContentsAreaLink" class="skip">본문 바로가기</a>
+<div id="blog-gnb">
+<div id="gnb-area" class="gnb">
+	<ul>
+	
+		<li class="i3"><a href="https://blog.naver.com/MyBlog.nhn" onclick="clickcr(this,'gnb_oth.my','','',event);" class="link" target="_top">내 블로그</a> <img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" /></li>
+	
+		<li class="i4">
+		<a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://blog.naver.com/gur5381" onclick="clickcr(this,'gnb_oth.other','','',event);" class="link" target="_top">이웃블로그</a>
+		
+		
+		<img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" />
+		<div id="buddydiv" style="display:none">
+		<div class="buddylist_bg"></div>
+		<span class="ico_arrow"></span>
+		<div id="buddylist"></div>
+		</div>
+		</li>
+		<li class="i2"><a href="https://section.blog.naver.com" onclick="clickcr(this,'gnb_oth.all','','',event)" class="link" target="_top">블로그 홈</a> <img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" /></li>
+		
+		
+		<li class="i1 login">
+			<a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://blog.naver.com/gur5381/221308517525" class="btn_blog_login" onclick="clickcr(this,'gnb_oth.login','','',event);" target="_top"><span class="blind">로그인</span></a>
+		</li>
+		
+		<li class="i1 blog_gnb_wrap">
+			<div id="gnb"></div>
+		</li>
+	</ul>
+</div>
+</div>
+<!-- blog_gnb -->
+
+<!-- <div id="highlight_turn_on" class="highlight_off _hightlightOpen" style="display:none;">
+	<button type="button" class="btn_op _hightlightOpen">검색어 켜기</button>
+</div> -->
+
+<hr />
+
+<script type="text/javascript">
+	var gnb_service="blog";
+	var gnb_template="gnb_utf8";
+	var gnb_brightness=1;
+	var gnb_url='https://blog.naver.com/gur5381/221308517525';
+	var gnb_logout = gnb_url;
+	var gnb_login = gnb_url;
+	var gnb_login_on_top = true;
+	var gnb_item_hide_option= 1|4|8|16;
+	var isGetGnbCalled = false;
+	
+	window.onload = function() {
+		if (!isGetGnbCalled) {
+			getGNB();
+			isGetGnbCalled = true;
+		}
+		setSkipNavigationInfo();
+	};
+	
+	//웹접근성 스킵네비게이션 설정
+	function setSkipNavigationInfo() {
+		var contentsId;
+		if ($("postListBody")) {
+			contentsId = "postListBody";
+		} else {
+			contentsId = "post-area";
+		}
+
+		if (contentsId) {
+			$("goContentsAreaLink").href = "#" + contentsId;
+
+			if (document.getElementById("goContentsAreaLink").addEventListener) {
+				document.getElementById("goContentsAreaLink").addEventListener(
+						'click', onClickChangeFocus, false);
+			} else if (document.getElementById("goContentsAreaLink").attachEvent) {	//IE8을 위한 이벤트 등록 리스너
+				document.getElementById("goContentsAreaLink").attachEvent(
+						'click', onClickChangeFocus);
+			}
+
+			function onClickChangeFocus() {
+				var t = document.getElementById(contentsId);
+				t.tabIndex = -1;
+				t.focus();
+				return false;
+			};
+		}
+	}
+</script>
+
+<script id="gnb-script" type="text/javascript" src="https://ssl.pstatic.net/static.gn/templates/gnb_utf8.nhn?20190207" charset="utf-8"></script>
+<script type="text/javascript">
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent',navigator.userAgent);
+setTimeout(function() {
+	if (!isGetGnbCalled) {
+		getGNB();
+		isGetGnbCalled = true;
+	}
+}, 1500);
+</script><hr />
+			<div id="whole-border">
+				<div id="whole-head"></div>
+				<div id="whole-body">
+					
+					<div id="top-area">
+					  	
+
+
+
+
+
+
+
+
+<div id="blog-title">
+<table role="presentation"><tr><td id="blogTitleText"><h1><a id="blog-title-anchor" onclick="clickcr(this,'tit.title','','',event);" href="https://blog.naver.com/PostList.nhn?blogId=gur5381"><span id="blogTitleName" class="itemtitlefont">gur5381님의 블로그</span></a></h1></td></tr></table>
+</div><hr />
+
+
+
+<div id="blog-menu">
+	<div class="border">
+			<table>
+				<caption>
+					<span class="blind">블로그 메뉴</span>
+				</caption>
+				<tr><td nowrap="nowrap" class="menu1">
+			<ul>
+			
+			
+			
+				<li>
+				<img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" />
+				
+				<a href="https://blog.naver.com/PostList.nhn?blogId=gur5381&skinType=&skinId=&from=menu" class="off itemfont _doNclick _param(false|blog|)">블로그</a>
+				
+				</li>
+			
+			
+			
+				<li>
+				<img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" />
+				
+					
+				
+				<a href="https://blog.naver.com/PostList.nhn?blogId=gur5381&categoryNo=2&parentCategoryNo=2&skinType=&skinId=&from=menu" class="off itemfont _doNclick _param(false|category|2|1)">포토로그</a>
+				
+				</li>
+			
+			
+			</ul></td><td nowrap="nowrap" class="menu2">
+			<ul>
+			
+			
+				<li>
+				<img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" />
+				<a href="https://blog.naver.com/mapview/MapView.nhn?blogId=gur5381&skinType=&skinId=&from=menu"  class="off itemfont _doNclick _param(false|mapview)">지도</a>
+				
+				</li>
+			
+
+			
+			
+				<li>
+				<img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" />
+				<a href="https://blog.naver.com/library/LibraryView.nhn?blogId=gur5381&skinType=&skinId=&from=menu"  class="off itemfont _doNclick _param(false|library)">서재</a>
+				
+				</li>
+			
+
+			
+			
+				<li>
+				<img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" />
+				<a href="https://blog.naver.com/memo/MemologPostList.nhn?blogId=gur5381&Redirect=MemoList&skinType=&skinId=&from=menu"  class="off itemfont _doNclick _param(false|memolog)">메모</a>
+				
+				</li>
+			
+
+			
+			
+				<li>
+				<img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" />
+				<a href="https://blog.naver.com/BlogPrivateTagCloud.nhn?blogId=gur5381&Redirect=Dtagcloud&skinType=&skinId=&from=menu"  class="off itemfont _doNclick _param(false|tag)">태그</a>
+				
+				</li>
+			
+
+			
+			
+				<li>
+				<img src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="11" class="bar" alt="" />
+				<a href="https://guestbook.blog.naver.com/guestbook/GuestBookList.nhn?blogId=gur5381&skinType=&skinId=&from=menu"  class="off itemfont _doNclick _param(false|guestbook)">안부</a>
+				
+				</li>
+			
+
+			
+
+			</ul>
+		</td></tr></table>
+	</div>
+</div><hr />
+					</div>
+					
+					<div id="wrapper" class="clearfix">
+						<div id="twocols" class="clearfix">
+							
+							<div id="content-area" class="">
+								
+
+
+
+
+
+<div id="post-area" class="post-area">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  class="_naver_comment_skin_property" style="position:absolute;z-index:-100;visibility:hidden">
+	<span class="pcol2"></span>
+	<span class="cline"></span>
+	<span class="pcol3"></span>
+	<span class="comment"></span>
+	<span class="btn"></span>
+	<span class="pcol2b"></span>
+</div>
+<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/t.static.blog/mylog/versioning//css/navercomment/naver_comment_blog_base-61fa3cc_https.css" />
+<script type="text/template" id="naverCommentCustomCssTpl">
+#post-area .commentbox_header,
+#post-area .u_cbox \{background:{=comment} !important;\}
+
+#post-area .u_cbox .u_cbox_name_area,
+#post-area .u_cbox .u_cbox_target_name,
+#post-area .u_cbox .u_cbox_comment .u_cbox_text_wrap,
+#post-area .u_cbox .u_cbox_date,
+#post-area .u_cbox .u_cbox_btn_report,
+#post-area .u_cbox .u_cbox_btn_unhide,
+#post-area .u_cbox .u_cbox_tool .u_cbox_btn_reply,
+#post-area .u_cbox .u_cbox_paginate .u_cbox_cnt_page,
+#post-area .u_cbox .u_cbox_paginate .u_cbox_num_page,
+#post-area .commentbox_header .btn_write_comment,
+#post-area .commentbox_header .commentbox_pagination .num,
+#post-area .commentbox_header .btn_pagination .icon,
+#post-area .post-btn .postre .u_likeit_list_module .u_likeit_list_btn,
+#post-area .u_cbox .u_cbox_recomm_set .u_cbox_ico_recomm:before,
+#post-area .u_cbox .u_cbox_recomm_set .u_cbox_cnt_recomm,
+#post-area .u_cbox .u_cbox_ico_stat_secret,
+#post-area .u_cbox .u_cbox_work_sub .u_cbox_ico_open \{color:{=pcol2} !important;\}
+
+#post-area .u_cbox .u_cbox_info_base .u_cbox_ico_bar \{background-color:{=pcol2} !important;\}
+
+#post-area .u_cbox .u_cbox_tool .u_cbox_btn_reply:before,
+#post-area .u_cbox .u_cbox_work_sub .u_cbox_work_box:before,
+#post-area .u_cbox .u_cbox_comment_box:before,
+#post-area .u_cbox .u_cbox_ico_reply,
+#post-area .u_cbox .u_cbox_paginate strong.u_cbox_page:before,
+#post-area .commentbox_header:before,
+#post-area .commentbox_header .btn_pagination a:before,
+#post-area .post-btn .postre .u_likeit_list_module .u_likeit_list_btn:before,
+#post-area .u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm:before \{border-color:{=pcol2} !important;\}
+
+#post-area .u_cbox .u_cbox_mine .u_cbox_name_area,
+#post-area .u_cbox .u_cbox_paginate strong.u_cbox_page .u_cbox_num_page,
+#post-area .commentbox_header .commentbox_pagination .num strong,
+#post-area .post-btn .postre .u_likeit_list_module .u_likeit_list_btn.on,
+#post-area .u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm_on .u_cbox_ico_recomm:before,
+#post-area .u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm_on .u_cbox_cnt_recomm,
+#post-area .u_cbox .u_cbox_ico_editor .u_cbox_txt_editor \{color:{=pcol3} !important;\}
+
+#post-area .post-btn .postre .u_likeit_list_module .u_likeit_list_btn.on:before,
+#post-area .u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm_on:before,
+#post-area .u_cbox .u_cbox_ico_editor \{border-color:{=pcol3} !important;\}
+
+#post-area .u_cbox .u_cbox_content_wrap:before,
+#post-area .u_cbox .u_cbox_comment_box:before,
+#post-area .u_cbox .u_cbox_comment .u_cbox_write_wrap:before,
+#post-area .u_cbox .u_cbox_tool .u_cbox_btn_reply:before,
+#post-area .u_cbox .u_cbox_work_sub .u_cbox_work_box:before,
+#post-area .u_cbox .u_cbox_ico_reply,
+#post-area .u_cbox .u_cbox_paginate strong.u_cbox_page:before,
+#post-area .commentbox_header:before,
+#post-area .commentbox_header .btn_pagination a:before,
+#post-area .post-btn .postre .u_likeit_list_module .u_likeit_list_btn:before,
+#post-area .u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm:before
+\{border-color:{=pcol2};\}
+</script>
+        	
+				
+				
+					
+
+          			
+          				
+		            		
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning//common/js/global/RemoveSubDomain-dea9950_https.js"></script>
+<script type="text/javascript">
+
+
+
+
+
+
+var isAutoPlayYN = false;
+
+
+var tagOpenModeType = '2';
+var tagMarkDisplayIfPostTagEmpty = false;
+
+var categoryNo = '0';
+var parentCategoryNo = '0';
+var categoryParentCategoryNo = '';
+var currentCategoryNo;
+if(categoryNo=="" && parentCategoryNo == ""){ 
+	currentCategoryNo = 0;
+}else if((categoryNo=="" || categoryNo=="0") && parentCategoryNo != ""){  
+	currentCategoryNo = parentCategoryNo;
+}else if(categoryNo!=""){  
+	currentCategoryNo = categoryNo;
+}
+
+var viewDate = '' || ''; 
+
+
+
+var isFromSearch = false;	
+var isFromSection = false;	
+
+var forFocusingTargetId = "category-name";
+
+var isFirstPage = false;	
+var from = 'postView';	
+var search_logNo = "221308517525";
+
+var postListTopCurrentPage = '1';
+var categoryName = "%EC%9E%90%EB%B0%94%C2%A0%EB%8F%84%EC%A0%84%EA%B8%B0";
+
+var gsGfMarketUrl = 'http://m.gfmarket.naver.com';
+
+
+var userTopListCurrentPage = "1";
+var userTopListCount = "5";
+var userTopListOpen = true; 
+var userTopListManageOpen = false; 
+var isTopListOpen = false; 
+var topListPostCount = "5"; 
+
+var isTopListCategoryEmpty = true;
+if (!isTopListCategoryEmpty) {
+	isTopListOpen = false; 
+	topListPostCount = ""; 
+}
+
+var isThumbnailList = false;
+var isThumbnailView = false;
+
+var aPostSendInfo = [];
+var aPostBaseInfo = [];
+var aPostFiles = [];
+var aPostVideoInfo = [];
+var aPostImageFileSizeInfo = [];
+var aPostAutoSourcingHtmlView = [];
+var aQueuePost = []; 
+var htInitData = [];
+
+
+
+
+var paramLogNo = '221308517525';
+var isAfterWrite = false;
+
+
+var isRecommendedBlog = true;
+
+var gdidTag = [];
+var nsc = "blog.post";
+var nFirstLogNo = "";
+var pagePerPostCount = 5;
+
+
+var sCommentNoPosition = '';	
+var isCommentAreaOpen = false;
+var postBottomOptionalAreaType = '0';
+var commentAreaOpenType = '1';
+var isRelayAreaOpen = false;
+var isSympathyAreaOpen = false;
+var relayAreaOpenType = '2';
+var firstPostLogNo = "221308517525";
+var firstPostIsAllOpenPost = true;
+var sClpboardFlashUrl = '/versioning//common/swf/Clipboard/clipboard_jindo2-f1f4d15.swf';
+var searchImg = '';
+var searchVid = '';
+
+
+var currentPage = '1';
+var tagParam = '' || '&logNo=221308517525';
+
+
+var imageWidth = '' || '550';
+
+
+var maxNoticePostCount = '5';
+var gbIsPostCommentOpen = false;
+
+
+var isDoPostAggregate = false;
+
+
+
+
+
+
+
+	gUserId = "";
+	gBlogId = "gur5381";
+	gSE3Url = "https://blog.editor.naver.com/";
+    gsSesseionId = "685022AC7C0CA14B04155CDA9E48F9B0.jvm1";
+    gsSearchKeyword = "";
+    gsBlogOwnerYn = false? "Y" : "N";
+    
+    gIsRabbitWriterOn = 'true';
+
+	
+	
+		nFirstLogNo = "221308517525";		
+        gnFirstLogNo = "221308517525";
+        gsFirstCategoryName = "\uC790\uBC14\u00A0\uB3C4\uC804\uAE30";
+
+	
+	
+	gdidTag[1] = "90000003_00000000000000338703FC95";
+	aPostAutoSourcingHtmlView[1] = "<p style='margin:11px 0 7px 0;padding:0;font-size:12px;font-family:Dotum;font-style:normal;font-weight: normal;'><strong style='padding:0 7px 0 0;'>[출처]</strong> <a href='https://blog.naver.com/gur5381/221308517525' target='_blank'>3라운드. (자바 Mysql 연동 DB) 로그인 프로그램 만들기!</a><span style='padding:0 7px 0 5px;'>|</span><strong style='padding:0 7px 0 0;'>작성자</strong> <a href='https://blog.naver.com/gur5381' target='_blank'>줌코딩</a></p>";
+	aPostFiles[1] = [];
+	aPostVideoInfo[1] = [];
+	
+	aPostImageFileSizeInfo[1] = {'/MjAxODA2MjhfMjYy/MDAxNTMwMTU0Mjk3NTE3.VHV3rglnEPe9ckwQvwb1fQH9H51zozLBmHfYGE1HQTkg.bevz0t3G4oV7ZmoFg0u7kB_sE9H8aZ8FD4pqPEvxPX8g.PNG.gur5381/image.png': '105,560|image.png' , '/MjAxODA2MjhfMzAw/MDAxNTMwMTU0ODU3MDI0.AFHk_i3Ir920KzoS2b-ba8E3mUOQYyLbe2YQNSx23Qcg.euOiDV-gBcv4kOehPoMn957G6TNs7i0fL3JgtLW_WREg.PNG.gur5381/image.png': '88,765|image.png' , '/MjAxODA2MjhfMTIz/MDAxNTMwMTU1MTI3MzE0.PQ5NmD-LBHfIzNdmMg8Nlcz3zBGaMKYn7x5WbOVCvFkg.coyoleUIKsrw_2TKwldmauO-Qe53EDEzu_TpRQJE030g.PNG.gur5381/image.png': '35,283|image.png' , '/MjAxODA2MjhfMjUw/MDAxNTMwMTU1MjU5MjQ0.laIOmIP5cNC199sip3SUXdnUIK2jOlcm229LnJjlGIwg.brJfma6kRhNh28OYQX-vyJrwCQmNWgnIaAT9_oVNtQgg.PNG.gur5381/image.png': '49,826|image.png' , '/MjAxODA2MjhfMTAw/MDAxNTMwMTU1NDMxMDgx.HF8UNTVYji6FfzLA4zxr_8X9KJ0uwx6xaLUUkjIytrgg.izyUJDZa4vaVWxi-xnWOXMfj9DIM8QAdd-sQciTgVvMg.PNG.gur5381/image.png': '212,682|image.png' , '/MjAxODA2MjhfNTAg/MDAxNTMwMTU1NzE0NjY1.XwGAscWwOse4qLMexQ_MhS1w78Y9gyiBqnfC1L7FLGIg.ZfKi0da0GPf5d1XjX0YsCWNYZIfjn8784gxr1A-xP-8g.PNG.gur5381/image.png': '53,018|image.png' , '/MjAxODA2MjhfMjM5/MDAxNTMwMTU1Njg0ODQ1.Bo_4Guhe4jOeBfQ6XVjA23_diNGYKl_Xob-LusL_0SQg.7k5gibDeqZtH-DdPFlQJkyp5H3aO-8dHBhCjJBlZEZwg.PNG.gur5381/image.png': '134,881|image.png' , '/MjAxODA2MjhfMjcx/MDAxNTMwMTU2MTUyOTA5.IwDUO3sCKCjmmNRNbV1qGyHEAuOnrPBB6GZ3307ADdAg.uE3vYM0mGBBOxva8w7rN9Z5oPlaS4nOwD1XQZyGecc0g.PNG.gur5381/image.png': '64,193|image.png' , '/MjAxODA2MjhfNjIg/MDAxNTMwMTU2MDM4MjQ1.NghwB9CEqgmO4WHqHupSrI0yiHo5gDWxctMO_Zvc_tgg.K0TsWxiU26LI92pah26I1XM6bXW5ML-MlYG-8peTOEUg.PNG.gur5381/image.png': '194,021|image.png' , '/MjAxODA2MjhfMjYz/MDAxNTMwMTU2NDI1NDI3.uez3WHgW2-yGHgnWIbpoQXL4Fuq6pcWfbb5k8h2qiIQg.JoLjUifhrfXWTw2-5XtrE6K_YWxmrmKdmKZ-_y8Mvggg.PNG.gur5381/image.png': '50,126|image.png' , '/MjAxODA2MjhfMTY2/MDAxNTMwMTU2NDYxNjcz.lqXe9FC2AFtC6ff6hFIz_ytgE9GeSoJSTN6Brf-l32Ug.WP-QAyoZDpqL0f4OxA0l6E5FOrZU-5waCW1cRKjRQjYg.PNG.gur5381/image.png': '117,541|image.png' , '/MjAxODA2MjhfMTYx/MDAxNTMwMTU2NTc5MjAx.fmcwzvf6htcwvadG5rHeT5pGdvWD3JyXLIN0is9z3NQg.t7FWla0vW04kLRTPiS_SiV6DkzvKdvtmErOg6e4qC-8g.PNG.gur5381/image.png': '79,658|image.png' , '/MjAxODA2MjhfNDcg/MDAxNTMwMTU2NzI3NzA4.8YnmxuCgi6qoJzeTOa7EBu7TGsKrKNEDw1NTVg0bcT8g.hKZY0QZwbTQI0wK4DkAFWAwjvBoGeBJtSGanc18rTFog.PNG.gur5381/image.png': '132,976|image.png' , '/MjAxODA2MjhfMjcz/MDAxNTMwMTU2ODYxMDg0.UG8i7XRh_5QRSBWlwTZcxUI9CnAQc61WFmnD5Yo0ptEg.rx-xiKZTRexV6JrZSBwhaOBlg_HrEKhqujLXjP41IwYg.PNG.gur5381/image.png': '78,040|image.png' , '/MjAxODA2MjhfMjE5/MDAxNTMwMTU3MDQ3MTYy.VltZB1HARi-ZlH3l6YGijQMw9oN4IK70FHbHsqYHCJMg.BR5S9lQUz_jlomOm_i0ubRf7wgOcgLYGp3Y89z3gwAwg.PNG.gur5381/image.png': '36,665|image.png'};
+	aPostSendInfo[1] = [];
+	aPostBaseInfo[1] = "221308517525|0|1|1|0|0|false|3|MYLOG";
+	aQueuePost.push({logNo : '221308517525',tagNames : ''}); 	
+
+
+
+
+
+
+
+
+//<!--
+	htInitData[0] = {
+		
+		style  : "community",
+		
+		
+		textClass : "pcol2",
+		barClass : "fil3 pcol2b",
+		align : "right",
+		onLoginRedirect : function() {window.open("https://nid.naver.com/nidlogin.login?svctype=16448&url=" + encodeURIComponent(blogURL + "/post/common/reloadOpenerParentAndClose.jsp"), "", 'width=400px, height=500px, scrollbars=yes, resizable=yes');},
+
+		evkey  : "blog",
+		servicename : "블로그",
+		title  : "3\uB77C\uC6B4\uB4DC. (\uC790\uBC14 Mysql \uC5F0\uB3D9 DB) \uB85C\uADF8\uC778 \uD504\uB85C\uADF8\uB7A8 \uB9CC\uB4E4\uAE30!",
+		source : "https://blog.naver.com/gur5381/221308517525",
+		me2key : "",
+		tags   : ["네이버블로그", "gur5381\uB2D8\uC758 \uBE14\uB85C\uADF8"],
+
+
+		me : {
+			
+			feedInfo : "블로거의 글이",
+			popupType : "C",
+			targetUrl : "/subscribe/blog/applyFeedRelation.nhn",
+			serviceId : "blog",
+			feedGroupId : "neighbor",
+			feedId : ["gur5381"],
+			feedName : ["gur5381\uB2D8\uC758 \uBE14\uB85C\uADF8"],
+			feedUrl : ["http://blog.naver.com/gur5381" ],
+			selected : ['Y']
+		},
+		
+
+		
+		
+		
+		me2day : {sourceUrl : "https://blog.naver.com/PostView.nhn?blogId=gur5381&logNo=221308517525"},
+		
+		
+
+		
+		
+		
+		mail : {
+			srvid   : "blog",
+			srvurl  : "http://bookmark.naver.com/getRichMailTmpl.ajax?sourceUrl="
+			 + encodeURIComponent("https://blog.naver.com/PostView.nhn?blogId=gur5381&logNo=221308517525")
+		},
+		facebook : {sourceUrl : "https://blog.naver.com/PostView.nhn?blogId=gur5381&logNo=221308517525"},
+		
+		
+
+		cafe : {
+			proxyUrl : "/ScrapToCafe.nhn?blogId=gur5381&logNo=221308517525&inAppNavigation=true" 
+			
+		},
+		blog : {
+			
+			proxyUrl : "/ScrapToBlog.nhn?blogId=gur5381&logNo=221308517525&loadOnModalView=true&template=modal&isShowingGnb=false"
+		}
+	};
+
+
+// 스크립트 오류를 방지하지 위해서 막아논 부분.
+//-->
+function splugin_oninitialize(nCount) {
+	return htInitData[nCount - 1];
+}
+</script>
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning/PostTopCommon-462369321_https.js" charset="UTF-8"></script>
+
+<script type="text/javascript">$Ajax.SWFRequest.write(sAjaxFlashUrl);</script>
+		
+
+	
+	
+
+
+
+
+
+
+
+
+
+<div class="division-line-x" id="quickPostTopLine" style="display:none"></div>
+<div class="qk_wrap"  id="quickPostBanner" style="display:none" onclick="clickcr(this,'qed.open','','',event);">
+	<div class="qk_post">
+		<p class="msg _qpMessage _postSize _rosRestrictAll" style="font-size:12px">다시 읽고 싶은 링크를 퀵에디터로 남겨보세요.</p>
+		<button type="button" class="qkb_post _postSize _rosRestrictAll"><span>글쓰기</span></button>
+	</div>
+</div>
+
+<div id="quickPostPromotion" class="qk_layer2" style="display: none">
+	<div class="qk_layer2_inner">
+		<span class="blind">가벼운 글쓰기툴 퀵에디터가 오픈했어요!</span>
+		<a href="https://admin.blog.naver.com//config/quickposting" target="_top" style="top:8px;left:187px"><img src="https://blogimgs.pstatic.net/nblog/quickeditor/btn_qk_set.gif" width="65" height="14" alt="사용설정하기"></a>
+		<a href="https://section.blog.naver.com/Notice.nhn?docId=10000000000020964978" target="_blank" style="top:8px;right:32px"><img src="https://blogimgs.pstatic.net/nblog/quickeditor/btn_what2.gif" width="57" height="14" alt="퀵에디터란?"></a>
+
+		<a href="#" class="clse _returnFalse _closeQuickPostPromotion"><img src="https://blogimgs.pstatic.net/nblog/quickeditor/btn_clse_ly2.gif" width="15" height="15" alt="설정 닫기"></a>
+	</div>
+</div>
+<div class="division-line-x" id="quickPostBottomLine" style="display:none"></div>
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<div class="post post_top_title_aggregate_expose post_top_title_aggregate_click" id="category-name" >
+	<div class="post-back">
+		<table class="post-head" cellspacing="0" cellpadding="0" role="presentation">
+			<tbody><tr>
+				<td class="htl" nowrap="nowrap"></td><td class="htc"></td><td class="htr" nowrap="nowrap"></td>
+			</tr>
+			</tbody></table>
+		</table>
+		<table class="post-body" cellspacing="0" cellpadding="0" role="presentation">
+			<tbody><tr>
+				<td class="bcl" nowrap="nowrap"></td>
+				<td class="bcc">
+					
+						
+							
+						
+						
+					
+					<div class="wrap_blog2_list wrap_blog2_categorylist">
+						<h4 class="category_title pcol2">
+							<a href="#" role="button" class="pcol2 _toggleTopList _returnFalse" title="전체보기 목록 닫고 열기" id ="categoryTitle"><strong>전체보기</strong></a> 18개의 글
+						</h4>
+						<a href="#" class="btn_openlist pcol2 _toggleTopList _returnFalse" role="button"><span class="blind">전체보기</span><span class="txt" id="toplistSpanBlind">목록열기</span></a>
+						<div class="wrap_list" area-hidden="false" id="toplistWrapper" style="display:none;"></div>
+					</div>
+
+
+				</td>
+				<td class="bcr" nowrap="nowrap"></td>
+			</tr>
+			</tbody></table>
+		<table class="post-footer" cellspacing="0" cellpadding="0" role="presentation">
+			<tbody><tr><td class="ftl" nowrap="nowrap"></td><td class="ftc"></td><td class="ftr" nowrap="nowrap"></td></tr>
+			</tbody></table>
+	</div>
+</div>
+<div class="division-line-x plile"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="postListBody">
+	
+	
+	<div id="post_1" class="post _post_wrap _param(1)" data-post-editor-version="3">
+		<div class="post-back">
+			<table class="post-head" cellspacing="0" cellpadding="0"><tr><td class="htl" nowrap="nowrap"></td><td class="htc"></td><td class="htr" nowrap="nowrap"></td></tr></table>
+			<table id="printPost1" class="post-body" cellspacing="0" cellpadding="0" role='presentation'>
+				<tr>
+					<td class="bcl" nowrap="nowrap"></td>
+                    <td class="bcc">
+						
+						
+						
+						
+						
+                        
+                    	
+						<div id="post-view221308517525" class=" pcol2 _param(1) _postViewArea221308517525">
+							<div id="SEDOC-1530534553126-414293492" class="se_doc_viewer se_body_wrap se_theme_transparent " data-docversion="1.0">
+<div class="se_doc_header_start" id="SEDOC-1530534553126-414293492_se_doc_header_start"></div>
+<!-- SE_DOC_HEADER_START -->
+<div id="SEDOC-1530534553126-414293492_viewer_head" class="se_viewer_head"></div>
+<div class="se_component_wrap">
+<div class="se_component se_documentTitle documentTitle_blog  is-fill">
+    <div class="se_sectionArea is-fill se_align-left">
+        <!-- --> 
+<div class="blog2_series">
+	<a href="/PostList.nhn?blogId=gur5381&categoryNo=11&from=postList&parentCategoryNo=11" class="pcol2" onclick="clickcr(this,'pst.category','','',event);">자바 도전기</a>
+</div>
+<div class="pcol1"> 
+<!-- -->
+        <!-- SE_DOC_HEADER_TITLE_TOP-->
+     	<div id="SEDOC-1530534553126-414293492_se_doc_title_top" class="se_doc_title_top"></div>
+        <div class="se_editArea">
+        	<div class="se_viewArea se_ff_nanumgothic se_fs_D2">
+	            <div class="se_editView se_title">
+	                <div class="se_textView">
+                        <h3 class="se_textarea">
+                            <!-- -->3라운드. (자바 Mysql 연동 DB) 로그인 프로그램 만들기!<!-- -->
+                            
+                        </h3>
+                        
+                        
+	                </div>
+	            </div>
+	        </div>
+        </div><!-- SE_DOC_HEADER_TITLE_MIDDLE-->
+        <div id="SEDOC-1530534553126-414293492_se_doc_title_middle" class="se_doc_title_middle"></div>
+        <!-- SE_DOC_HEADER_CONTENTS_START -->
+        <!-- -->
+</div>
+<div class="blog2_container">
+    <span class="writer">
+        <span class="area_profile"><a href="https://blog.naver.com/gur5381" class="link" onclick="clickcr(this,'pst.profile','','',event);" target="_top"><img src="https://ssl.pstatic.net/static/blog/m/img_default.gif" class="img" alt="프로파일"></a></span>
+        <span class="nick"><a href="https://blog.naver.com/gur5381" class="link pcol2" onclick="clickcr(this,'pst.username','','',event);" target="_top">줌코딩</a></span>
+    </span>
+    <i class="dot"> ・ </i>
+	<span class="se_publishDate pcol2">2018. 6. 28. 12:41</span>
+
+</div>
+<div class="blog2_post_function">
+	<a href="#" id="copyBtn_221308517525" class="url pcol2 _setClipboard _returnFalse _se3copybtn _transPosition" title="https://blog.naver.com/gur5381/221308517525" style="cursor:pointer;" >URL 복사</a>
+
+            <a href="#" class="btn_buddy btn_addbuddy pcol2 _buddy_popup_btn _returnFalse" onclick="clickcr(this,'pst.addnei','','',event);"><i class="ico"></i> 이웃추가<i class="aline"></i></a>
+	<div class="overflow_menu" >
+        <a href="#" class="btn_overflow_menu _open_overflowmenu pcol2 _param(221308517525) _returnFalse" role="button" area-haspopup="true" area-expanded="false"><span class="blind">본문 기타 기능</span></a>
+		<div id="overflowmenu-221308517525" class="lyr_overflow_menu" area-hidden="true">
+          	 <a href="#" class="naverTranslateNavigationBox _goTran _param(221308517525) _returnFalse">번역보기<span class="ico_translation _goTran _param(221308517525)"></span></a>
+		</div>
+	</div>
+    <input type="text" value="https://blog.naver.com/gur5381/221308517525" alt="url" class="copyTargetUrl" style="display:none;" title="URL 복사">
+</div>
+<!-- -->
+        <!-- SE_DOC_HEADER_CONTENTS_END -->
+        <!-- SE_DOC_HEADER_TITLE_BOTTOM-->
+        <div id="SEDOC-1530534553126-414293492_se_doc_title_bottom" class="se_doc_title_bottom"></div>
+    </div>
+</div>
+
+</div>
+<div class="location_component">
+    <div class="location">
+            </div>
+</div>
+<!-- {{{$SE3-CONTENTS_HEADER}}} -->
+<!-- SE_DOC_HEADER_END -->
+<div class="se_doc_header_end" id="SEDOC-1530534553126-414293492_se_doc_header_end"></div>
+<div class="se_doc_contents_start" id="SEDOC-1530534553126-414293492_se_doc_contents_start"></div>
+<!-- SE_DOC_CONTENTS_START -->
+<div class="se_component_wrap sect_dsc __se_component_area">
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>바로 쉬지 않고 달린다.<br></span><span><br></span><span>3라운드는 전혀 다른 DB관리이다. 그럼 바로 과제 내용을 소개하겠다.<br></span><span><br></span><span>ACCOUNT 관리 프로그램 만들기<br></span><span>기한 : 6/25(오후 8시) ~ 6/27(오후9시)<br></span><span></span><span>기능 : 신규 가입(ID중복확인 PW설정확인), 로그인(환영메세지 후 개인정보 수정, 탈퇴), Admin모드(강제 탈퇴, 개인정보 변경 기능)<br></span><span><br></span><span>일단 처음에는 엄청나게 막막 했다.<br></span><span><br></span><span>MySQL은 데이터베이스 관리하는 소프트웨어라는 정도만 알고 있지 내가 이것을 직접 써보지 않았기에 낯설었고 심지어 자바랑 연동이라니.. 후우<br></span><span><br></span><span>막막한 시간을 견디다 보니 방법을 알아내게 되었다. <br></span><span><br></span><span>일단 뭔지는 모르겠는데 MySQL과 자바를 연동시켜놓았다.<br></span><span><br></span><span>방법은 다음과 같다.<br></span><span>1. MySQL, my</span><span></span><span>sql connector를 다운받는다.<br></span><span>2. Build Path를 통해서 mysqlconnector를 프로젝트에 export해준다.<br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_0_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMjYy/MDAxNTMwMTU0Mjk3NTE3.VHV3rglnEPe9ckwQvwb1fQH9H51zozLBmHfYGE1HQTkg.bevz0t3G4oV7ZmoFg0u7kB_sE9H8aZ8FD4pqPEvxPX8g.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_0_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMjYy/MDAxNTMwMTU0Mjk3NTE3.VHV3rglnEPe9ckwQvwb1fQH9H51zozLBmHfYGE1HQTkg.bevz0t3G4oV7ZmoFg0u7kB_sE9H8aZ8FD4pqPEvxPX8g.PNG.gur5381/image.png?type=w580" width="1098" height="878" data-attachment-id="IH9jQV2I6Vz7CXHgTwZiR73DE-I4" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span></span><span>3. 다음 명령어를 활용한다.<br></span><span><br></span><span><span class="s1" style="color: rgb(0, 0, 0);">Class.forName(</span>"co<a href="http://m.mysql.cj.jdbc.Driver" target="_blank" class="se_link">m.mysql.cj.jdbc.Driver</a>"<span class="s1" style="color: rgb(0, 0, 0);">); </span><span class="s2" style="color: rgb(78, 144, 114);">// JDBC 드라이버 로드</span><br><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span>System.<span class="s3" style="color: rgb(3, 38, 204);">out</span>.println(<span class="s4" style="color: rgb(57, 51, 255);">"드라이버 연결 성공!"</span> + <span class="s3" style="color: rgb(3, 38, 204);">mode</span>);<br><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="s3" style="color: rgb(3, 38, 204);">conn</span> = DriverManager.getConnection(<span class="s3" style="color: rgb(3, 38, 204);">url</span>);<br><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span>System.<span class="s3" style="color: rgb(3, 38, 204);">out</span>.println(<span class="s4" style="color: rgb(57, 51, 255);">"데이터베이스 연결 성공!"</span>);<br><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="s3" style="color: rgb(3, 38, 204);">stmt</span> = <span class="s3" style="color: rgb(3, 38, 204);">conn</span>.createStatement();<br><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span>String <span class="s5" style="color: rgb(126, 80, 79);">useXproject</span> = <span class="s4" style="color: rgb(57, 51, 255);">"use Xproject"</span>;&nbsp;<span style="color: rgb(78, 144, 114);">// DB 선택(Xproject 선택)</span><br><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span><span class="s3" style="color: rgb(3, 38, 204);">stmt</span>.executeUpdate(<span class="s5" style="color: rgb(126, 80, 79);">useXproject</span>);&nbsp;<br></span><span><span><br></span></span><span>그러면 끝났다!<br></span><span><br></span><span>자 그렇다면 일단 위에서 mysql을 사용하는 방법을 알아보자.<br></span><span><br></span><span>일단 <br></span><span>stmt : mysql문 명령어이다. 이 변수는 mysql문에 쓸 명령어를 생성해준다.&nbsp;<br></span><span>rs : result set의 축약어로 결과값을 sql문 명령을 수행한 결과를 담는 그릇이다.<br></span><span>stmt.executeUpdate(String command) : command 변수의 명령을 수행해서 mysql의 정보를 업데이트 해주는 역할을 한다.&nbsp;<br></span><span>rs = stmt.executeQuery(String command) : command 변수의 명령을 수행한 후 나온 결과를 rs에 담는다.</span><span><br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_1_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMzAw/MDAxNTMwMTU0ODU3MDI0.AFHk_i3Ir920KzoS2b-ba8E3mUOQYyLbe2YQNSx23Qcg.euOiDV-gBcv4kOehPoMn957G6TNs7i0fL3JgtLW_WREg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_1_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMzAw/MDAxNTMwMTU0ODU3MDI0.AFHk_i3Ir920KzoS2b-ba8E3mUOQYyLbe2YQNSx23Qcg.euOiDV-gBcv4kOehPoMn957G6TNs7i0fL3JgtLW_WREg.PNG.gur5381/image.png?type=w580" width="1064" height="318" data-attachment-id="ISjzOPyq7v0aa-lTV_FJ2lvmz8Gk" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>일단 이것만 잘 이해하면 로그인프로그램 어렵지 않다!<br></span><span><br></span><span>문제는 항상 Frame짜는 것이다. 이번에는 하나의 프레임에 여러개의 패널을 꼈다 뺐다 하도록 설정해주었다. 그래서 프레임에서 다른 패널을 삭제해주고 새 패널을 끼워주기를 반복했다.</span><span><br></span><span><br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_2_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMTIz/MDAxNTMwMTU1MTI3MzE0.PQ5NmD-LBHfIzNdmMg8Nlcz3zBGaMKYn7x5WbOVCvFkg.coyoleUIKsrw_2TKwldmauO-Qe53EDEzu_TpRQJE030g.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_2_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMTIz/MDAxNTMwMTU1MTI3MzE0.PQ5NmD-LBHfIzNdmMg8Nlcz3zBGaMKYn7x5WbOVCvFkg.coyoleUIKsrw_2TKwldmauO-Qe53EDEzu_TpRQJE030g.PNG.gur5381/image.png?type=w580" width="772" height="190" data-attachment-id="IMb_zoN0O-JIHbeRS92or-ZgtDUE" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>프레임을 새로 만들었다 지웠다 할 때보다 버벅임이 없어서 훨씬 좋았다!<br></span><span><br></span><span>로그인, 회원가입, 정보수정에는 입력값이 적거나 없을 경우 오류 메세지를 주고 프레임을 띄워주어 값을 받기도 했는데 그것은 굳이 설명하지 않겠다:)<br></span><span>궁금하면 아래 github링크를 참고하면 된다.<br></span><span><br></span><span>mysql문을 활용한 과정과 주요기능만 설명하겠다.</span><span><br></span><span><br></span><span>일단 제일 먼저 볼 것은 로그인 페이지이다!<br></span><span><br></span><span><br></span><span>1. 로그인</span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_3_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMjUw/MDAxNTMwMTU1MjU5MjQ0.laIOmIP5cNC199sip3SUXdnUIK2jOlcm229LnJjlGIwg.brJfma6kRhNh28OYQX-vyJrwCQmNWgnIaAT9_oVNtQgg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_3_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMjUw/MDAxNTMwMTU1MjU5MjQ0.laIOmIP5cNC199sip3SUXdnUIK2jOlcm229LnJjlGIwg.brJfma6kRhNh28OYQX-vyJrwCQmNWgnIaAT9_oVNtQgg.PNG.gur5381/image.png?type=w580" width="802" height="1208" data-attachment-id="IVo0Zec4dL2cH9vWrdFjskHwH4JM" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>부족한 인터페이스 양해바란다.<br></span><span><br></span><span>나는 로그인을 두가지로 나눴는데 일반 유저와 Admin유저이다. 두가지의 모드를 나눠서 설정해주었다. <br></span><span><br></span><span>이때는 mysql문에서 검색 명령인<br></span><span><b>'select * from user where "username" like '[유저이름]';</b><br></span><span>을 이용해서 해당 정보의 password가 입력값과 같다면 로그인에 성공 시켰다.<br></span><span><br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_4_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMTAw/MDAxNTMwMTU1NDMxMDgx.HF8UNTVYji6FfzLA4zxr_8X9KJ0uwx6xaLUUkjIytrgg.izyUJDZa4vaVWxi-xnWOXMfj9DIM8QAdd-sQciTgVvMg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_4_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMTAw/MDAxNTMwMTU1NDMxMDgx.HF8UNTVYji6FfzLA4zxr_8X9KJ0uwx6xaLUUkjIytrgg.izyUJDZa4vaVWxi-xnWOXMfj9DIM8QAdd-sQciTgVvMg.PNG.gur5381/image.png?type=w580" width="1100" height="1148" data-attachment-id="Ip6LzugVnXkp2iVQf4GH9fP-Rucw" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>2. 계정 생성<br></span><span><br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_5_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfNTAg/MDAxNTMwMTU1NzE0NjY1.XwGAscWwOse4qLMexQ_MhS1w78Y9gyiBqnfC1L7FLGIg.ZfKi0da0GPf5d1XjX0YsCWNYZIfjn8784gxr1A-xP-8g.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_5_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfNTAg/MDAxNTMwMTU1NzE0NjY1.XwGAscWwOse4qLMexQ_MhS1w78Y9gyiBqnfC1L7FLGIg.ZfKi0da0GPf5d1XjX0YsCWNYZIfjn8784gxr1A-xP-8g.PNG.gur5381/image.png?type=w580" width="790" height="1194" data-attachment-id="Iq8pYOBo0Q7W9E8Om2l_BpCwB734" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>각 정보를 하나씩 받아오는데 여러가지 제약을 두어서 원하는 정보를 다 입력 받을 수 있게 코드해놨다. 여기서 정보를 다 입력한 후에 save버튼을 누르면 DB에 테이블 내용을 추가하는 명령어가 수행되게 하였다.<br></span><span><b>'insert into user(username, passwd, name, birthdate, email) "</b><br><span class="s1" style="color: rgb(0, 0, 0);"><span class="Apple-tab-span"><b> </b></span><span class="Apple-tab-span"><b> </b></span><span class="Apple-tab-span"><b> </b></span><span class="Apple-tab-span"><b> </b></span><span class="Apple-tab-span"><b> </b></span><span class="Apple-tab-span"><b> </b></span><b>+ </b></span><b>"values('jin</b><b>', '12345</b><b>', '진혁</b><span class="s3" style="color: rgb(57, 51, 255);"></span></span><span style="color: rgb(0, 0, 0);"><span class="s3" style="color: rgb(57, 51, 255);"><span class="s3" style="color: rgb(0, 0, 0);"><b>', '19951230</b></span><span class="s3" style="color: rgb(0, 0, 0);"><b>', 'yes@gmail.com</b></span><span class="s3" style="color: rgb(0, 0, 0);"><b>');'</b><br></span><span class="s3" style="color: rgb(0, 0, 0);"><b></b><br></span><span class="s3" style="color: rgb(0, 0, 0);"><b></b></span></span></span><span style="color: rgb(0, 0, 0);"><span class="s3" style="color: rgb(57, 51, 255);"><span class="s3" style="color: rgb(0, 0, 0);">그리고 username을 primary key로 두었는데 username이 겹치면 안되므로 생성하려는 유저이름이 겹치지 않는지 검색 명령을 두었다.</span></span></span><span style="color: rgb(0, 0, 0);"><span class="s3" style="color: rgb(57, 51, 255);"><span class="s3" style="color: rgb(0, 0, 0);"><br></span></span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_6_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMjM5/MDAxNTMwMTU1Njg0ODQ1.Bo_4Guhe4jOeBfQ6XVjA23_diNGYKl_Xob-LusL_0SQg.7k5gibDeqZtH-DdPFlQJkyp5H3aO-8dHBhCjJBlZEZwg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_6_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMjM5/MDAxNTMwMTU1Njg0ODQ1.Bo_4Guhe4jOeBfQ6XVjA23_diNGYKl_Xob-LusL_0SQg.7k5gibDeqZtH-DdPFlQJkyp5H3aO-8dHBhCjJBlZEZwg.PNG.gur5381/image.png?type=w580" width="1158" height="610" data-attachment-id="I_3mktll-vhgW3qZ5V24L7kQtD7I" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span><br></span><span>3. 일반 유저 로그인(개인정보 수정 및 탈퇴!)<br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_7_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMjcx/MDAxNTMwMTU2MTUyOTA5.IwDUO3sCKCjmmNRNbV1qGyHEAuOnrPBB6GZ3307ADdAg.uE3vYM0mGBBOxva8w7rN9Z5oPlaS4nOwD1XQZyGecc0g.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_7_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMjcx/MDAxNTMwMTU2MTUyOTA5.IwDUO3sCKCjmmNRNbV1qGyHEAuOnrPBB6GZ3307ADdAg.uE3vYM0mGBBOxva8w7rN9Z5oPlaS4nOwD1XQZyGecc0g.PNG.gur5381/image.png?type=w580" width="794" height="1194" data-attachment-id="I-5B0LMyOw7yB9KpDoemCoUuhJbs" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>로그인을 하게 되면 개인정보를 수정할 수 있는 프로그램이 실행된다.<br></span><span><br></span><span>여기서는 Edit버튼을 누르면 테이블의 값을 수정해준다.<br></span><span> </span><span><b>'update suer set passwd = '[비밀번호]' where username = '[유저이름];'&nbsp;</b></span><span><br></span><span>명령을 사용한다.<br></span><span><br></span><span>Delete Account를 누를 시에는 계정을 삭제해주게 되는데 이 때는<br></span><span>테이블의 값을 삭제해주는 명령인<br></span><span><b>'delete from user where username = '[유저이름]';'</b><br></span>명령어가 사용되었다.<span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_8_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfNjIg/MDAxNTMwMTU2MDM4MjQ1.NghwB9CEqgmO4WHqHupSrI0yiHo5gDWxctMO_Zvc_tgg.K0TsWxiU26LI92pah26I1XM6bXW5ML-MlYG-8peTOEUg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_8_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfNjIg/MDAxNTMwMTU2MDM4MjQ1.NghwB9CEqgmO4WHqHupSrI0yiHo5gDWxctMO_Zvc_tgg.K0TsWxiU26LI92pah26I1XM6bXW5ML-MlYG-8peTOEUg.PNG.gur5381/image.png?type=w580" width="1230" height="760" data-attachment-id="I3xJlOYlV_kuDyAHBp3B-qfYPJqM" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>4. Admin 로그인(모든 계정 정보 조회, 수정, 삭제 기능)<br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_9_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMjYz/MDAxNTMwMTU2NDI1NDI3.uez3WHgW2-yGHgnWIbpoQXL4Fuq6pcWfbb5k8h2qiIQg.JoLjUifhrfXWTw2-5XtrE6K_YWxmrmKdmKZ-_y8Mvggg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_9_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMjYz/MDAxNTMwMTU2NDI1NDI3.uez3WHgW2-yGHgnWIbpoQXL4Fuq6pcWfbb5k8h2qiIQg.JoLjUifhrfXWTw2-5XtrE6K_YWxmrmKdmKZ-_y8Mvggg.PNG.gur5381/image.png?type=w580" width="800" height="1202" data-attachment-id="IOUbAOFZBwDdZ6xjL8UBhHQK5TE0" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_10_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMTY2/MDAxNTMwMTU2NDYxNjcz.lqXe9FC2AFtC6ff6hFIz_ytgE9GeSoJSTN6Brf-l32Ug.WP-QAyoZDpqL0f4OxA0l6E5FOrZU-5waCW1cRKjRQjYg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_10_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMTY2/MDAxNTMwMTU2NDYxNjcz.lqXe9FC2AFtC6ff6hFIz_ytgE9GeSoJSTN6Brf-l32Ug.WP-QAyoZDpqL0f4OxA0l6E5FOrZU-5waCW1cRKjRQjYg.PNG.gur5381/image.png?type=w580" width="1596" height="1196" data-attachment-id="IqYUO9GO2SEXsoCPnFNeTIv5tVVc" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { -->Admin으로 로그인하게 되면 전 계정의 정보를 조회, 수정, 삭제 할 수 있게 하였다.<br><br>먼저, 조회는 다음 명령어를 사용하였다.<br><span><b>'select* from user;'</b><br></span><span>그리고 rs에 머든 정보를 담을 수 있도록 하여서 그것을 JTable을 이용해서 전부 출력해주었다.</span><span><br></span><br><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_11_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMTYx/MDAxNTMwMTU2NTc5MjAx.fmcwzvf6htcwvadG5rHeT5pGdvWD3JyXLIN0is9z3NQg.t7FWla0vW04kLRTPiS_SiV6DkzvKdvtmErOg6e4qC-8g.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_11_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMTYx/MDAxNTMwMTU2NTc5MjAx.fmcwzvf6htcwvadG5rHeT5pGdvWD3JyXLIN0is9z3NQg.t7FWla0vW04kLRTPiS_SiV6DkzvKdvtmErOg6e4qC-8g.PNG.gur5381/image.png?type=w580" width="980" height="334" data-attachment-id="IOO0W4CPvSyiS0tq3kWCEDUoINdg" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span style="color: rgb(0, 0, 0);"><br></span><span style="color: rgb(0, 0, 0);">Delete(Checked) 클릭시에는&nbsp; 체크박스를 이용해서 체크된 값들을 따로 array에 저장해주어 array값이 존재한다면 그 계정을 삭제해주는 방법을 이용했다.<br></span><br><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_12_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfNDcg/MDAxNTMwMTU2NzI3NzA4.8YnmxuCgi6qoJzeTOa7EBu7TGsKrKNEDw1NTVg0bcT8g.hKZY0QZwbTQI0wK4DkAFWAwjvBoGeBJtSGanc18rTFog.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_12_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfNDcg/MDAxNTMwMTU2NzI3NzA4.8YnmxuCgi6qoJzeTOa7EBu7TGsKrKNEDw1NTVg0bcT8g.hKZY0QZwbTQI0wK4DkAFWAwjvBoGeBJtSGanc18rTFog.PNG.gur5381/image.png?type=w580" width="1258" height="720" data-attachment-id="IOV1x0r4Rtl2KbJkzNNmjSb8K07A" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span style="color: rgb(0, 0, 0);"><b>수정은 테이블에 mouseListener를 주어 클릭한 데이터에 해당 값을 수정할 수 있도록 해주었다.(이거 신기하다!!!)</b></span><span style="color: rgb(0, 0, 0);"><b></b></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_13_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMjcz/MDAxNTMwMTU2ODYxMDg0.UG8i7XRh_5QRSBWlwTZcxUI9CnAQc61WFmnD5Yo0ptEg.rx-xiKZTRexV6JrZSBwhaOBlg_HrEKhqujLXjP41IwYg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_13_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMjcz/MDAxNTMwMTU2ODYxMDg0.UG8i7XRh_5QRSBWlwTZcxUI9CnAQc61WFmnD5Yo0ptEg.rx-xiKZTRexV6JrZSBwhaOBlg_HrEKhqujLXjP41IwYg.PNG.gur5381/image.png?type=w580" width="1026" height="374" data-attachment-id="I-xiWUN5-qSgp7DhJqJqEfArwA6s" alt="">
+        
+        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>버튼을 클릭할 때마다 정보를 최신화해서 보여줄 수 있도록 하려고 panel을 매번 바꿔꼈었는데 생각보다 이 과정이 쉽지 않았다!!<br></span><span>panel을 꼈다뺐다 하는 것이 아니라 최신화 할 것은 테이블 만이기 때문에 테이블을 담고 있는 jScrollPane, table, checkbox만 꼈다 뺐다 해주면 된다는 것을 나중가서 깨달았다. 다들 panel이용시 주의하길 바란다. 매번 add해주다보면 시스템이 누적되어 이상해진다... 다들 나 같은 실수 안하시길!!<br></span><span></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+		<div class="se_component se_image default">
+			<div class="se_sectionArea se_align-justify">
+				<div class="se_editArea">
+					<div class="se_viewArea" >
+        <a href="#" onclick="return false;" class="se_mediaArea __se_image_link __se_link" data-linktype="img" data-linkdata='{"imgId" : "SEDOC-1530534553126-414293492_image_14_img", "src" : "https://postfiles.pstatic.net/MjAxODA2MjhfMjE5/MDAxNTMwMTU3MDQ3MTYy.VltZB1HARi-ZlH3l6YGijQMw9oN4IK70FHbHsqYHCJMg.BR5S9lQUz_jlomOm_i0ubRf7wgOcgLYGp3Y89z3gwAwg.PNG.gur5381/image.png", "linkUse" : "false", "link" : ""}'>
+                            <img id="SEDOC-1530534553126-414293492_image_14_img" class="se_mediaImage __se_img_el" src="https://postfiles.pstatic.net/MjAxODA2MjhfMjE5/MDAxNTMwMTU3MDQ3MTYy.VltZB1HARi-ZlH3l6YGijQMw9oN4IK70FHbHsqYHCJMg.BR5S9lQUz_jlomOm_i0ubRf7wgOcgLYGp3Y89z3gwAwg.PNG.gur5381/image.png?type=w580" width="878" height="164" data-attachment-id="IUumybWXfxR8sXYrQugumrZKTwJs" alt="">
+        
+        </a>
+							<div class="se_editView">
+								<div class="se_textView se_mediaCaption">
+                                        <span class="se_textarea">패널이 아닌 내용만 빼주는 모습</span>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span>이번 라운드는 mySQL을 이용하다보니 처음에 이해하는데 시간이 조금 오래 걸렸다. 하지만 막상 이해하고 활용하다보니 크게 연동 과정에서 크게 막히는 부분은 없었다. 하지만 항상 문제는 프레임 구성이다. 거기서 어려움을 겪다보니 참 쉬운 것이 없어보였다. 다음 단계에서는 좀 더 인터페이스를 잘 짤 수 있을 것 같다. 이번에 많이 헤맸으니깐 말이다:)<br></span><span><br></span><span>일단 그래도 이번 라운드를 무사히 패스했다. 어제 축구도 맛깔나게 이겼으니 다음 라운드 영상처리도 빡시게 달려보자!!<br></span><span><br></span><span>Github 주소<br></span><span><a href="https://github.com/gur5381/JavaStudy18-1" target="_blank" class="se_link">https://github.com/gur5381/JavaStudy18-1</a></span><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="se_component se_oglink default ">
+    <div class="se_sectionArea se_align-left">
+        <div class="se_editArea" id="SEDOC-1530534553126-414293492_oglink_0">
+            <div class="se_viewArea se_og_wrap">
+                <a class="se_og_box  __se_link" href="https://github.com/gur5381/JavaStudy18-1" target="_blank" data-linktype="link" data-linkdata='{"link" : "https://github.com/gur5381/JavaStudy18-1"}'>
+                    <div class="se_og_thumb">
+                        <img src="https://dthumb-phinf.pstatic.net/?src&#61;%22https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F36878344%3Fs%3D400%26v%3D4%22&amp;type&#61;ff120" alt="">
+					</div>
+                    <div class="se_og_txt">
+                            <div class="se_og_tit">gur5381/JavaStudy18-1</div>
+                                <div class="se_og_desc">JavaStudy18-1 - 18년 여름방학 자바 뿌시기 프로젝트!</div>
+                            <div class="se_og_cp">github.com</div>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/data" class="__se_module_data" data-module='{"type":"v1_oglink", "docVersion" : "1.0", "id" :"SEDOC-1530534553126-414293492_oglink_0" , "data" : {"viewId" : "SEDOC-1530534553126-414293492_oglink_0", "link" : "https://github.com/gur5381/JavaStudy18-1", "isVideo" : "false", "thumbnail" : "http://dthumb.phinf.naver.net/?src&#61;%22https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F36878344%3Fs%3D400%26v%3D4%22&amp;type&#61;ff120"}}'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+<div class="se_component se_paragraph default">
+    <div class="se_sectionArea">
+        <div class="se_editArea">
+            <div class="se_viewArea se_ff_nanumgothic se_fs_T3 se_align-left" >
+                <div class="se_editView">
+                    <div class="se_textView">
+                        <p class="se_textarea"><!-- SE3-TEXT { --><span><br></span><span></span><span></span><br><!-- } SE3-TEXT --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- SE_DOC_CONTENTS_END -->
+<div class="__se_doc_title_end" id="se_doc_contents_end"></div>
+<div id="SEDOC-1530534553126-414293492_se_doc_footer" class="se_doc_footer"></div>
+</div>
+						</div>
+						
+
+						
+
+					
+					
+					
+
+					
+					
+						
+						<div class="post_footer_contents">
+							
+							
+							
+							
+							<div class="wrap_tag">
+								
+									
+									
+										
+											
+											
+												<div class="_param(false|false|3)" id="tagList_221308517525" style="display:none;cursor:default;">
+													<strong class="blind">태그</strong>
+												</div>
+											
+										
+									
+								
+								<div style="display:none">
+									<span class="wrap_input_text">
+										<input type="text" class="input_text pcol2 _tagInputArea" title="태그를 입력하세요." value="">
+										<i class="aline"></i><i class="pcol2b"></i>
+									</span>
+									<span class="wrap_btn"><a href="#" class="btn pcol2 _cancelTag _returnFalse _param(221308517525)">취소<i class="aline"></i></a>
+									<a href="#" class="btn pcol2 _saveTag _rosRestrict _returnFalse _param(221308517525)">확인<i class="aline"></i></a></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="post-btn post_btn2">
+                            <div class="wrap_postcomment">
+                                
+
+                                
+                                <div class="area_comment pcol2">
+                                    <a href="#" role="button" id="Comi221308517525" class="btn_comment pcol2 _cmtList _param(1|1|221308517525|0|true) _returnFalse">
+                                        <i class="ico"></i> 댓글쓰기
+										
+										<i class="aline bar"></i>
+                                        <span class="btn_arr"><i class="bu_arr"></i><span class="blind">이 글에 댓글 단 블로거 열고 닫기</span></span>
+                                    </a>
+                                    <i class="aline"></i><i class="aline3"></i>
+                                </div>
+                                
+                            </div>
+                        <div class="wrap_postedit">
+                                <!-- 소셜플러그인 -->
+							<div id="spiLayer1" class="naver-splugin"
+								 data-style="standard-v1-basic"
+								 data-url="https://blog.naver.com/gur5381/221308517525"
+								 data-oninitialize="splugin_oninitialize(1);"
+								 data-me-display="off"
+								 data-likeServiceId="blog"
+								 data-likeContentsId="gur5381_221308517525"
+								 data-canonical-url="https://blog.naver.com/gur5381/221308517525"
+							></div>
+							<!-- //소셜플러그인 -->
+
+                                <div class="area_btn_postedit pcol2">
+                                    <i class="aline"></i>
+									
+										<a href="#" class="pcol2 _printPost _returnFalse _param(221308517525)" target="_blank">인쇄
+											
+										</a>
+									
+									
+									
+									
+									
+                                </div>
+                            </div>
+						</div>
+						
+						<div id="naverComment_201_221308517525_ct" style="display:none">
+							<div class="commentbox_header _naverCommentHeader">
+								<a href="#" class="btn_write_comment _naverCommentWriteBtn _param(naverComment_201_221308517525|naverComment_201_221308517525_ct) _returnFalse" title="새 창" >댓글쓰기</a>
+								<div class="commentbox_pagination">
+									<div class="num"><strong class="_currentPageNo">1</strong>/<span class="_lastPageNo">1</span></div>
+									<div class="btn_pagination">
+										<a href="#" class="prev dimmed _naverCommentPrev _param(naverComment_201_221308517525_ct) _returnFalse">
+											<span class="blind">이전</span>
+											<span class="icon icon_ic_arrow_8x12_left"></span>
+										</a>
+										<a href="#" class="next _naverCommentNext _param(naverComment_201_221308517525_ct) _returnFalse">
+											<span class="blind">다음</span>
+											<span class="icon icon_ic_arrow_8x12_right"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div id="naverComment_201_221308517525"></div>
+						</div>
+						
+						
+						<iframe id="sympathyFrm221308517525" allowtransparency="true" src="" width="100%" height="1" style="display:none" scrolling="no" frameborder="0" title="엮인글"></iframe>
+                        
+                            <div id="ssp-adpost"></div>
+                            <div  class="_adpost_skin_property" style="position:absolute;z-index:-100;visibility:hidden">
+                                <span class="pcol1"></span>
+                                <span class="pcol2"></span>
+                                <span class="pcol3"></span>
+                            </div>
+                        
+						
+					</td>
+                    <td class="bcr" nowrap="nowrap"></td>
+				</tr>
+			</table>
+			<table class="post-footer" cellspacing="0" cellpadding="0"><tr><td class="ftl" nowrap="nowrap"></td><td class="ftc"></td><td class="ftr" nowrap="nowrap"></td></tr></table>
+		</div>
+	</div>
+	<div class="division-line-x plile"></div>
+	
+		
+		
+	
+	
+
+
+</div>
+
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+<div id="postListBottom" style="display: block;" class="other_category_and_popular_expose other_category_and_popular_click">
+	<div class="post">
+		<div class="post-back">
+			<table cellspacing="0" cellpadding="0" class="post-head" role="presentation">
+				<tbody>
+					<tr>
+						<td class="htl"></td>
+						<td class="htc"></td>
+						<td class="htr"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table cellspacing="0" cellpadding="0" class="post-body" role="presentation">
+				<tbody>
+					<tr>
+						<td class="bcl"></td>
+						<td class="bcc">
+						
+						
+							<div class="wrap_blog2_list wrap_blog2_categorylist2 other_category_post_list_expose other_category_post_list_click" id="bottom-list">
+								<div class="wrap_title">
+									<h4 class="title pcol2">
+										
+										이 블로그
+										
+										
+											
+												<a href="/PostList.nhn?blogId=gur5381&from=postList" class="pcol2 aggregate_click_delegate"> <strong class="pcol3"> 전체</strong> </a>카테고리 글
+											
+											
+										
+									</h4>
+									
+										
+											<a href="/PostList.nhn?blogId=gur5381&from=postList" class="pcol2 btn_openlist" onclick="clickcr(this,'rec_others.all','','',event);">전체글 보기</a>
+										
+										
+									
+									<i class="cline"></i>
+								</div>
+								<div class="wrap_list">
+									<table cellspacing="0" cellpadding="0" class="blog2_list" summary="글 목록">
+										<caption><span class="blind">글 목록</span></caption>
+										<colgroup>
+											<col class="title">
+											<col class="date">
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col">
+												<span class="blind">글 제목</span>
+											</th>
+											<th scope="col"><span class="blind">작성일</span></th>
+										</tr>
+										</thead>
+										<tbody id="postBottomTitleListBody">
+
+										</tbody>
+									</table>
+									<div class="wrap_blog2_paginate">
+										<div class="blog2_paginate" id="postBottomTitleListNavigation">
+
+										</div>
+									</div>
+								</div>
+									<div class="area_btn_top"  id="postBottomTitleListTop">
+										<a href="#" class="btn_top pcol2" role="button" onclick="clickcr(this, 'rec.top', '', '', event)"><i class="icon"></i><span class="blind">화면 최상단으로 이동</span></a>
+									</div>
+
+							</div>
+						
+						
+						</div>
+
+						</td>
+						<td class="bcr"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table cellspacing="0" cellpadding="0" class="post-footer" role="presentation">
+				<tbody>
+					<tr>
+						<td class="ftl"></td>
+						<td class="ftc"></td>
+						<td class="ftr"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning/PostViewBottom-515210704_https.js" charset="UTF-8"></script>
+
+<script type="text/javascript">
+	
+	postViewBottomTitleListController.start(blogId, nFirstLogNo, 'false' == 'true', parentCategoryNo, currentCategoryNo, categoryName, viewDate, '1530157309150', from, 'false', '');
+</script>
+
+
+
+    
+
+
+
+
+
+<script type="text/javascript">
+	var nilOptions = {
+    devMode: "true"=="false",
+		topReferer : (function() {
+			var ref = "";
+			var isMobile = function() {
+				return window.location.host.indexOf('m.blog.naver.com') >= 0;
+			}
+
+			if (isMobile()){
+				return document.referrer;
+			} else {
+				if (ref == '') {
+					if (parent != window && parent.location.href == document.referrer) {
+						return '';
+					} else {
+						return document.referrer;
+					}
+				} else {
+					return ref;
+				}
+			}
+		})()
+	}
+</script>
+<div id="multime2Layer" class="layer_style display_none"></div>
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+	<script id="socialPluginCustomTag" src="https://ssl.pstatic.net/spi/js/release/ko_EUC-KR/splugin.js?20190207" charset="euc-kr"></script>
+	<script>
+	window.onload = function() {
+        window.__splugin = SocialPlugIn_Core({
+            //소셜 플러그인 기본 설정
+            // nEvent Key
+            "evKey"       : "blog",
+            // 서비스명
+            "serviceName" : "블로그",
+            // 출처
+            "sourceName"  : "gur5381\uB2D8..",
+            "sendNClick"  : 'on',
+            "nClickCode" : {
+                'blog': { 'in': 'shr_lyr.blog', 'out': 'shr.blog' },
+                'cafe': { 'in': 'shr_lyr.cafe', 'out': 'shr.cafe' },
+                'bookmark': { 'in': 'shr_lyr.bookmark', 'out': 'shr.bookmark' },
+                'memo':     { 'in': 'shr_lyr.memo',     'out': 'shr.memo' },
+                'mail':     { 'in': 'shr_lyr.mail',     'out': 'shr.mail' },
+                'band':     { 'in': 'shr_lyr.band',     'out': 'shr.band' },
+                'line':     { 'in': 'shr_lyr.line',     'out': 'shr.line' },
+                'twitter':  { 'in': 'shr_lyr.twitter',  'out': 'shr.twitter' },
+                'facebook': { 'in': 'shr_lyr.facebook', 'out': 'shr.facebook' },
+                'weibo':    { 'in': 'shr_lyr.weibo',    'out': 'shr.weibo' },
+                'reddit':   { 'in': 'shr_lyr.reddit',   'out': 'shr.reddit' },
+                'copyurl':  { 'in': 'shr_lyr.copyurl' },
+                'release':  { 'out': 'shr.sharebtn' }
+        	}
+        });
+	}
+	</script>
+
+
+	
+    <script type="text/javascript" src="https://editor-static.pstatic.net/v/blog/se.viewer.js?v=1.0.5-20190131142213" defer></script>
+
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning/PostBottomCommon-1032610096_https.js" charset="utf-8"></script>
+<script type="text/javascript">
+new InstallBlogAppPush();
+
+/*var adPostObject = new AdPostObject();
+adPostObject.sBlogId = blogId;
+adPostObject.sAdPostSecurityParam = "nRYibYanUKpLFd2SpczLQRA5b9NJL1Zua0+kzdhbrFE=";
+adPostObject.oContentShareObject = g_ContentShareObject || {};
+adPostObject.bExistAdPost = false;
+adPostObject.bUseAdPostInSide = false;
+adPostObject.nCategoryDirectorySeq = "0";
+adPostObject.nFirstLogNo = nFirstLogNo;
+
+*/
+/*var adPostInject = new AdPostInject(adPostObject);
+adPostInject.injectAdPost();*/
+</script>
+
+	
+
+
+
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        var gdid = '90000003_00000000000000338703FC95';
+        var uri = 'http://blog.naver.com/gur5381/221308517525';
+        var relationType = 4;
+        var referrer = nilOptions.topReferer;
+        var dimension_1 = "";
+        var optional_1 = false;
+        var event_category = "post_view";
+        var isNilAnalystLeaveEvent = "true";
+        var isPostList = !!isPostList;
+        $Fn(function () {
+            try {
+                new nilForBlogCVAnalyst(blogId, uri, relationType, gdid, dimension_1, referrer, optional_1, event_category, isPostList, isNilAnalystLeaveEvent);
+            } catch (e) {}
+        }).attach(window, "load");
+
+    </script>
+
+
+<!-- 	<script Type="text/javascript" Src="http://openapi.map.naver.com/openapi/openapi_v23.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" charset="utf-8" src="https://blog.like.naver.com/js/reaction/dist/reaction.min.js?20190207"></script>
+<script type="text/javascript">
+
+
+$Fn(function() {
+	try {
+        reaction.init({
+            type: "basic",
+            domain : "https://blog.like.naver.com",
+            cssId : "blog",
+            isMobile : false,
+            maxCount : 9999,
+            isHiddenCount : false,
+            highlightCount : 50,
+            highlightClassname : "double_heart",
+            callback : {
+                click : function(param){
+                    oSympathyLayer.setLogno(param);
+                },
+                clicked : function(){
+                    oSympathyLayer.reloadSympathyLayer();
+                }
+            }
+        });
+	} catch(e){}
+
+    $ElementList(".u_likeit_list_btn").addClass("pcol2");
+
+}).attach(window, "load");
+</script>
+
+          				
+          				
+          			
+
+				
+		  	
+</div>
+
+							</div><hr />
+							
+							
+							<div id="left-area" class="side-width side-width-1"><div class="side-border"><div class="side-head"></div><div class="side-body">
+								
+
+
+<div id="blog-profile" class="widget">
+	
+	<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+</div>
+<div class="division-line-x"></div>      
+      
+      
+      
+      <div id="blog-music" class="widget" style="display:none">
+          <div class="bgm_player_wrap widget_t2  bgm_skin_t1">
+            <div class="tit">
+              <p class="_songTitle _titleStopped" style="display:none;"></p>
+              
+            </div>
+            <div class="control_music">
+              <a href="#" class="btn_prev _prevBtn"><span class="blind">이전</span></a>
+              <a href="#" class="btn_play _playBtn"><span class="blind">재생</span></a>
+              <a href="#" class="btn_pause _pauseBtn" style="display:none"><span class="blind">정지</span></a>
+              <a href="#" class="btn_next _nextBtn"><span class="blind">다음</span></a>
+            </div>
+            <div class="volume _volumeBar">
+              <div class="size _volumeBarMeter" style="width:50%"></div>
+              <div class="control _volumeControl" style="left:50%"></div>
+            </div>
+            <a href="#" class="btn_set _setBtn"><span class="blind">SET</span></a>
+            <a href="#" class="btn_list _listBtn"><span class="blind">LIST</span></a>
+          </div>
+      </div>
+      <div id="blog-music-flash-noti" class="lyr_bgmplayer" style="display: none;">
+            <p class="txt">BGM플레이어를 이용하시려면 <a href="https://helpx.adobe.com/kr/flash-player/kb/installation-problems-flash-player-windows.html " target="_blank">여기를 참고</a>하여 Adobe Flash Plugin을 활성화해주세요.</p>
+            <a href="#" class="btn_close _notiClose"><span class="_notiClose">레이어 닫기</span></a>
+      </div>
+      
+      
+      <div class="division-line-x"></div>
+      
+
+
+
+<div id="blog-category" class="widget">
+
+<input type="hidden" id="categoryNo" name="categoryNo" value="0" ></input>
+</div>
+<div class="division-line-x"></div>
+
+
+
+<div id="blog-tag" class="widget">
+	<div class="cm-border">
+		<div class="cm-head"></div>
+		<div class="cm-title">
+			<h3 class="component">
+				<span class="cm-icol">태그</span>
+				
+			</h3>
+			<div class="cmore">
+				<a href="#" id="recent" role="button" class="cm-icol _viewSmallTagCloud _returnFalse _param(gur5381|2)" onclick="clickcr(this,'taw.recent','','',event);">최근</a> <span class="cm-icol">|</span>
+				<a href="#" id="popular" role="button" class="cm-icol _viewSmallTagCloud _returnFalse _param(gur5381|1)" onclick="clickcr(this,'taw.popular','','',event);">인기</a>
+			</div>
+		</div>
+		<div class="cm-body" id="widget-tag">
+			
+			<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+		<div class="cm-footer"></div>
+	</div>
+</div>
+<div class="division-line-x"></div>
+
+<div id="blog-calendar" class="widget">
+
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+</div>
+<div class="division-line-x"></div>
+
+<div id="widget-mapview" class="widget">
+</div>
+<div class="division-line-x" ></div>
+
+
+
+
+	
+		
+	
+	
+	
+
+
+<div id="blog-search" class="widget">
+	<div class="blog_search">
+		<form name="searchfrm" id="searchfrm"  method="GET" action="https://blog.naver.com/PostSearchList.nhn">
+		<h3 class="blind">검색</h3>
+		<label for="searchText" class="blind">글 검색</label><input type="text" id="searchText" name="SearchText" class="inp" style="ime-mode:active;" value="" onclick="clickcr(this,'sew.window','','',event);"/><input type="hidden" name="blogId" value="gur5381" /><input type="image" src="https://blogimgs.pstatic.net/nblog/spc.gif" width="1" height="1" class="sp_blog btn" id="searchBtn" alt="검색" onclick="clickcr(this,'sew.search','','',event);"/>
+		</form>
+	</div>
+</div>
+<div class="division-line-x"></div>
+
+
+
+
+<div id="widget_library" class="widget libr_wrp">
+	<p class="libr_h">
+        <em class="tit">서재안에 글</em>
+        <strong><span id="library_widget_totalcount">0</span></strong>
+        
+    </p>
+    <div class="libr_bdy">
+    	
+    	
+    		
+	    		
+	    		
+			    	<p class="nodt_post">서재 안에<br>글이 없습니다.</p>
+	    		
+    		
+    	
+    		
+    	
+   		<div class="libr_ft">
+       	<div class="page_sec" id="widget_library_navigation">
+           	<span class="pg">
+                   <a href="#" class="pre_v _prev" style="display:none" onclick="clickcr(this, 'lbw.prev', '', '', event)">이전 목록</a>
+                   <a href="#" class="next_v _next" style="display:none" onclick="clickcr(this, 'lbw.next', '', '', event)">다음 목록</a>
+          	</span>
+            <span class="pg_num" id="library_widget_paging"></span>        
+        </div>
+       	<a href="/library/LibraryView.nhn?blogId=gur5381" class="more" onclick="clickcr(this, 'lbw.detail', '', '', event)">전체보기</a>
+       </div>
+    </div>
+    <span style="display:none" id="library_widget_totalPageCount">0</span>
+</div>
+<div class="division-line-x" ></div>
+
+
+
+<div id="blog-recent-comment" class="widget">
+</div>
+<div class="division-line-x"></div>
+
+
+
+<div id="blog-visitor" class="widget">
+	<div id="visitor_block" class="layerpop2" style="background:#FFF; display:none; width:326px;left:0;">
+		<!--[if lt IE 7]>
+		<iframe width="1000px" height="1000px" style="overflow:hidden;position:absolute;top:0;left:0;" frameborder="0" title="빈프레임"></iframe>
+		<![endif]-->
+		<div class="border_type" style="display: none">
+			<div class="content1">
+			<h6>다녀간 블로거를 삭제하시겠습니까?</h6>
+			<input type="checkbox" id="visited-blog-del" class="check" /> <label for="visited-blog-del">선택한 블로거를 스팸차단 ID로 등록합니다.</label>
+			<p class="subtext">스팸차단 ID로 등록시 방문흔적이 남지 않으며, 내 블로그 <br />내에서 모든 활동이 제한됩니다.</p>
+			</div>
+			<p class="btn1" id="delete_btn" style="padding:10px;">
+				<a href="#"><img src="https://blogimgs.pstatic.net/imgs/btn_confirm.gif" width="55" height="27" alt="확인" /></a><a href="#" class="_deleteFormClose _returnFalse"><img src="https://blogimgs.pstatic.net/imgs/btn_cancel.gif" width="55" height="27" alt="취소" /></a>
+			</p>
+			<a href="#" class="close _deleteFormClose _returnFalse"><img src="https://blogimgs.pstatic.net/static/ws/btn_close.gif" alt="닫기" width="15" height="14"></a>
+		</div>
+	</div>
+	<div class="cm-border">
+		<div class="cm-head" style="background:none;border:0;"></div>
+			
+				
+				
+					
+					
+					
+				
+			
+		<div class="cm-title" style="display: none">
+            <h3 class="component"><span class="cm-icol">다녀간 블로거</span></h3>
+			<p class="cmore"><span><button type="button" class="cm-icol listdown" id="visitor-list-i" title="다녀간 블로거 닫힘"><span>&#94</span></button></span></p>
+		</div>
+		<div class="cm-body" id="visitor-list" style="display:none;"  >
+
+		</div>
+		<div class="cm-footer" style="display: none"></div>
+	</div>
+</div>
+<div class="division-line-x"></div>
+
+
+
+<div id="blog-buddy" class="widget">
+	<div class="cm-border" id="blog-buddy-event-area">
+		<div class="cm-head  cm_cur  _viewMore"></div>
+		<div class="cm-title">
+			<h3 class="component"><span class="cm-icol _viewMore">이웃 블로거</span></h3>
+			<p class="cmore"><span><button type="button" class="cm-icol listup _viewMore" id="buddy-list-i" title="이웃 블로거 열림"><span class="_viewMore">&#94</span></button></span></p>
+		</div>
+		<div class="cm-body" id="buddy-list" style="display:block;">
+
+		</div>
+		<div class="cm-footer"></div>
+	</div>
+</div>
+<div class="division-line-x"></div>
+
+
+
+<div id="blog-counter" class="widget">
+</div>
+<div class="division-line-x"></div>
+
+
+
+<div id="blog-stat" class="widget">
+	<div class="cm-border">
+		<div class="cm-head">
+			<h3 class="component"><span class="cm-icol">활동정보</span></h3>
+		</div>
+		<div class="cm-body" id="widget-stat">
+		
+		<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+		<div class="cm-footer"></div>
+	</div>
+</div>
+<div class="division-line-x"></div>
+
+
+<div id="blog-rss" class="widget">
+  <a href="https://rss.blog.naver.com/gur5381.xml" target="_blank" class="rss1" onclick="clickcr(this,'rsw.rss20','','',event);"><span class="no">RSS 2.0</span></a>
+  <a href="https://rss.blog.naver.com/gur5381.xml?rss=1.0" target="_blank" class="rss2" onclick="clickcr(this,'rsw.rss10','','',event);"><span class="no">RSS 1.0</span></a>
+  <a href="https://rss.blog.naver.com/gur5381.xml?atom=0.3" target="_blank" class="rss3" onclick="clickcr(this,'rsw.atom03','','',event);"><span class="no">ATOM 0.3</span></a>
+</div>
+<div class="division-line-x"></div>
+
+
+
+<div id="blog-powered" class="widget">
+	<span>POWERED BY</span>
+	<a href="http://www.naver.com/" target="_blank" class="naver" onclick="clickcr(this,'naw.naverlogo','','',event);"><span>NAVER</span></a>
+	<a href="https://section.blog.naver.com" target="_blank" class="blog" onclick="clickcr(this,'naw.bloglogo','','',event);"><span>BLOG</span></a>
+</div>
+<div class="division-line-x"></div>
+							</div><div class="side-footer"></div></div></div>
+							
+						</div>
+						<div id="bottom-area">
+				      		
+						</div>
+					</div><hr />
+				</div>
+				<div id="whole-footer"></div>
+			</div>
+			<div id="blog-sign"></div>
+		</div>
+		
+		<div id="bottom-skin"></div>
+
+		
+		
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+<div id="avoid_facebook_crawling_layer" style="display:none;">
+	<p>안녕하세요.<br/>이 포스트는 네이버 블로그에서 작성된 게시글입니다.<br/>자세한 내용을 보려면 링크를 클릭해주세요.<br/>감사합니다.</p>
+</div>
+
+<div id="travel_closing_popup" class="travel_closing_popup" style="width:350px; display:none; cursor: default; position:absolute;">
+	<div class="border_type">
+		<div class="content3">
+			<h5 class="gr" style="margin:10;">글 보내기 서비스 안내</h5>
+			<p class="ulayer" style="margin:10;">2009년 6월 30일 네이버 여행 서비스가 종료되었습니다.<br/> 네이버 여행 서비스를 이용해 주신 여러분께 감사드리며, <br/>더 좋은 서비스로 보답할 수 있도록 노력하겠습니다.<br/></p>
+			<div align="center"><a href="#" class="btn_confirm _returnFalse _closeLayer _param(travel_closing_popup)"><img src="https://ssl.pstatic.net/static/common/btn/btn_confirm2.gif" border="0" alt="확인"></a></div>
+			<br />
+			<a href="#" class="closelayer _returnFalse _closeLayer _param(travel_closing_popup)"><img src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_thin_close.gif" width="13" height="10" alt="닫기" class="btn_close"></a>
+		</div>
+	</div>
+</div>
+
+
+<div style="display:none;" class="addfile_layer" id="fileLayer">
+	<div class="layer_contents"><ul><li></li></ul>
+	<a href="#" class="clse _closeLayer _param(fileLayer) _returnFalse"><img width="9" height="9" class="btn_close" src="https://blogimgs.pstatic.net/imgs/btn_close8.gif" alt="닫기"/></a>
+	</div>
+	<span class="shadow shadow1"></span><span class="shadow shadow2"></span><span class="shadow shadow3"></span>
+</div>
+
+	
+	<div id="layer_msg">
+	<div class="layer_hashfilter" id="malwareAlertLayer" style="width:390px;display:none;z-index:99999">
+		<h2>악성코드가 포함되어 있는 파일입니다.</h2>
+		<p class="file"><img src="https://blogimgs.pstatic.net/nblog/mylog/post/ico_file.gif" width="11" height="10" alt="파일">{FILENAME}</p>
+
+		<p>백신 프로그램으로 치료하신 후 다시 첨부하시거나, 치료가 어려우시면<br>파일을 삭제하시기 바랍니다.</p> <!-- 100513 -->
+		<a href="http://security.naver.com/index.nhn" target="_blank" class="vaccine_link">네이버 백신으로 치료하기</a>
+		<p class="info_text">고객님의 PC가 악성코드에 감염될 경우 시스템성능 저하,<br>개인정보 유출등의 피해를 입을 수 있으니 주의하시기 바랍니다.</p>
+		<div class="btns">
+			<a href="FILEPATH" class="downloadBtn"><img src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_download2.gif" width="73" height="26" alt="다운로드"></a>
+			<a href="#" class="_closeMalwareAlertLayer _returnFalse"><img src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_cancel3.gif" width="45" height="26" alt="취소"></a>
+		</div>
+		<a href="#" class="close _closeMalwareAlertLayer _returnFalse"><img src="https://blogimgs.pstatic.net/imgs/btn_close3.gif" width="19" height="19" border="0" alt="닫기"></a>
+	</div>
+	
+	<div class="layer_hashfilter layer_filter2" id="blockAlertLayer" style="display:none;z-index:99999">
+		<h2>작성자 이외의 방문자에게는 이용이 제한되었습니다.</h2>
+		<p>{ALERTMESSAGE}</p>
+		<p class="rst">이용제한 파일 : {FILENAME}</p>
+
+		<div class="btns">
+			<a href="FILEPATH" class="downloadBtn" id="blockAlertDownloadBtn"><img src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_download2.gif" width="73" height="26" alt="다운로드"></a>
+			<a href="#" class="_closeBlockAlertLayer _returnFalse"><img src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_cancel3.gif" width="45" height="26" alt="취소"></a>
+		</div>
+		<a href="#" class="close _closeBlockAlertLayer _returnFalse"><img src="https://blogimgs.pstatic.net/imgs/btn_close3.gif" width="19" height="19" border="0" alt="닫기"></a>
+	</div>
+	</div>
+
+
+<div id="sendInfoLayer" style="display:none;" class="send_post_layer">
+	<div class="layer_contents" id="sendInfoLayerDiv"></div>
+	<a href="#"><img width="13" height="12" class="btn_close" src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_close5.gif" alt="닫기"/></a>
+	<span class="shadow shadow"></span><span class="shadow shadow2"></span><span class="shadow shadow3"></span>
+</div>
+
+
+<div style="position:absolute; top:0; left: -10000px; width: 320px;" class="post_layer" id="sendPostLayer">
+	<div class="shadow01">
+	<div class="shadow01_side">
+	<div class="shadow02">
+	<div class="shadow02_side">
+		<div class="border_type">
+			<div class="content" id="layerContent"></div>
+			<div class="btn">
+				<a href="#" id="sendPostLayerBtn" class="_deletePostConfirm _returnFalse _closeLayer _param(sendPostLayer)" target="_blank"><img src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_confirm.gif" width="38" height="21" alt="확인"></a>
+				<a href="#" class="_closeLayer _param(sendPostLayer) _returnFalse"><img src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_cancel.gif" width="38" height="21" alt="취소"></a>
+			</div>
+			<a href="#" class="close _closeLayer _param(sendPostLayer) _returnFalse"><img src="https://blogimgs.pstatic.net/nblog/btn_close_1.gif" alt="닫기" width="15" height="14"></a>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+
+
+<input type="hidden" name="logtype" id="logtype" value="mylog"></input>
+
+
+
+<form id="saveTagName" name="saveTagName" method="post" action="/BlogTagNameRegist.nhn" target="saveTagNameFrame">
+	<input type="hidden" name="blogId" value="gur5381" />
+	<input type="hidden" name="logNo" />
+	<input type="hidden" name="chtagname" />
+	<input type="hidden" name="logType" value="mylog"/>
+	<input type="hidden" name="directEdit" value="Y" />
+</form>
+
+
+<iframe name="saveTagNameFrame" id="saveTagNameFrame" src="" style="display:none" width="0" height="0" title="포스트별 태그정보 저장용 프레임"></iframe>
+
+
+<form name="deletePostFrm" method="post" style="display:none;" action="">
+    <input type='hidden' name='blogId' value=''>
+    <input type='hidden' name='cpage' value=''>
+    <input type='hidden' name='categoryNo' value=''>
+    <input type='hidden' name='parentCategoryNo' value=''>
+    <input type='hidden' name='viewDate' value=''>
+    <input type='hidden' name='sourceCode' value=''>
+	<input type='hidden' name='logNo' value=''/>
+	<input type='hidden' name='currentPage' value=''/>
+</form>
+
+
+<div id="ExifInfoBtn" style="display: none; position: absolute;"
+	class="btn_exif">
+	<a href="#" class="_showExifInfoLayer _returnFalse">
+		<img height="20" width="80" alt="사진정보 보기" src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_viewexif.gif" />
+	</a>
+</div>
+<div id="ExifInfoBtnWithDirectSave" style="display: none; position: absolute;" class="btn_exif">
+	<a href="#" class="_saveSourceImage _returnFalse">
+		<img width="80" height="20" alt="원본 저장하기" 	src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_originaldn.gif">
+	</a>
+	<a href="#" class="_showExifInfoLayer _returnFalse">
+		<img height="20" width="80" alt="사진정보 보기" 	src="https://blogimgs.pstatic.net/nblog/mylog/post/btn_viewexif.gif" />
+	</a>
+	<ul id="SaveOption" class="save_opt _saveOptionLayer">
+		<li><a href="#" class="toPC _returnFalse">내PC 저장</a></li>
+		<li><a href="#" class="toNDrive _returnFalse">N드라이브 저장</a></li>
+	</ul>
+</div>
+
+<div id="ExifInfoLayer" style="display: none;" class="detail_exif">
+	<a href="#" class="_ellipsisHelper _ellipsis _param(120)" style="display: none; font-size: 11px; font-family: '돋움', Dotum;"></a>
+	<div>
+		<a href="#" class="_closeLayer _param(ExifInfoLayer) _returnFalse">
+			<img height="21" width="21" class="close _ExifCloseBtn" src="https://blogimgs.pstatic.net/imgs/nblog/spc.gif" />
+		</a> 
+		<img height="14" width="69" class="tit" alt="사진정보보기" src="https://blogimgs.pstatic.net/nblog/mylog/post/tit_viewexif.gif" /><br />
+		<dl>
+			<dt>카메라 모델</dt>
+			<dd class="_model"></dd>
+			<dt>해상도</dt>
+			<dd class="_resolution"></dd>
+			<dt>노출시간</dt>
+			<dd class="_exposure"></dd>
+			<dt>노출보정</dt>
+			<dd class="_correct"></dd>
+			<dt>프로그램모드</dt>
+			<dd class="_program"></dd>
+			<dt>ISO감도</dt>
+			<dd class="_iso"></dd>
+			<dt>조리개값</dt>
+			<dd class="_iris"></dd>
+			<dt>초점길이</dt>
+			<dd class="_focus"></dd>
+			<dt>측광모드</dt>
+			<dd class="_ttl"></dd>
+			<dt>촬영일시</dt>
+			<dd class="_date"></dd>
+		</dl>
+	</div>
+</div>
+
+<div class="cp_layer_popup" style="width:370px; display:none" id="sendPostBlockLayerById">
+	<div class="shadow1"><div class="shadow1_side"><div class="shadow2"><div class="shadow2_side">
+		<div class="border_type">
+			<h4 class="header"><span class="blind">글보내기 제한 공지</span></h4>
+			<div class="content">
+				<dl class="cp_noti" >
+					<dt><img src="https://blogimgs.pstatic.net/nblog/ico_notice2.gif" width="29" height="26" alt=""></dt>
+					<dd>저작권 침해가 우려되는 컨텐츠가 포함되어 있어<br/> 글보내기 기능을 제한합니다. </dd>
+				</dl>
+				<div class="cp_noti_desc">
+					<p>네이버는 블로그를 통해 저작물이 무단으로 공유되는 것을 막기 위해,
+						저작권을 침해하는 컨텐츠가 포함되어 있는 게시물의 경우 글보내기 기능을 제한하고 있습니다.</p>
+					<p>상세한 안내를 받고 싶으신 경우 네이버 고객센터로 문의주시면 도움드리도록 하겠습니다.
+						건강한 인터넷 환경을 만들어 나갈 수 있도록 고객님의 많은 관심과 협조를 부탁드립니다.</p>
+				</div>
+			</div>
+			<a href="#BtnCLose" class="closelayer" onclick="$Element($('sendPostBlockLayerById')).hide();"><img src="https://blogimgs.pstatic.net/nblog/book/publishingcompany/btn_close.gif" alt="닫기" width="15" height="14"></a>
+		</div>
+	</div></div></div></div>
+</div>
+
+<div class="cp_layer_popup" style="width:370px; display:none" id="sendPostBlockModifyLayerById">
+	<div class="shadow1"><div class="shadow1_side"><div class="shadow2"><div class="shadow2_side">
+		<div class="border_type">
+			<h4 class="header"><span class="blind">주제 분류 제한 공지</span></h4>
+			<div class="content">
+				<dl class="cp_noti" >
+					<dt><img src="https://blogimgs.pstatic.net/nblog/ico_notice2.gif" width="29" height="26" alt=""></dt>
+					<dd>저작권 침해가 우려되는 컨텐츠가 포함되어 있어<br/> 주제 분류 기능을 제한합니다.</dd>
+				</dl>
+				<div class="cp_noti_desc">
+					<p>네이버는 블로그를 통해 저작물이 무단으로 공유되는 것을 막기 위해,
+						저작권을 침해하는 컨텐츠가 포함되어 있는 게시물의 경우 주제 분류 기능을 제한하고 있습니다.</p>
+					<p>상세한 안내를 받고 싶으신 경우 네이버 고객센터로 문의주시면 도움드리도록 하겠습니다.
+						건강한 인터넷 환경을 만들어 나갈 수 있도록 고객님의 많은 관심과 협조를 부탁드립니다.</p>
+				</div>
+			</div>
+			<a href="#BtnCLose" class="closelayer" onclick="$Element($('sendPostBlockModifyLayerById')).hide();"><img src="https://blogimgs.pstatic.net/nblog/book/publishingcompany/btn_close.gif" alt="닫기" width="15" height="14"></a>
+		</div>
+	</div></div></div></div>
+</div>
+
+
+<form method="post" action="https://blog.naverblogwidget.com/ExternalWidgetRender.nhn?blogId=gur5381" name="ExternalWidgetForm">
+	<input type="hidden" name="reversedWidgetCode"/>
+	<input type="hidden" name="blogId"/>
+</form>
+
+
+<form name="loginForm" method="post" action="https://nid.naver.com/nidlogin.login?mode=form">
+	<input type="hidden" name="url" value="" />
+</form>
+
+
+<div id="c_layer_popup" style="position:absolute;display:none;">
+	<!--[if lt IE 7]>
+	<iframe width="1000px" height="1000px" style="overflow:hidden;position:absolute;top:0;left:0;" frameborder="0" title="빈프레임"></iframe>
+	<![endif]-->
+	<p class="c_desc00">작성하신 <strong><span>게시글</span>에 사용이 제한된 문구가 포함</strong>되어 일시적으로 <br /> 등록이 제한됩니다.</p>
+	<div class="c_contents">
+		<p class="c_desc01">이용자 분들이 홍보성 도배, 스팸 게시물로 불편을 겪지 않도록<br /> 다음과 같은 경우 해당 게시물 등록이 일시적으로 제한됩니다.</p>
+		<ul class="c_desc02">
+			<li>특정 게시물 대량으로 등록되거나 해당 게시물에서 자주 사용하는<br />
+			  문구가 포함된 경우</li>
+			<li>특정 게시물이 과도하게 반복 작성되거나 해당 게시물에서 자주 사용하는<br />문구가 포함된 경우</li>
+		</ul>
+		<p class="c_desc03">스팸 게시물이 확대 생성되는 것을 방지하기 위하여 문구 및 사용 제한기간을<br />상세하게 안내해 드리지 못하는 점 양해 부탁 드립니다. 모두가 행복한 인터넷<br />문화를 만들기 위한 네이버의 노력이오니 회원님의 양해와 협조 부탁드립니다.</p>
+		<p class="c_desc04">더 궁금하신 사항은 <a href="https://help.naver.com/support/alias/blog/stats/stats1.naver" target="_blank">고객센터</a>로 문의하시면 자세히 알려드리겠습니다.</p><!-- //090708 -->
+		<p class="c_desc05">수정하신 후 다시 등록해 주세요.</p>
+	</div>
+	<div class="c_footer"><button type="button" onclick="if(wordCheck) wordCheck.hideDialog();">확인</button><button type="button" class="c_close" onclick="if(wordCheck) wordCheck.hideDialog();"><img src="https://blogimgs.pstatic.net/static/common/popup/btn_close3.gif" width="15" height="14" alt="닫기" /></button></div>
+</div>
+
+
+<div id="loginstart_layer" class="layerpopup" style="z-index:199;width:380px; top:100px; left:414px; display:none;">
+	<div class="shadow1"><div class="shadow1_side">
+	<div class="shadow2"><div class="shadow2_side">
+	<div class="shadow3"><div class="shadow3_side">
+		<div class="border_type">
+			<div class="logbox_wrap">
+				<p class="notice">회원님의 안전한 서비스 이용을 위해 <strong>비밀번호를 확인해 주세요.</strong></p>
+				<p class="notice02">다시 한번 <strong>비밀번호 확인</strong> 하시면 이용중인 화면으로 돌아가며, 작성 중이던<br>내용을 정상적으로 전송 또는 등록하실 수 있습니다.</p>
+				<a href="#" onClick="loginObj.closeLayeredLogin(); return false;" class="closelayer"><img src="https://blogimgs.pstatic.net/nblog/widget/btn_close.gif" alt="닫기" width="15" height="14"></a>
+				<div class="frame_wrap"><iframe id="layeredframe" src="about:blank" width="350" height="163" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="레이어용 프레임"></iframe></div>
+			</div>
+		</div>
+	</div></div>
+	</div></div>
+	</div></div>
+</div>
+
+
+<div id="captcha_layer" class="layerpopup" style="z-index:-1;width:504px; top:0px; left:0px; display:none;">
+	<input type="hidden" id="target" value=""/>	<div class="frame_wrap"><iframe id="captchalayeredframe" src="about:blank" width="504" height="252" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="안부게시판 캡차"></iframe></div>
+</div>
+
+
+<div id="day_write_limit_layer"  class="layerpopup" style="position:absolute;top:350px;left:50px;z-index:999;font-family:'돋움',dotum;font-size:12px;color:#666;line-height:16px; display:none;">
+	<div style="width:306px;height:161px;padding:0 20px;border:2px solid #666;background:#fff">
+		<div style="margin:24px 0 10px -1px;padding:0;color:#333">
+			<strong>1일 안부글 작성횟수를 초과하셨습니다.</strong>
+		</div>
+		<div style="width:100%;margin-left:-1px">
+			네이버 블로그에서는 프로그램을 이용한<br>
+			안부글 자동등록 방지를 위해 1일 안부글 작성횟수에<br>
+			제한을 두고 있습니다.
+		</div>
+		<div style="margin-top:16px;padding-top:9px;border-top:1px solid #e5e5e5;letter-spacing:-1px;text-align:center">
+			<a href="#" onClick="writeLimitObj.closeLayeredWriteLimit('day'); return false;"  ><img src="https://blogimgs.pstatic.net/nblog/guestbook/btn_ok.gif" width="47" height="27" alt="확인" border="0"  /></a>
+		</div>
+		<a href="#" onClick="writeLimitObj.closeLayeredWriteLimit('day'); return false;" class="closelayer"><img src="https://blogimgs.pstatic.net/nblog/guestbook/btn_close2.gif" width="14" height="14" alt="닫기"  border="0" /></a>
+	</div>
+</div>
+
+
+<div id="reported_write_limit_layer" class="layerpopup" style="position:absolute;top:560px;left:50px;z-index:999;font-family:'돋움',dotum;font-size:12px;color:#666;line-height:16px; display:none;">
+	<div style="width:341px;height:231px;padding:0 20px;border:2px solid #666;background:#fff">
+		<div style="margin:24px 0 10px -1px;padding:0;color:#333">
+			<strong>1일 안부글 작성횟수를 초과하셨습니다.</strong>
+		</div>
+		<div style="width:100%;margin-left:-1px">
+			고객님이 남기신 안부글에 대한 다수의 신고가 접수되어<br>
+			1일 안부글 작성 횟수가 <span style="color:#2cae0c"><strong>5회</strong>로 제한</span>되었습니다.
+			<p id="blockedDate" style="margin:0;padding:7px 0 15px 1px"></p>
+			네이버 블로그는 여러 사람이 함께 모여 즐거움을 나누는<br>
+			공간으로 모든 분들이 기분좋게 블로그를 이용할 수 있도록<br>
+			고객님의 이해와 협조 부탁 드립니다.
+		</div>
+		<div style="margin-top:16px;padding-top:9px;border-top:1px solid #e5e5e5;letter-spacing:-1px;text-align:center">
+			<a href="#" onclick="writeLimitObj.closeLayeredWriteLimit('reported'); return false;" class="closeLayer"><img src="https://blogimgs.pstatic.net/nblog/guestbook/btn_ok.gif" width="47" height="27" alt="확인"></a>
+		</div>
+		<a href="#" onclick="writeLimitObj.closeLayeredWriteLimit('reported'); return false;" class="closeLayer" style="position:absolute;top:10px;right:10px"><img src="https://blogimgs.pstatic.net/nblog/guestbook/btn_close2.gif" width="19" height="19" alt="닫기"></a>
+	</div>
+</div>
+
+
+<div id="hbeanLeverageLayer" style="z-index:101; position:absolute; top:100px; right:10px;" ></div>
+
+<script type="text/template" id="tpl_video">
+	<span class="sp_blog ico_video">동영상</span>
+</script>
+<script type="text/template" id="tpl_recommend_buddy">
+<strong class="tit">{=recommendTitle}</strong>
+<div class="lyr_cont">
+	<a href="/{=blogId}" target="_blank" onclick="clickcr(this,'bap.blog','','',event);">
+		<div class="bloger">
+			<span class="thumb"><img src="{=profileImageUrl}" width="35" height="35" alt="섬네일"></span>
+			<span class="txt">
+				<strong class="nick">{=nickname}</strong>
+				<span class="dsc">{=blogName}</span>
+			</span>
+		</div>
+	<a>
+	<a href="#" class="btn_add_buddy _addBuddy _param({=blogId})"><span class="ico"></span>이웃추가</a>
+</div>
+<a href="#" class="btn_close _closeLayer">이웃추가 레이어 닫기</a>
+</script>
+
+
+<style type="text/css">
+	.layerpop2{position:absolute; z-index:999; font:normal 12px 돋움,Dotum; color:#333; overflow:hidden; display:none;}
+	.layerpop2 .border_type{position:relative; border:solid 2px #777; background-color:#fff;}
+	.layerpop2 .close{position:absolute; top:8px; right:8px;}
+	.layerpop2 .content1{padding:30px 30px 21px; border-bottom:solid 1px #f0f0f0;}
+	.layerpop2 .content1 h6{font-weight:bold; font-size:14px; padding-bottom:10px; margin:0; color:#333;}
+	.layerpop2 .subtext{font-size:11px; color:#999; margin:0; padding:7px 0 0; line-height:16px; letter-spacing:-1px; text-align:left;}
+	.layerpop2 .check{width:13px; height:13px; vertical-align:middle; padding:0 3px 2px 0; margin-left:2px;}
+	.layerpop2 .btn1{background-color:#fbfbfb; border-top:solid 1px #f7f7f7; text-align:center; margin:0; padding:11px 0 20px;}
+	.layerpop2 .btn1 img{margin:0 1px; vertical-align:top;}
+	</style>
+<div id="sympathyDeleteLayer" class="layerpop2" style="background:#FFF; display:none; width:326px; top:200px; left:50px;">
+	<div class="border_type">
+		<div class="content1">
+		<h6>공감을 삭제하시겠습니까?</h6>
+		<p class="subtext">이 글의 공감수도 함께 차감됩니다.</p>
+		<input type="checkbox" id="registerBlacklistCheck" class="check" style="display:none"><label for="registerBlacklistCheck" style="display:none">선택한 블로거를 블랙리스트ID로 등록합니다.</label>
+		<p class="subtext" style="display:none">블랙리스트로 등록시 공감 및 댓글 작성 등이 <br/> 제한되며 방문흔적이 남지 않습니다.</p>
+		</div>
+		<p class="btn1" id="sympathyLayer_deleteBtn" style="padding:10px;">
+			<a href="#"><img src="https://blogimgs.pstatic.net/imgs/btn_confirm_pop2.gif" width="55" height="27" alt="확인" /></a><a href="#" class="_deleteFormClose _returnFalse"><img src="https://blogimgs.pstatic.net/imgs/btn_cancel_pop2.gif" width="55" height="27" alt="취소" /></a>
+		</p>
+		<a href="#" class="close _deleteFormClose _returnFalse"><img src="https://blogimgs.pstatic.net/static/ws/btn_close.gif" alt="닫기" width="15" height="14"></a>
+	</div>
+</div>
+
+
+<div id="buddyRecommendLayer" class="pop_buddy_add_lyr" style="display:none;">
+	 <strong class="tit">이웃으로 추가하시겠어요?</strong>
+	 <div class="lyr_cont">
+	         <div class="bloger">
+	           <span class="thumb">
+	           
+	           	
+	           		<img src="https://blogimgs.pstatic.net/nblog/comment/login_basic.gif" width="35" height="35" alt="프로필 이미지">
+	           	
+	           	
+	    	   
+	           </span>
+	           <span class="txt">
+	                   <strong class="nick">줌코딩</strong>
+	                   <span class="dsc">gur5381님의 블로그</span>
+	           </span>
+	         </div>
+	         <a href="#" class="btn_add_buddy _addBuddy _param(gur5381)"><span class="ico"></span>이웃추가</a>
+	         
+	 </div>
+	 <a href="#" class="btn_close _buddyRecommendCloseLayer">이웃추가 레이어 닫기</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning//common/js/flash/allowSwfForChrome-d0f381e_https.js"></script>
+<script type="text/javascript">
+  allowSwfForChrome.allow('/versioning//common/swf/chromeFlashRestrictionEscape-1d933a9.swf', 1, 1);
+</script>
+
+
+
+<style type="text/css">
+/* Default Type Selector */
+#banword_wrap *, #banword_wrap1 *{ margin:0; padding:0; font-size:12px; font-family:돋움, Dotum, 굴림, Gulim, Helvetica, Sans-serif; text-align:left;}
+#banword_wrap a, #banword_wrap1 a{ color:#004790;}
+#banword_wrap img, #banword_wrap1 img,
+#banword_wrap fieldset, #banword_wrap1 fieldset{ border:none;}
+#banword_wrap legend, #banword_wrap1 legend{ display:none;}
+#banword_wrap em, #banword_wrap1 em{ font-style:normal; color:#258102;}
+#banword_wrap strong, #banword_wrap1 strong{ color:#258102;}
+#banword_wrap li, #banword_wrap1 li{ list-style:none;}
+#banword_wrap h1, #banword_wrap1 h1{ font:bold 13px 굴림, Gulim, 돋움, Dotum, Helvetica, Sans-serif; color:#333; padding:11px 0 0 19px; *padding:12px 0 0 19px; }
+/* Layout */
+#banword_wrap{ position:absolute; width:410px; _width /**/:418px; overflow:hidden; border:4px solid #777; background:#fff; display: none; z-index: 200;}
+#banword_wrap1{ position:relative; width:410px; _width /**/:418px;height:446px; overflow:hidden; border:4px solid #777; background:#fff;}
+#bw_content{ padding:14px 0 28px 0; margin:0 19px 0 18px;}
+#bw_footer{ height:8px; _height:8px; text-align:center;}
+body:first-of-type #bw_footer{ height:7px;}
+#bw_footer, x:-moz-any-link, x:default { height:7px;}
+*:first-child+html #bw_footer{ height:8px;}
+#bw_btn_footer{ height:46px; _height /**/:45px; text-align:center; background:url(https://ssl.pstatic.net/static/common/popup/bg_not_available_common.gif) no-repeat left 1px; padding:16px 0 0 0 ; _padding /**/:16px 0 20px 0 ;}
+
+/* Common */
+#bw_content .bw_bx1{border:1px solid #f1f1f1; margin:0 1px 9px 2px; height:100px; background:#f8f8f8; }
+#bw_content .bw_bx1_shadow{position:relative;  padding:13px 13px 12px 0; }
+#bw_content .bw_bx1_shadow strong { color:#282828; vertical-align:top; margin-left:13px; margin-bottom:10px; display:block; }
+#bw_content .bw_bx1_shadow a img {vertical-align:middle; margin:-1px 0 0 0; *margin:-2px 0 0 0;}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0)
+{
+	#bw_content .bw_bx1_shadow a img {margin:-1px !important;}
+}
+body:first-of-type #bw_content .bw_bx1_shadow a img {vertical-align:middle; margin:-5px 0 0 0;}
+#bw_content .bw_bx1_shadow_in {height:35px; _height /**/:53px; margin:7px 0 0 13px; _margin:5px 0 0 13px; padding:8px 13px 7px 12px; _padding:9px 13px 8px 12px; border:#e3e3e3 1px solid; color:#666; line-height:20px; background:#fff; overflow:auto;}
+body:first-of-type #bw_content .bw_bx1_shadow_in {height:35px; _height /**/:53px; margin:5px 0 0 13px; padding:8px 13px 9px 12px; border:#e3e3e3 1px solid; color:#666; line-height:20px; background:#fff; overflow:auto;}
+#bw_content .bw_bx1_shadow_in, x:-moz-any-link, x:default {height:35px; _height /**/:53px; margin:5px 0 0 13px; padding:8px 13px 9px 12px; border:#e3e3e3 1px solid; color:#666; line-height:20px; background:#fff; overflow:auto;}
+*:first-child+html #bw_content .bw_bx1_shadow_in {height:33px; _height /**/:53px; margin:7px 0 0 13px; padding:8px 13px 9px 12px; border:#e3e3e3 1px solid; color:#666; line-height:20px; background:#fff; overflow:auto;}
+
+#bw_content .bw_bx2{ border:1px solid #eeeeee; margin:0 0 6px 3px; background:#fbfbfb; line-height:18px;}
+#bw_content .bw_bx2 *{ color:#444444;}
+/* Content */
+#bw_content .bw_desc1{ color:#444444; font-weight:bold; margin:0 0 4px 0;  letter-spacing:-1px;}
+#bw_content .bw_desc2{ color:#444444; margin:0 0 13px 0;}
+
+#bw_content .bw_desc3{ position:relative; color:#696968; padding:9px 2px 9px 34px; font-size:11px; letter-spacing:-1px; background:url(https://ssl.pstatic.net/static/common/popup/bu_attention.gif) no-repeat 13px 12px;}
+body:first-of-type #bw_content .bw_desc3{ padding:10px 2px 8px 34px;}
+#bw_content .bw_desc3, x:-moz-any-link, x:default { padding:10px 2px 8px 34px;}
+*:first-child+html #bw_content .bw_desc3{ padding:9px 2px 9px 34px;}
+
+#bw_content .bw_desc4 { color:#6c6c6c; margin:10px 0 0 33px; font-size:11px; letter-spacing:-1px;}
+body:first-of-type #bw_content .bw_desc4 { margin:9px 0 0 33px;}
+#bw_content .bw_desc4, x:-moz-any-link, x:default { margin:9px 0 0 33px;}
+*:first-child+html #bw_content .bw_desc4 { margin:10px 0 0 33px;}
+#bw_content .bw_desc4 a {color:#258102; font-size:11px;}
+
+#bw_content .bw_desc5 { color:#333333; margin:16px 0 10px 0; _margin:16px 0 10px 0; padding:0 0 0 1px; letter-spacing:-1px;}
+body:first-of-type #bw_content .bw_desc5 { color:#333333; margin:14px 0 12px 0; padding:0 0 0 1px; letter-spacing:-1px;}
+#bw_content .bw_desc5, x:-moz-any-link, x:default { color:#333333; margin:14px 0 12px 0; padding:0 0 0 1px; letter-spacing:-1px;}
+*:first-child+html #bw_content .bw_desc5 { color:#333333; margin:16px 0 12px 0; _margin:16px 0 10px 0; padding:0 0 0 1px; letter-spacing:-1px;}
+#bw_content .bw_desc5 strong{ color:#333333;}
+
+#bw_content .bw_desc6{color:#333333; margin:21px 0 0 0; padding:0 0 5px 1px; _padding:0 0 3px 1px; letter-spacing:-1px; border-bottom:1px solid #ececec; line-height:20px;}
+/*html:first-child #bw_content .bw_desc6 {margin:46px 0 0 0; padding:0 0 8px 1px;}
+body:first-of-type #bw_content .bw_desc6 {margin:26px 0 0 0; padding:0 0 8px 1px;}
+#bw_content .bw_desc6, x:-moz-any-link, x:default {margin:26px 0 0 0; padding:0 0 8px 1px;}
+*:first-child+html #bw_content .bw_desc6 { margin:27px 0 0 0; padding:0 0 9px 1px;}*/
+#bw_content .bw_desc6 strong{ color:#333333;}
+
+#bw_content .layer_content p {font-size:11px; line-height:14px; color:#717171; letter-spacing:-1px;}
+#bw_content .layer_content p.bw_orange {margin-top:5px; color:#fd630a;}
+/* function button box */
+#bw_content .function_btn {overflow:hidden; height:53px; *height:57px; _height:60px; width:362px; margin:14px 0 21px 6px; padding-top:4px;}
+body:first-of-type #bw_content .function_btn { margin:14px 0 20px 6px;}
+#bw_content .function_btn, x:-moz-any-link, x:default  { margin:14px 0 20px 6px;}
+*:first-child+html #bw_content .function_btn { margin:14px 0 21px 6px;}
+
+#bw_content .function_btn .btn_wrap {float:left; width:174px; _width /**/:181px; padding:0 0 0 7px;}
+#bw_content .function_btn .btn_wrap p {margin-top:5px; font-size:11px; letter-spacing:-1px; color:#696968; background:url(https://ssl.pstatic.net/static/common/popup/bu_line.gif) no-repeat right top;}
+body:first-of-type #bw_content .function_btn .btn_wrap p {margin-top:6px;}
+#bw_content .function_btn .btn_wrap p, x:-moz-any-link, x:default  {margin-top:6px;}
+*:first-child+html #bw_content .function_btn .btn_wrap p {margin-top:5px;}
+
+#bw_content .function_btn .btn_wrap1 {float:left; width:179px; _width /**/:181px; text-align:center; padding-left:2px}
+#bw_content .function_btn .btn_wrap1 p {margin-top:5px; font-size:11px; letter-spacing:-1px; color:#696968; text-align:left; padding:0 0 0 4px;}
+body:first-of-type #bw_content .function_btn .btn_wrap1 p {margin-top:6px;}
+#bw_content .function_btn .btn_wrap1 p, x:-moz-any-link, x:default  {margin-top:6px;}
+*:first-child+html #bw_content .function_btn .btn_wrap1 p {margin-top:5px;}
+
+#bw_footer button.c_close{position:absolute; top:7px; right:6px; width:18px; height:17px; background:none; border:none;}
+#bw_footer button.c_close, x:-moz-any-link, x:default {top:5px; right:8px;}
+*:first-child+html #bw_footer button.c_close {top:7px; right:6px;}
+
+#bw_btn_footer button {width:55px; height:27px; text-align:center; font-size:12px;}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0)
+{
+	#bw_btn_footer button {padding-top:6px;}
+}
+#bw_btn_footer button.c_close{position:absolute; top:7px; right:6px; width:18px; height:17px; background:none; border:none;}
+#bw_btn_footer button.c_close, x:-moz-any-link, x:default {top:5px; right:8px;}
+*:first-child+html #bw_btn_footer button.c_close {top:7px; right:6px;}
+
+</style>
+<script type="text/javascript">
+	var wordCheck;
+	function setWordCheckObject(obj) {
+		wordCheck = obj;
+	}
+</script>
+	<!-- 레이어팝업2 Document Size : 410*372 -->
+<div id="banword_wrap">
+	<div id="bw_content">
+		<p class="bw_desc5">작성하신 <strong><span id="bw_ugc_type"></span>에 이용자들의 신고가 많은 표현이 포함</strong>되어 있습니다.</p>
+		<div class="bw_bx1">
+			<div class="bw_bx1_shadow">
+				<strong>신고가 많은 표현</strong>
+				<div id='bw_ban_words' class="bw_bx1_shadow_in">
+				</div>
+			</div>
+		</div>
+		<div class="bw_bx2">
+			<p class="bw_desc3">다른 표현을 사용해주시기 바랍니다.<br>
+			건전한 인터넷 문화 조성을 위해 회원님의 적극적인 협조를 부탁드립니다.</p>
+		</div>
+		<p class="bw_desc4">더 궁금하신 사항은 <a href="https://help.naver.com/support/alias/blog/stats/stats1.naver" target="_blank">고객센터</a>로 문의하시면 자세히 알려드리겠습니다.</p>
+	</div>
+		<div id="bw_btn_footer">
+		<button type="button" onclick="if(wordCheck) wordCheck.hideDialog();">확인</button>
+		<button type="button" class="c_close" onclick="if(wordCheck) wordCheck.hideDialog();"><img src="https://blogimgs.pstatic.net/static/common/popup/btn_close3.gif" width="15" height="14" alt="닫기"></button>
+		</div>
+	</div>
+	<div id="dimmed_layer" style="z-index:198; position:absolute;left:0px; top:0px;  background: #000; opacity:0.1;filter:alpha(opacity=10); display:none;"></div>
+	<div id="dimmed_iframe_layer" style="z-index:197; position:absolute;left:0px; top:0px;  background: #000; opacity:0.1;filter:alpha(opacity=10); display:none;"><iframe  style="z-index:198; width: 100%; height: 100%; position:absolute;left:0px; top:0px;  background: #000; opacity:0;filter:alpha(opacity=0);" title="ie6에서 사용되는 팝업시 비활성화 프레임"></iframe></div>
+
+<script type="text/javascript">
+if (!window.nhn) window.nhn = {};
+if (!window.nhn.Blog) window.nhn.Blog = {};
+if (!window.nhn.Blog.SocialApp) window.nhn.Blog.SocialApp = {};
+
+var gsNDriveUrl = "https://cloud.naver.com";
+var gsStaticNetUrl = "https://ssl.pstatic.net/static";
+</script>
+
+
+<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning/LayoutBottomCommon-166387124_https.js" charset="UTF-8"></script>
+
+	<script type="text/javascript" src="https://ssl.pstatic.net/t.static.blog/mylog/versioning//common/js/mylog/floating/FloatingBarAreaHandler-c2cd2c9_https.js"></script>
+
+<script type="text/javascript">
+function openLoginPopup() {
+	var closeUrl = blogURL + "/post/common/reloadOpenerParentAndClose.jsp";
+	window.open(idURLSecret + "/nidlogin.login?mode=form&template=plogin&url="+closeUrl,"loginPopup","width=400,height=267");
+	return;
+}
+
+var blogId = 'gur5381';
+</script>
+<script type="text/javascript">
+if ( typeof nsc == 'undefined') {
+	nsc = "blog.post";
+}
+
+var ccsrv="cc.naver.com";
+var nclk_evt = 3;
+nclk_do();
+
+
+</script>
+
+
+
+
+</body>
+</html>
