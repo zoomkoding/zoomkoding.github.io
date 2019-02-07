@@ -3,7 +3,7 @@ title: (웹입문기-1) APT 명령어, APM 설치하기(apache2, php7, mysql)
 layout: post
 date: '2018-05-08 02:00:00'
 author: 줌코딩
-tag: Apt명령어, apm설치, apminstall, apache, php, mysql
+tags: Apt명령어, apm설치, apminstall, apache, php, mysql
 cover: "/assets/instacode.png"
 categories: Linux Web개발
 ---

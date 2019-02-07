@@ -3,7 +3,7 @@ title: "(ML) 머신러닝 입문기 - 머신러닝캠프 1일차"
 layout: post
 date: '2019-01-07 11:44:11'
 author: 줌코딩
-tag: 머신러닝입문 딥러닝 김인중교수님
+tags: 머신러닝입문 딥러닝 김인중교수님
 cover: "/assets/instacode.png"
 categories: ML
 ---

@@ -3,7 +3,7 @@ title: MacBook에 Virtual Box, Ubuntu, APM 설치하는 법
 layout: post
 date: '2018-05-05 02:00:00'
 author: 줌코딩
-tag: 맥북 VirtualBox설치 Ubuntu설치 APM설치 맥리눅스설치 MacUbuntu설치 리눅스한국어
+tags: 맥북 VirtualBox설치 Ubuntu설치 APM설치 맥리눅스설치 MacUbuntu설치 리눅스한국어
 cover: "/assets/instacode.png"
 categories: Web개발 Linux
 ---

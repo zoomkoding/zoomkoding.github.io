@@ -3,7 +3,7 @@ title: (Web개발) Node.js 입문기(1) - Nodejs란?
 layout: post
 date: '2019-01-07 02:00:00'
 author: 줌코딩
-tag: Nodejs 노드js
+tags: Nodejs 노드js
 cover: "/assets/instacode.png"
 categories: Web개발 nodejs
 ---

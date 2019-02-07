@@ -3,7 +3,7 @@ title: (Linux Week 1st) Linux Command 정리1
 layout: post
 date: '2018-03-22 02:00:00'
 author: 줌코딩
-tag: 리눅스 리눅스명령어 Linux CommandLine
+tags: 리눅스 리눅스명령어 Linux CommandLine
 cover: "/assets/instacode.png"
 categories: Linux
 ---

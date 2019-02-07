@@ -3,7 +3,7 @@ title: Git 기초 배우기! (Git Tutorial 진행해보기)
 layout: post
 date: '2018-04-04 02:00:00'
 author: 줌코딩
-tag: Github Git tutorial 깃기초 깃튜토리얼
+tags: Github Git tutorial 깃기초 깃튜토리얼
 cover: "/assets/instacode.png"
 categories: Git
 ---
