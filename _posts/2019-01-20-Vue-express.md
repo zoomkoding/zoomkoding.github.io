@@ -49,7 +49,7 @@ Vuejs 한국 사용자 커뮤니티에 너무너무 감사하다.
 
 내 routes 다음과 같이 구성되어있다.
 
-![Histime routes](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Vue-express.png)
+![Histime routes](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Vue-Express-1.png)
 
 
 **너무 세분화 하지 않고 페이지별, 용도별로 큼지막하게 만들고**
