@@ -5,7 +5,7 @@ date: '2019-01-10 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js form post writeFile redirection update
 cover: "/assets/instacode.png"
-categories: Web개발 nodejs
+categories: web개발 nodejs
 ---
 
 ### HTML-form과 post를 활용하여 데이터 받기
@@ -14,7 +14,7 @@ html에는 form 이라는 타입이 있다.
 이 form type을 이용하여 다음과 같은 구조를 만들었다.
 form은 정보를 입력받아 전달할 수 있는 기능을 한다.
 
-![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-5.png)
+![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-5.png)
 ￼
 이 구조에 해당하는 정보는 다음과 같다.
 
@@ -56,7 +56,7 @@ request.on('end', ... ) 에서 데이터가 다 전송된 것을 확인하고 po
 
 다음은 create_process로 보내진 포스트 방식의 내용이다!
 
-![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-6.png)
+![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-6.png)
 
 
 ### WriteFile and Redirection하기!
@@ -94,7 +94,7 @@ fileRead function을 이용했고
 
 그렇게 얻게된 수정 페이지 모습!
 ￼
-![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-7.png)
+![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-7.png)
 
 근데 만약에 title이 수정되면 가는 돌아가는 링크 자체가 잘못되기 때문에 id값을 보내주는 방법이 필요하다
 
@@ -189,7 +189,7 @@ fs.writeFile로 다시 description을 적어주면 끝!!
         response.end('success');
     })
     
-![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-8.png)
+![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-8.png)
 
 
 

@@ -5,7 +5,7 @@ date: '2019-01-08 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js url
 cover: "/assets/instacode.png"
-categories: Web개발 nodejs
+categories: web개발 nodejs
 ---
 
 ## Url이란..
@@ -18,7 +18,7 @@ Url의 정의는 다음과 같다.
 
 즉, 아래 이미지와 같이 자원에 대한 정보를 담고 있는 것을 url이라고 보면 되겠다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-3.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-3.png)
 ￼
 ### 우리는 이 url에 id값을 담아서 동적으로 페이지를 바꿔보려고 한다!
 

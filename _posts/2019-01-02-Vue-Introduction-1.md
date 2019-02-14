@@ -5,7 +5,7 @@ date: '2019-01-04 01:13:56'
 author: 줌코딩
 tags: Vue vue-cli computed v-bind component
 cover: "/assets/instacode.png"
-categories: Vue Web개발
+categories: vue web개발
 ---
 
 ## 시작해보자 
@@ -118,7 +118,7 @@ ref라는 친구 내부에는 value가 저장되어있다
 
 ## 7. Nesting Component (고급 버전?!)
 
-![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Vue-introduction-1.png) 
+![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Vue-introduction-1.png) 
 
 먼저 **root component**는 **하나의 태그**로 써라운드 되있어야 한다.
 
@@ -142,5 +142,5 @@ App.vue 는 root Component 이고 그 밑에 여러가지 컴포넌트가 존재
 
     2. export default 밑에 넣어 사용하면 됨
     
-		![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Vue-introduction-2.png) 
+		![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Vue-introduction-2.png) 
     

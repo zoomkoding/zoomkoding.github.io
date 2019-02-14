@@ -5,7 +5,7 @@ date: '2018-05-08 02:00:00'
 author: 줌코딩
 tags: Apt명령어, apm설치, apminstall, apache, php, mysql
 cover: "/assets/instacode.png"
-categories: Linux Web개발
+categories: linux web개발
 ---
 
 
@@ -46,21 +46,21 @@ M은 mySQL이라는 데이터베이스의 한 종류를 의미한다.
 
 a. 자신의 PC에 웹 서버 설치 후, 설치 확인 화면(터미널에서 확인/브라우저 확인)을 캡처하시오.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/1.png)
+![사진]()https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/1.png
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/2.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/2.png)
 
 b. MYSQL을 설치 후 mysqld가 시작되었는지 터미널에서 확인하라
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/3.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/3.png)
 
 c. PHP7을 설치한 후, <?php phpinfo(); ?>를 저장하여 제대로 나오는지 화면 캡처하시오. 
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/4.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/4.png)
 
 d. Phpmyadmin을 설치한 후, 브라우저에 제대로 나오는지 확인하여 화면 캡처하시오. A. http://127.0.0.1/phpmyadmin/
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/5.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/5.png)
 
 e. apache를 시작/중지하는 방법은? 
 
@@ -68,15 +68,15 @@ sudo /etc/init.d/apache2 restart 명령을 이용해서 apache2를 중지 후 �
 service apache2 start 명령을 이용해서 apche2를 시작하고
 service apache2 stop 명령을 이용해서 apache2를 중지한다
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/6.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/6.png)
 
 9. 홈 디렉터리 변경해 보기 (/var/www/html2)
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/7.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/7.png)
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/8.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/8.png)
 
 10. SSH Server 구축하고 putty를 통해 접속한 화면과 우분투 화면을 한 화면으로 캡처하시오.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/APT-APM/9.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/APT-APM/9.png)
 

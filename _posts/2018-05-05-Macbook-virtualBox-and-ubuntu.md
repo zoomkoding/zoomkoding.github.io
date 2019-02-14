@@ -5,7 +5,7 @@ date: '2018-05-05 02:00:00'
 author: 줌코딩
 tags: 맥북 VirtualBox설치 Ubuntu설치 APM설치 맥리눅스설치 MacUbuntu설치 리눅스한국어
 cover: "/assets/instacode.png"
-categories: Web개발 Linux
+categories: web개발 linux
 ---
 
 
@@ -23,13 +23,13 @@ c. 다운로드 목록에 있는 dmg 파일을 과정에 따라 다운로드 한
 
 ## 2. Ubuntu 설치하기
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/1.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/1.png)
 
 a. www.ubuntu.com에 접속한다.
 
 b. Download - Desktop 에서 가장 최신 메뉴를 다운로드한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/2.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/2.png)
 
 c. 돈을 0으로 바꾸고 Not now, take me to the download 버튼을 클릭한다.
 
@@ -37,33 +37,33 @@ c. 돈을 0으로 바꾸고 Not now, take me to the download 버튼을 클릭한
 
 a. VirtualBOx를 켠다,
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/3.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/3.png)
 
 b. 이름, 종류, 버전을 설정한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/4.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/4.png)
 
 c. 메모리 크기를 설정한다. 메모리 크기는 작게 하면 나중에 원하는 패키지를 다 다운 받지 못할 수 있음으로 넉넉히 한다. (1기가로 했다가 한번 다시 깔았었다.. 다시 깔 때는 6기가로 했다는ㅎㅎ)
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/5.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/5.png)
 
 d. 새 가상 하드 디스크를 만든다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/6.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/6.png)
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/7.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/7.png)
 
 e. 만들기를 진행한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/8.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/8.png)
 
 f. 그리고 하아아안참 기다리면 설치가 완료된다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/9.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/9.png)
 
 g. 중간에 지역과 개인정보 입력을 물어보는데 거기에 맞춰서 입력해주면 끝!
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Mac-ubuntu-virtualbox/10.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Mac-ubuntu-virtualbox/10.png)
 
 이런 페이지를 한참 볼것이다.... 내 피씨는 새 것임에도 불구하고 한 40분정도 소요됐다. 
 

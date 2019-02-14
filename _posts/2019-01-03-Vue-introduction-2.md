@@ -5,7 +5,7 @@ date: '2019-01-04 02:13:00'
 author: 줌코딩
 tags: vue component firstpage
 cover: "/assets/instacode.png"
-categories: Vue Web개발
+categories: vue web개발
 ---
 
 ## 짜잔
@@ -14,7 +14,7 @@ categories: Vue Web개발
 
 일단 vue의 component를 여럿 만들어주고
 
-![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Vue-introduction-3.png) 
+![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Vue-introduction-3.png) 
     
 
 각 vue component에 해당하는 내용을 저장했다.
@@ -59,7 +59,7 @@ categories: Vue Web개발
 
 ## 결과물!
 
-![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Vue-introduction-4.png) 
+![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Vue-introduction-4.png) 
 	
 
 일단 대충은 알겠는데 

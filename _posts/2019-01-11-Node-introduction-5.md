@@ -1,11 +1,11 @@
 ---
-title: (Web개발) Node.js 입문기(4) - 보안
+title: (Web개발) Node.js 입문기(5) - 보안
 layout: post
 date: '2019-01-11 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js 보안 sanitize-html
 cover: "/assets/instacode.png"
-categories: Web개발 nodejs
+categories: web개발 nodejs
 ---
 
 ## 보안 이슈 2가지
@@ -61,6 +61,6 @@ sanitize-html이라는 모듈을 가져오면 된다.
 
 그리고 해당 모듈의 설명서를 읽어보면 된다!
 ￼
-![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-9.png)
+![그림](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-9.png)
 
 이외에도 해당 모듈에서는 다양한 sanitizing 방법을 소개하고 있다. 소개한 방법을 활용해보자

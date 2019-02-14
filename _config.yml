@@ -23,8 +23,12 @@ inter_post_navigation: true
 highlightjs_theme: monokai-sublime
 jekyll-archives:
   enabled:
-  layout: 'archive'
+  - categories
+  - tags
+  layout: archive
   permalinks:
+    category: "/category/:name/"
+    tag: "/tag/:name/"
 disqus_shortname: zoomKoding
 ga_tracking_id: UA-83878761-1
 descriptions:

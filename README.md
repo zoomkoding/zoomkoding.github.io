@@ -219,7 +219,7 @@ Please follow these steps:
 
 ## License
 
-MIT. See [LICENSE.MD](https://github.com/bencentra/centrarium/blob/master/LICENSE.md).
+MIT. See [LICENSE.MD](https://github.com/bencentra/centrarium/blob/source/LICENSE.md).
 
 [bencentra]: http://bencentra.com
 [bourbon]: http://bourbon.io/

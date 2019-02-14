@@ -5,7 +5,7 @@ date: '2018-05-14 02:00:00'
 author: 줌코딩
 tags: DNS 도메인바꾸기 Wordpress설치 웹개설 워드프레스설치 Web개설
 cover: "/assets/instacode.png"
-categories: Web개발 Wordpress Linux
+categories: web개발 wordpress linux
 ---
 
 
@@ -34,16 +34,16 @@ hosts 파일이란 각 OS에서 간단히 DNS의 설정을 제공해주는 파�
 
 내용을 보면 일반적인 text파일로 되어있는데 관리자 권한으로 실행하여야 수정이 가능한데
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/1.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/1.png)
 
 다음과 같은 텍스트 파일에 원하는 가상 도메인 정보를 입력하여 준다.
 나는 127.0.1.2 라는 ip주소에 jin.ya.ho라는 도메인 정보를 입력해주었다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/2.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/2.png)
 
 firefox에 해당 ip주소로 접속해보면 원하는 도메인의 내용이 출력되었음을 볼 수 있다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/3.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/3.png)
 
 
 
@@ -95,39 +95,39 @@ helloworld2.com -> 192.168.0.1:8080
 
 먼저 새 웹사이트를 위한 디렉토리를 구성한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/4.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/4.png)
 
 디렉토리 내에 index.html을 생성하고 그 내용을 다음과 같이 설정해준다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/5.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/5.png)
 
 다음은 새 사이트를 위한 Virtual Host를 설정해준다. 
 /etc/pache2/sites-available 속에 있는  000-default.conf 파일을 복사하여 jin.ya.ho.conf 파일을 생성한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/6.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/6.png)
 
 그리고 해당 파일 내용 속 ServerName, DocumentRoot를 설정하고 싶은 home directory명과 index.html 파일이 있는 디렉토리로 입력해준다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/7.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/7.png)
 
 이제 새로운 Virtual Host 설정파일을 등록해주는데 이것은 /etc/apache2/sites-enabled에 등록해준다.
 a2ensite 명령을 이용하면 손쉽게 등록이 가능해진다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/8.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/8.png)
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/9.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/9.png)
 
 a2ensite 명령을 이용하면 자동으로 site-enabled 디렉토리에 conf파일이 생성된다. 
 
 그리고 마지막으로 /etc/hosts를 수정해준다.
 내가 원하는 도메인명과 홈디렉토리명을 입력해준다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/10.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/10.png)
 
 그리고 제대로 생성 됐는지 확인해준다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/11.png)
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/12.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/11.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/12.png)
 
 짜잔! 도메인과 홈디렉토리명을 내가 설정하여 웹사이트를 구성해보았다!
 
@@ -135,15 +135,15 @@ a2ensite 명령을 이용하면 자동으로 site-enabled 디렉토리에 conf�
 
 DNS Server에 등록되지 않은 도메인을 수행하기 위해서
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/13.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/13.png)
 
 내 mac 아래에 있는 hosts 파일을 수정해준다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/14.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/14.png)
 
 그럼 내 피씨에서도 해당 ip주소를 입력 시에 웹페이지가 열린다!
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/15.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/15.png)
 
 
 
@@ -151,30 +151,30 @@ DNS Server에 등록되지 않은 도메인을 수행하기 위해서
 사용자를 추가하는 명령어로 두가지가 있다. 
 - adduser : 이 명령어는 user를 생성하고 user에 해당하는 비밀번호와 각종 정보를 입력 받는다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/16.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/16.png)
 
 - useradd : 이 명령어는 user를 생성하지만 비밀번호나 다른 정보는 입력 받지 않는다.
 - userdel : 이 명령어는 생성했던 user를 삭제한다. 
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/17.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/17.png)
 
 10. Wordpress 설치하는 방법에 대해 단계별로 설명하시오(화면캡처 제출) 
 
 먼저 새로 생성된 계정의 홈 디렉토리로 이동한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/18.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/18.png)
 
 이동한 후에 최신 위드프레스를 다운로드하고 압축을 푼다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/19.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/19.png)
 
 풀고 난후 압축 파일을 삭제한다!
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/20.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/20.png)
 
 위드프레스 설정 파일을 복사하고 내용을 수정한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/21.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/21.png)
 
 그리고 내 MySQL에 로그인 한 후 
 위드프레스용 DB를 생성하고 
@@ -182,20 +182,20 @@ DB계정 생성하고
 모든 DB 및 테이블에 접근 권한을 설정하고 
 설정한 권한을 적용한 후 종료한다!
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/22.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/22.png)
 
 
 이제 wordpress의 소유자와 권한을 변경해주고 apache를 다시 시작한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/23.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/23.png)
 
 Firefox를 이용하여 접속하면 웹사이트를 개설하라는 메세지가 뜨는데 여기를 따라서 완료하면!
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/24.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/24.png)
 
 나만의 웹사이트가 열린다!
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Wordpress/25.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Wordpress/25.png)
 
 
 워드프레스 계정 id: 21500670

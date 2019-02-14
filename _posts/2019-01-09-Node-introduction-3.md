@@ -5,7 +5,7 @@ date: '2019-01-09 02:00:00'
 author: 줌코딩
 tags: Nodejs nodejs동적페이지 dynamicpage
 cover: "/assets/instacode.png"
-categories: Web개발 nodejs
+categories: web개발 nodejs
 ---
 
 
@@ -48,7 +48,7 @@ categories: Web개발 nodejs
 
 해당 코드를 실행하면 결과는 다음과 같다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-4.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-4.png)
 ￼
 
 ### 동적으로 글목록을 출력하기

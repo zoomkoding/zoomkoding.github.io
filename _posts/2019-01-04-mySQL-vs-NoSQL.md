@@ -5,7 +5,7 @@ date: '2019-01-04 02:42:00'
 author: 줌코딩
 tags: '데이터베이스 결정장애 db nosql-vs-sql sql nosql '
 cover: "/assets/instacode.png"
-categories: DB Web개발
+categories: db web개발
 ---
 
 우리 웹 서비스를 시작하는데 있어서 어떤 데이터 베이스를 쓰면 좋을지 하나를 딱 정하려고 하니 결정장애가 도졌다.
@@ -39,11 +39,11 @@ Structure Query Language라고 쿼리하는 언어를 의미한다.
 
 여기에는 3종류가 있는데 one-to-one, one-to-many, many-to-many가 그들이다.
 	
-![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/mySQL-vs-NoSQL-1.png) 
+![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/mySQL-vs-NoSQL-1.png) 
 
 one to May의 예는 하나의 유저가 여러개의 item을 like했을때로 생각해 볼 수 있다!
 
-![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/mySQL-vs-NoSQL-2.png) 
+![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/mySQL-vs-NoSQL-2.png) 
  
  
 ## NoSQL(MongoDB)
@@ -62,13 +62,13 @@ one to May의 예는 하나의 유저가 여러개의 item을 like했을때로 �
  우리가 **폴더를 정리하는 것**와 같다고 보면 될 것 같다!!
  
  
- ![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/mySQL-vs-NoSQL-3.png) 
+ ![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/mySQL-vs-NoSQL-3.png) 
  
  
 ### no Schema
  이 친구는 그렇기 때문에 하위에 들어가는 same schema, 즉 같은 틀을 쓰지 않아도 된다. 
  
-![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/mySQL-vs-NoSQL-4.png) 
+![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/mySQL-vs-NoSQL-4.png) 
 
 때문에 새로**운 정보를 수정하고 추가 삭제 하는 것이 매우 flexible**하다!!
 
@@ -82,7 +82,7 @@ one to May의 예는 하나의 유저가 여러개의 item을 like했을때로 �
 
 그리고 **업데이트할때 모두 업데이트 해줘야하기 떄문에 매우 위험**하기도 하다!!
 
-![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/mySQL-vs-NoSQL-5.png) 
+![Alt text](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/mySQL-vs-NoSQL-5.png) 
 
 어떤 전문가 분이 쓰신 글 같은데... 참 뭔가 이 얘기 듣고 noSQL 쓰기 불안하다..!ㅋㅋㅋㅋㅋ
 

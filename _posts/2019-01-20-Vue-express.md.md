@@ -5,7 +5,7 @@ date: '2019-01-20 02:00:00'
 author: 줌코딩
 tags: vue-express-연동 vue express 연동 
 cover: "/assets/instacode.png"
-categories: Web개발 histime
+categories: web개발 histime
 ---
 
 Histime에 대한 기능과 디비 디자인과 UI 디자인을 받은 상태에서 본격적으로 막상 개발을 시작하려고 하니 너무 막막했다… 
@@ -49,7 +49,7 @@ Vuejs 한국 사용자 커뮤니티에 너무너무 감사하다.
 
 내 routes 다음과 같이 구성되어있다.
 
-![Histime routes](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Vue-Express-1.png)
+![Histime routes](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Vue-Express-1.png)
 
 
 **너무 세분화 하지 않고 페이지별, 용도별로 큼지막하게 만들고**

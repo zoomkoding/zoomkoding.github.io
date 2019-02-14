@@ -5,7 +5,7 @@ date: '2019-01-10 02:00:00'
 author: 줌코딩
 tags: 동기 비동기 async sync javascript nodejs
 cover: "/assets/instacode.png"
-categories: Web개발
+categories: web개발
 ---
 
 ## 동기와 비동기
@@ -24,7 +24,7 @@ categories: Web개발
 
 아래 그림과 같이 병렬적으로 일을 처리해보는 것을 의미한다.
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Sync-async-1.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Sync-async-1.png)
 ￼
 ### sync와 async를 readFile로 비교해보자
 
@@ -39,7 +39,7 @@ categories: Web개발
 
 이코드를 진행하고 나면 다음과 같이 결과물이 나온다(sample.txt에는 B라는 값이 들어가 있다ㅎㅎ)
 
-￼![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Sync-async-2.png)
+￼![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Sync-async-2.png)
 
 역시 순차적으로 진행된다
 
@@ -59,7 +59,7 @@ async인 readFile함수는 파라미터 마지막에 callback function을 생성
 
 그래서 위와 같이 function을 설정해주고 진행해주면
 ￼
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Sync-async-3.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Sync-async-3.png)
 
 순서가 다음과 같이 바뀌는 것을 볼 수 있다.
 

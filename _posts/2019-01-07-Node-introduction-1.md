@@ -5,7 +5,7 @@ date: '2019-01-07 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js
 cover: "/assets/instacode.png"
-categories: Web개발 nodejs
+categories: web개발 nodejs
 ---
 
 ## 18년도 가장 핫한 FrameWork
@@ -13,7 +13,7 @@ categories: Web개발 nodejs
 Node.js... 말로는 많이 들어봤다. 웹에 누구보다 압도적인 점유율을 가지고 있는 어떠한 것(?)이고 들었다.
 아래 사진에서 보듯이 Nodejs는 정말 많이 사용되고 있다고 한다.
 
-![2018 Most Popular Technologies - StackOverFlow](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-1.png)
+![2018 Most Popular Technologies - StackOverFlow](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-1.png)
 
 
 이렇게 핫하다면 한번 공부해볼만 하다..ㅎㅎ
@@ -28,7 +28,7 @@ JavaScript는 machine이 바로 이해할 수 없다.
 그래서 이를 Machin이 이해할 수 있게 변환해줄 무언가가 필요하다.
 이러한 역할을 해주는 것을 **JavaScript Engine** 이라고 한다.
 
-![JavaScript - Nodejs(V8) - Machine](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/master/assets/_posts/Node-introduction-2.png)
+![JavaScript - Nodejs(V8) - Machine](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Node-introduction-2.png)
 
 
 Node.js는 c++로 구성되어 있는 **V8 자바스크립트 엔진(구글에서 만들었다)**을 통해서 보는 것과 같이 자바스크립트를 machine code로 변환해준다
