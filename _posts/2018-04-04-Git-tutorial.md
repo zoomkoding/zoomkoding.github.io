@@ -174,7 +174,7 @@ git rm는 파일을 삭제해줌과 동시에 파일이 삭제되는 것을 stag
 
 ### 1.23 Preparing to Merge
 
-이제 그럼 여태까지 clean_up에서 했던 작업을 master branch로 merge 해보자!
+이제 그럼 여태까지 clean_up에서 했던 작업을 master branch로 merge 해보자! 
 
 ![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/Git-tutorial/24.png)
 
