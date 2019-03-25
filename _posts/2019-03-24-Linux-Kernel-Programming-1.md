@@ -47,12 +47,12 @@ categories: OS linux
 ## LKM을 위한 환경설정하기
 
 
-      $ **sudo apt-get update**
-      $ **apt-cache search linux-headers-$(uname -r)**
-      **linux-headers-4.15.0-041500-generic** - Linux kernel headers for version 4.15.0 on 64 bit x86 SMP
-      $ **sudo apt-get install (헤더명)**
-      $ **cd /usr/src/(헤더명)**
-      $ **ls**
+      $ sudo apt-get update
+      $ apt-cache search linux-headers-$(uname -r)
+      linux-headers-4.15.0-041500-generic - Linux kernel headers for version 4.15.0 on 64 bit x86 SMP
+      $ sudo apt-get install (헤더명)
+      $ cd /usr/src/(헤더명)
+      $ ls
 
 이때 주의할 점은 자신한테 맞는 header를 설치해야 한다.
 
