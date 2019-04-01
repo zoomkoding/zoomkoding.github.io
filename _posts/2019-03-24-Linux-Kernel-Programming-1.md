@@ -5,7 +5,7 @@ date: '2019-03-24 02:00:00'
 author: 줌코딩
 tags: linux
 cover: "/assets/instacode.png"
-categories: OS linux
+categories: os linux
 ---
 
 ## 들어가기 앞서
