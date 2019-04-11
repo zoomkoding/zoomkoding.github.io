@@ -1,5 +1,5 @@
 ---
-title: (리눅스 시스템 프로그래밍) LKM 입문 및 예제
+title: (리눅스 시스템 프로그래밍) LKM이란 + C 예제코드
 layout: post
 date: '2019-03-24 02:00:00'
 author: 줌코딩
