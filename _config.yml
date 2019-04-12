@@ -26,6 +26,7 @@ jekyll-archives:
   - categories
   - tags
   layout: archive
+  comments: true
   permalinks:
     category: "/category/:name/"
     tag: "/tag/:name/"
