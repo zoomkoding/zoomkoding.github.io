@@ -11,7 +11,7 @@ email: gur5381@gmail.com
 name: Jinhyeok Jeong
 description: 'Zoom in Coding from the Basic.'
 baseurl: ''
-url: https://zoomKoding.github.io
+url: https://zoomkoding.github.io
 plugins:
 - jekyll-sitemap
 cover: "/assets/header_image.jpeg"
@@ -39,7 +39,7 @@ social:
 - name: GitHub
   icon: github
   username: ZoomKoding
-  url: https://github.com/zoomKoding
+  url: https://github.com/zoomkoding
   desc: Fork me on GitHub
   share: false
 protocols:
