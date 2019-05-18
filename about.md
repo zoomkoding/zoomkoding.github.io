@@ -45,7 +45,7 @@ permalink: /about/
 
 
 
-## 프로젝트
+<h2><center>프로젝트<center></h2>
 
 ### 자바 캠프 with 갇호준 교수님
 #### 자바캠프는
