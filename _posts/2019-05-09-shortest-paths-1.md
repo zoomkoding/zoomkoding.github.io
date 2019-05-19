@@ -1,11 +1,11 @@
 ---
-title: Shortest Path 알고리즘(Bellman-Ford, DAG, Dijkstara 알고리즘)
+title: (알고리즘) Shortest Path 찾기(Bellman-Ford, DAG, Dijkstara 알고리즘)
 layout: post
 date: '2019-05-09 02:00:00'
 author: 줌코딩
-tags: codingtest
+tags: algorithm
 cover: "/assets/instacode.png"
-categories: codingtest
+categories: algorithm
 ---
 
 ## Shortest Path
