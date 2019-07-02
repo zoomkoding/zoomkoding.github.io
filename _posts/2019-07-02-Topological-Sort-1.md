@@ -167,7 +167,7 @@ categories: algorithm
 
 ### 결과
 
-![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/topological-sort-3.png)
+![사진](https://raw.githubusercontent.com/zoomKoding/zoomKoding.github.io/source/assets/_posts/topological-sort-4.png)
 
 **이중 벡터 써도 각 벡터마다 사이즈를 달리할 수 있다. 그렇다면 확실히 따로 링크드 리스트 쓰는 것보다 그냥 벡터를 쓰는 게 좋다!!**
 
