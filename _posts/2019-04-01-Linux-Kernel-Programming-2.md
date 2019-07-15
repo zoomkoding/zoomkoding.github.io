@@ -209,7 +209,7 @@ The Boolean type variable, ‘hidden,’ works as a switch to hide and show the 
     MODULE_LICENSE("GPL");
     
     char filepath[128] = { 0x0, } ;
-    char filelist\[10\][128] = {{0x0, }};
+    char filelist\[10\][128] = { {0x0, } };
     void ** sctable ;
     int count = 0 ;
     int saved_uid = -1;
