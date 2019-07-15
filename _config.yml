@@ -12,7 +12,7 @@ name: Jinhyeok Jeong
 description: 'Zoom in Coding from the Basic.'
 baseurl: ''
 url: https://zoomkoding.github.io
-plugins:
+plugins_dir:
 - jekyll-sitemap
 cover: "/assets/header_image.jpeg"
 logo: "/assets/Crewcials.jpeg"
