@@ -41,6 +41,13 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 
 {% if site.jekyll-archives %}
 {% if page.tags.size > 0 %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2827068140840250",
+    enable_page_level_ads: true
+  });
+</script>
 <section class="tags">
   <strong>Tags:</strong> {% for tag in page.tags %}<a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},&nbsp;{% endif %}{% endfor %}
 </section>
