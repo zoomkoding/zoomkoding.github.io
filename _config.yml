@@ -17,6 +17,7 @@ plugins_dir:
 cover: "/assets/header_image.jpeg"
 logo: "/assets/Crewcials.jpeg"
 markdown: kramdown
+highlighter: rouge
 paginate: 5
 paginate_path: "/page:num/"
 inter_post_navigation: true
