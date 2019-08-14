@@ -1,5 +1,5 @@
 ---
-title: (알고리즘) 위상 정렬(Topological Sort)과 C++ 예제
+title: (알고리즘) 위상 정렬 Topological Sort + C++ 예제
 layout: post
 date: '2019-07-02 03:00:00'
 author: 줌코딩

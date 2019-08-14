@@ -1,5 +1,5 @@
 ---
-title: (Web개발) Node.js 입문기(4) - Nodejs로 동적인 페이지 만들기(2)
+title: (Web개발) Node.js 입문기(4) - Nodejs 동적인 페이지 만들기(2)
 layout: post
 date: '2019-01-10 02:00:00'
 author: 줌코딩

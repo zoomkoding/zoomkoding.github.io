@@ -1,5 +1,5 @@
 ---
-title: (본격 웹 개발기) (Nodejs) 서버 테스트하기, Artillery 사용법 (스트레스 테스트)
+title: (본격 웹 개발기) Nodejs 서버 테스트하기, Artillery 사용법 - 스트레스 테스트
 layout: post
 date: '2019-02-04 02:00:00'
 author: 줌코딩
