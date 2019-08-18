@@ -1,11 +1,11 @@
 ---
-title: "(Web개발) Vue 입문기(2) - Vue Component 활용 페이지 생성"
+title: "(web) Vue 입문기(2) - Vue Component 활용 페이지 생성"
 layout: post
 date: '2019-01-04 02:13:00'
 author: 줌코딩
 tags: vue component firstpage
 cover: "/assets/instacode.png"
-categories: vue web개발
+categories: vue web
 ---
 
 ## 짜잔

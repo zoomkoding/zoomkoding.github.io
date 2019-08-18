@@ -1,11 +1,11 @@
 ---
-title: (Web개발) Node.js 입문기(3) - Nodejs 동적인 페이지 만들기(1)
+title: (web) Node.js 입문기(3) - Nodejs 동적인 페이지 만들기(1)
 layout: post
 date: '2019-01-09 02:00:00'
 author: 줌코딩
 tags: Nodejs nodejs동적페이지 dynamicpage
 cover: "/assets/instacode.png"
-categories: web개발 nodejs
+categories: web nodejs
 ---
 
 

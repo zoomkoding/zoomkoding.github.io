@@ -1,11 +1,11 @@
 ---
-title: "(Web개발) Vue 입문기(1)"
+title: "(web) Vue 입문기(1)"
 layout: post
 date: '2019-01-04 01:13:56'
 author: 줌코딩
 tags: Vue vue-cli computed v-bind component
 cover: "/assets/instacode.png"
-categories: vue web개발
+categories: vue web
 ---
 
 ## 시작해보자 

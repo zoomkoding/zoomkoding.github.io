@@ -1,11 +1,11 @@
 ---
-title: (Web개발) Node.js 입문기(1) - Nodejs란?
+title: (web) Node.js 입문기(1) - Nodejs란?
 layout: post
 date: '2019-01-07 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js
 cover: "/assets/instacode.png"
-categories: web개발 nodejs
+categories: web nodejs
 ---
 
 ## 18년도 가장 핫한 FrameWork

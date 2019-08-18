@@ -5,7 +5,7 @@ date: '2019-01-20 02:00:00'
 author: 줌코딩
 tags: vue-express-연동 vue express 연동 
 cover: "/assets/instacode.png"
-categories: web개발 histime
+categories: web histime
 ---
 
 Histime에 대한 기능과 디비 디자인과 UI 디자인을 받은 상태에서 본격적으로 막상 개발을 시작하려고 하니 너무 막막했다… 

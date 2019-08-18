@@ -1,11 +1,11 @@
 ---
-title: (Web개발) Node.js 입문기(4) - Nodejs 동적인 페이지 만들기(2)
+title: (web) Node.js 입문기(4) - Nodejs 동적인 페이지 만들기(2)
 layout: post
 date: '2019-01-10 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js form post writeFile redirection update
 cover: "/assets/instacode.png"
-categories: web개발 nodejs
+categories: web nodejs
 ---
 
 ### HTML-form과 post를 활용하여 데이터 받기

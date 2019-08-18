@@ -1,11 +1,11 @@
 ---
-title: (Web개발) Node.js 입문기(5) - 보안
+title: (web) Node.js 입문기(5) - 보안
 layout: post
 date: '2019-01-11 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js 보안 sanitize-html
 cover: "/assets/instacode.png"
-categories: web개발 nodejs
+categories: web nodejs
 ---
 
 ## 보안 이슈 2가지

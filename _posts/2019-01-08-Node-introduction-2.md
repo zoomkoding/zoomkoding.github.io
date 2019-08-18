@@ -1,11 +1,11 @@
 ---
-title: (Web개발) Node.js 입문기(2) - Url을 통한 페이지 바꾸기
+title: (web) Node.js 입문기(2) - Url을 통한 페이지 바꾸기
 layout: post
 date: '2019-01-08 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js url
 cover: "/assets/instacode.png"
-categories: web개발 nodejs
+categories: web nodejs
 ---
 
 ## Url이란..

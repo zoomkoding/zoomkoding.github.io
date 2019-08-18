@@ -5,7 +5,7 @@ date: '2018-05-14 02:00:00'
 author: 줌코딩
 tags: DNS 도메인바꾸기 Wordpress설치 웹개설 워드프레스설치 Web개설
 cover: "/assets/instacode.png"
-categories: web개발 wordpress linux
+categories: web wordpress linux
 ---
 
 

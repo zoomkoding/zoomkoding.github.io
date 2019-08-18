@@ -1,11 +1,11 @@
 ---
-title: "(Web개발) 데이터베이스 결정장애(SQL vs noSQL)"
+title: "(web) 데이터베이스 결정장애(SQL vs noSQL)"
 layout: post
 date: '2019-01-04 02:42:00'
 author: 줌코딩
 tags: '데이터베이스 결정장애 db nosql-vs-sql sql nosql '
 cover: "/assets/instacode.png"
-categories: db web개발
+categories: db web
 ---
 
 우리 웹 서비스를 시작하는데 있어서 어떤 데이터 베이스를 쓰면 좋을지 하나를 딱 정하려고 하니 결정장애가 도졌다.

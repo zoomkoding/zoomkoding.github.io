@@ -1,11 +1,11 @@
 ---
-title: (Web개발) 동기, 비동기
+title: (web) 동기, 비동기
 layout: post
 date: '2019-01-10 02:00:00'
 author: 줌코딩
 tags: 동기 비동기 async sync javascript nodejs
 cover: "/assets/instacode.png"
-categories: web개발
+categories: web
 ---
 
 ## 동기와 비동기
