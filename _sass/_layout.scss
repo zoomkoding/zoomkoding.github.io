@@ -432,4 +432,7 @@ pre code.hljs {
 
 .post-link {
 	color: $dark-gray; 
+	&:hover {
+		color: darken($dark-gray, 10%);
+	}
 }
