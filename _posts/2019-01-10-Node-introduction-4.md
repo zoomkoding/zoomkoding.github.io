@@ -5,7 +5,7 @@ date: '2019-01-10 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js form post writeFile redirection update
 cover: "/assets/instacode.png"
-categories: web nodejs
+categories: web개발 nodejs
 ---
 
 ### HTML-form과 post를 활용하여 데이터 받기

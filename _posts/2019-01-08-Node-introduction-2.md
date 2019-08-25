@@ -5,7 +5,7 @@ date: '2019-01-08 02:00:00'
 author: 줌코딩
 tags: Nodejs 노드js url
 cover: "/assets/instacode.png"
-categories: web nodejs
+categories: web개발 nodejs
 ---
 
 ## Url이란..

@@ -5,7 +5,7 @@ date: '2019-02-04 02:00:00'
 author: 줌코딩
 tags: artillery nodejs-test server-test 
 cover: "/assets/instacode.png"
-categories: web nodejs histime
+categories: web개발 nodejs histime
 ---
 
 ## 배경

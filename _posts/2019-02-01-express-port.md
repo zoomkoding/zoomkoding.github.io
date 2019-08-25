@@ -5,7 +5,7 @@ date: '2019-02-01 02:00:00'
 author: 줌코딩
 tags: express port변경 
 cover: "/assets/instacode.png"
-categories: web node histime
+categories: web개발 node histime
 ---
 
 ## 배경

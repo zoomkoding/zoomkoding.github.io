@@ -5,7 +5,7 @@ date: '2019-01-09 02:00:00'
 author: 줌코딩
 tags: Nodejs nodejs동적페이지 dynamicpage
 cover: "/assets/instacode.png"
-categories: web nodejs
+categories: web개발 nodejs
 ---
 
 
