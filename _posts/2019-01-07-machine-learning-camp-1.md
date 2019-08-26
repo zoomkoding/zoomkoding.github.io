@@ -5,7 +5,7 @@ date: '2019-01-07 11:44:11'
 author: 줌코딩
 tags: 머신러닝입문 딥러닝 김인중교수님
 cover: "/assets/instacode.png"
-categories: ML
+categories: 머신러닝
 ---
 
 ## Why Machine Learning?
