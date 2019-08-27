@@ -165,10 +165,14 @@ $$v_{t+1,j} = v_{t,j} + f_{in,j} - f_{out,j} * c_{t,j}$$
 >* Uniform Traffic에서도 확연히 나은 모습을 볼 수 있었으며,
 >* Multi intersection 환경에서도 월등한 성과가 있었다.
 
-### Conclusion
+## Conclusion
 
 >* LIT is good!
 >* Simple is the Best!
+
+## Reference
+
+Guanjie Zheng, Xinshi Zang, Nan Xu, and Hua Wei. 2019. Diagnosing Reinforcement Learning for Traffic Signal Control
 
 ## 느낀점
 
