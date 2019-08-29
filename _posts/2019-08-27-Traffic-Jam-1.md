@@ -3,9 +3,9 @@ title: (TrafficJAM) 교통제어 강화학습 논문 정리 - Diagnoising Reinfo
 layout: post
 date: '2019-08-27 02:00:00'
 author: 줌코딩
-tags: TrafficJAM
+tags: trafficJAM 강화학습
 cover: "/assets/instacode.png"
-categories: TrafficJAM
+categories: trafficJAM 강화학습
 ---
 
 ## 요약 목적

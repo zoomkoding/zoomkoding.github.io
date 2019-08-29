@@ -3,9 +3,9 @@ title: (TrafficJAM) 교통제어 강화학습 논문 정리 - IntelliLight, A Re
 layout: post
 date: '2019-08-28 02:00:00'
 author: 줌코딩
-tags: TrafficJAM
+tags: trafficJAM 강화학습
 cover: "/assets/instacode.png"
-categories: TrafficJAM
+categories: trafficJAM 강화학습
 ---
 
 ## 요약 목적
@@ -69,9 +69,51 @@ categories: TrafficJAM
 
 ### Network Structure
 
+![사진](/assets/TJ2-3.png)
+
 >* 이제 agent는 미션을 이루기 위해 **Deep Q-Network Q(s,a)**를 배우게 될 것이다.
 >* 첫 단계는 교통 상황에 따라 partial reward를 제공한다. 이거는 모든 phase와 공유하고,
 >* 그리고 액션을 고르기 위해 agent는 현 상황에서 각 phase의 신호를 주고 나서 action을 취한 결과를 Q-function에 전달한다.
->* 이때 각 phase는 phase 별로 explicit하게 진행되어야 한다.
->* 이렇게 학습할 수 있도록 도와주는 것이 phase selector와 phase gate의 역할이다.
->* 이 게이트를 통해 각 phase의 학습 과정이 서로에게 영향을 미치지 않을 수 있도록 도와준다.
+>* 이때 각 phase는 **phase 별로 explicit하게 진행**되어야 한다.
+>* 이렇게 학습할 수 있도록 도와주는 것이 **phase selector와 phase gate의 역할**이다.
+>* 이 **게이트를 통해 각 phase의 학습 과정이 서로에게 영향을 미치지 않을 수 있도록 도와준다.**
+
+### Memory Palace and Model Updating
+
+>* agent는 이제 주기적으로 memory로부터 sample을 가져오고 network를 업데이트하는데 사용한다.
+>* replay memory는 가끔 오래된 샘플을 새로운 샘플로 대체하기도 한다.
+>* 과거 알고리즘은 샘플을 한 군데 모아놓았다.
+>* 이 때, 불균형적인 setting에서 학습을 진행하게 되면 자주 등장하는 phase와 action이 전체를 지배하게 하는 상황을 초래한다.
+>* 그러면 결국 agent는 자주 등장하는 phase와 action을 선택하게 된다.
+>* 그러므로 각 레인에 신호가 다르게 주어졌을 때, 불균형적인 sample이 성능 저하를 초래하게 된다.
+>* 이를 위해서 sample을 phase와 action에 따라 각각의 memory palace에 따로 저장한다.
+>* agent는 각 palace에서 같은 수의 sample을 취해서 더 정확하게 reward를 예측할 수 있게 돕는다.
+
+![사진](/assets/TJ2-4.png)
+
+## Experiment
+
+>* 실험은 SUMO라는 simulation platform을 이용하였다.
+>* 실험은 synthetic data와 real-worl data를 이용해서 진행하였다.
+>* synthetic data는 4거리로 2개의 phase로 구성하였다.
+>* Green-WE : 동서 green, 남북 red, Red-WE : 동서 red, 남북 green
+>* 우리가 사용하였던 모델의 parameter는 아래와 같다.
+
+![사진](/assets/TJ2-5.png)
+
+>* 아래와 같이 기존 intellilight에 MP(memory palace)와 PG(Phase Gate)를 사용했을 때의 결과가 가장 좋은 것을 볼 수 있었다.
+
+![사진](/assets/TJ2-6.png)
+
+### Performance on Real-world Data
+
+>* 실제 환경에서도 다른 방법들과 비교했을 때 더 많은 reward를 얻는 것으로 확인되었다.
+
+![사진](/assets/TJ2-7.png)
+
+>* 그리고 실제 교통 상황에 따른 관찰 결과는 다음과 같다.
+
+![사진](/assets/TJ2-8.png)
+
+>* 위의 그림에서 볼 수 있드시 월요일 7시, 9시반, 18시쯤에 WE에 차량수가 늘어나자 자연스럽게 WE에 초록불이 더 오래 켜져있는 것을 볼 수 있다.
+>* 주말에는 주중과 확연히 다른 교통량을 확인할 수 있었다. 낮시간 동안 SN의 차량수가 WE보다 살짝 많기 때문에 신호시간도 이에 맞춰서 반응하는 것을 볼 수 있다.
