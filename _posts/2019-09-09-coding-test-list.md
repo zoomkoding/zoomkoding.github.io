@@ -98,7 +98,7 @@ categories: codingtest
 
 ### 3. 카카오 블라인드 채용 코딩 테스트(9월 ~ 10월)
 
-![사진](/assets/2020 -kakao-blind-1.jpg)
+![사진](/assets/2020-kakao-blind-1.jpg)
 
 >* 주관 : 카카오
 >* 사이트 : [카카오 블라인드 채용](https://www.welcomekakao.com/competitions/102/2020-kakao-blind-recruitment)
@@ -155,7 +155,7 @@ OJ라는 온라인 저지 사이트인데 문제도 괜찮고 1년에 한번씩 
 >* 사이트 : [OJ Function Cup](https://oj.uz/contest/view/FUNCTIONCUP4)
 >* 참가 조건 : 3인 1조
 >* 참가 방법 : 지원 접수
->* 올해 일정 : 
+>* 올해 일정 :
     >* 9월 1일 오후 1시 0분 ~ 9월 1일 오후 6시 0분 (UTC+9)
 >* 상금 : 피자 기프티콘, 티셔츠
 
