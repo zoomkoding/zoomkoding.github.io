@@ -162,13 +162,9 @@ OJ라는 온라인 저지 사이트인데 문제도 괜찮고 1년에 한번씩 
 ## 주기적으로 열리는 코딩대회
 
 >* 주기적(보통 주단위)으로 대회가 열리는 해외 코딩 사이트로는 크게 3개가 있다.
-
-[AtCoder](https://atcoder.jp)
-
-[CodeForces](https://codeforces.com)
-
-[TopCoder](https://www.topcoder.com/spacenet?gclid=CjwKCAjw8NfrBRA7EiwAfiVJpTg25EhjbIYp_lmpV-8I7vD55hwLB6A-cwFjfyLr42_ipU9E3IS2ehoCCA8QAvD_BwE)
-
+>* [AtCoder](https://atcoder.jp)
+>* [CodeForces](https://codeforces.com)
+>* [TopCoder](https://www.topcoder.com/spacenet?gclid=CjwKCAjw8NfrBRA7EiwAfiVJpTg25EhjbIYp_lmpV-8I7vD55hwLB6A-cwFjfyLr42_ipU9E3IS2ehoCCA8QAvD_BwE)
 >* 모두 문제가 영어로 출제된다는 어려움이 있지만 그래도 문제를 제한된 시간 속에서 풀어보는 연습하기에는 딱 좋은 사이트이다.
 >* 또 CodeForces와 TopCoder에서 랭커가 된다면 이에 따라 백준에서도 이름색이 변하게 되는 영광을 누릴 수 있다.
 
