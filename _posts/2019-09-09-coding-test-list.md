@@ -3,7 +3,7 @@ title: 알고리즘 도전자를 위한 국제 && 국내 코딩 대회 정리
 layout: post
 date: '2019-09-09 01:00:00'
 author: 줌코딩
-tags: codingtest
+tags:
 cover: "/assets/instacode.png"
 categories: codingtest
 ---

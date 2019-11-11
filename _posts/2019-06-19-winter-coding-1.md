@@ -3,9 +3,9 @@ title: (프로그래머스) 2018 윈터코딩 Level 2 스킬트리
 layout: post
 date: '2019-06-19 02:00:00'
 author: 줌코딩
-tags: codingtest
+tags:
 cover: "/assets/instacode.png"
-categories: codingtest
+categories: 프로그래머스
 ---
 
 ## 문제
