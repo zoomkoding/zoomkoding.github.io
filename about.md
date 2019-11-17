@@ -19,17 +19,16 @@ permalink: /about/
 이왕 하는 거 재밌게 시작해서 야무지게 끝내 보자.<br /><br /></center>
 
 <h2><center>경험</center></h2>
-* 2015 . 4 ~ 2015 . 5 LG 글로벌 챌린져 미끄럼틀로 참가 및 예선 탈락
+
+* 2015 . 4 ~ 2015 . 5 **LG 글로벌 챌린져** 미끄럼틀로 참가 및 예선 탈락
 
 * 2016 . 2 ~ 2017 . 11 군복무
-
-* 2018 . 3 C Pointer도 기억 못하는 채로 군복학
 
 * 2018 . 5 Crewcials 결성 및 HBL(Handong Basketball League) 우승
 
 * 2018 . 6 ~ 2018 . 7 Java 공부 (with 갓호준 교수님)
 
-* 2018 . 7 ~ 2018 . 12 자존감 랩실(X-ray 그리드 라인 제거 개선 기법 연구)
+* 2018 . 7 ~ 2018 . 12 자존감 랩실(**X-ray 그리드 라인 제거 개선 기법 연구**)
 
     * 정진혁, 박준혁, 정겨운, 이지현, 김호준. "X-ray 영상 그리드 라인 제거를 위한 DCT 기반 기법에서 블로킹 현상의 개선" 한국정보과학회 KSC2018, 2018년 12월 - **학부생 논문 장려상 수상**
     
@@ -39,9 +38,7 @@ permalink: /about/
 
 * 2018 . 12 ~ 2019 . 2 **수강신청 도움 웹 개발** (Vue, Nodejs, Expressjs, Mysql 활용)
 
-* 2019 . 3 ~ 프로그래머스 코딩테스트 고득점 kit 정복 중...
-
-* 2019 . 5 . 11 **대경권 대학생 프로그램 경진대회 장려상** (아직 한참 멀었다 ㅠㅠ)
+* 2019 . 6 ~ 2019 . 9 **알고리즘 집중 공부** (진혁이와 함께 백준 달리기~~)
 
 * 2019 . 9 . 1 **제 6회 대한민국 SW 융합 해커톤 대회 우수상**
     
@@ -51,6 +48,8 @@ permalink: /about/
 * 2019 . 9 . 10 **2020 카카오 블라인드 신입 공채 1차 코딩 테스트 통과**
   
 * 2019 . 10 . 5 **2019 ACM-ICPC 지역예선 Negend(with 진혁, 예준) 한동대 1위** (휴학으로 본선 못나감..ㅠ)
+  
+* 2019 . 11 . 17 **코드포스 블루 등극** (행복해ㅠㅠ)
 
 <h2><center>프로젝트</center></h2>
 
@@ -183,4 +182,6 @@ permalink: /about/
 
 [Github]: https://github.com/zoomKoding
 
-[naver]: http://blog.naver.com/gur5381
+[Baekjoon]: https://www.acmicpc.net/user/zoomkoding
+
+[Codeforces]: https://codeforces.com/profile/zoomkoding?csrf_token=60ee10c8fa3b2fec9cc92f0c5ee4fef1
