@@ -179,7 +179,6 @@ permalink: /about/
 
 ![사진](/assets/TJ-0.jpeg)
 
-
 [Github]: https://github.com/zoomKoding
 
 [Baekjoon]: https://www.acmicpc.net/user/zoomkoding
