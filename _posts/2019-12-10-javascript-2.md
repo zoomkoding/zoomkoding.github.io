@@ -1,7 +1,7 @@
 ---
 title: (JS 다시 보기) 자바스크립트에서의 함수
 layout: post
-date: '2019-12-10 02:00:00'
+date: '2019-12-10 03:00:00'
 author: 줌코딩
 tags: javascript
 cover: "/assets/instacode.png"
