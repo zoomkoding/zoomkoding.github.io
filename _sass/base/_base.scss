@@ -13,3 +13,7 @@
 @import "lists";
 @import "tables";
 @import "typography";
+
+html {
+    scroll-behavior: smooth;
+}

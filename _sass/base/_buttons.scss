@@ -20,7 +20,7 @@ button {
 
   &:hover,
   &:focus {
-    background-color: darken($blue, 15%);
+    background-color: darken($red, 15%);
     color: #fff;
   }
 
@@ -28,4 +28,8 @@ button {
     cursor: not-allowed;
     opacity: 0.5;
   }
+}
+
+.cat_button {
+  margin-top: 10px;
 }
