@@ -17,6 +17,8 @@ button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  margin-top: 10px;
+
 
   &:hover,
   &:focus {
@@ -30,6 +32,3 @@ button {
   }
 }
 
-.cat_button {
-  margin-top: 10px;
-}
