@@ -6,7 +6,7 @@ permalink: /posts/
 
 {% for category in site.categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
-  <button type="button" class="cat_button" onclick="window.location.href='#{{cat}}' ">{{ cat | capitalize }} ({{site.categories[cat].size}})</button>
+  <button type="button" onclick="window.location.href='#{{cat}}' ">{{ cat | capitalize }} ({{site.categories[cat].size}})</button>
 {% endfor %}
 
 <hr>
