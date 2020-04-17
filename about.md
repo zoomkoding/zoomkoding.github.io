@@ -45,9 +45,9 @@ permalink: /about/
 
 * 2019 . 11 . 21 ~ 22 <a href="http://localhost:4000/codingtest/naver/2019/11/26/2019-naver-hackday-2.html">네이버 캠퍼스 핵데이 참여</a>
 
-* 2019 . 12 . 16 ~ 스타트업 개발 인턴
+* 2019 . 12 . 16 ~ [스타트업 개발 인턴](https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/03/25/start-up-app-development.html)
 
-* 2020 . 3 . 24 Skin Care App Picky v. 1.0.0 배포
+* 2020 . 3 . 24 [Picky Skin Care App 배포](https://apps.apple.com/kr/app/picky-skincare-made-smarter/id1504197356)
 
 <br>
 
