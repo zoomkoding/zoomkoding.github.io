@@ -45,6 +45,10 @@ permalink: /about/
 
 * 2019 . 11 . 21 ~ 22 <a href="http://localhost:4000/codingtest/naver/2019/11/26/2019-naver-hackday-2.html">네이버 캠퍼스 핵데이 참여</a>
 
+* 2019 . 12 . 16 ~ 스타트업 개발 인턴
+
+* 2020 . 3 . 24 Skin Care App Picky v. 1.0.0 배포
+
 <br>
 
 <span class="page-divider">
