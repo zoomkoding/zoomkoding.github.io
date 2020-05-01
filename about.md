@@ -43,7 +43,7 @@ permalink: /about/
 
 * 2019 . 11 . 17 <a href="https://zoomkoding.github.io/codeforces/2019/11/17/codeforces-600.html">코드포스 블루 등극</a>
 
-* 2019 . 11 . 21 ~ 22 <a href="http://localhost:4000/codingtest/naver/2019/11/26/2019-naver-hackday-2.html">네이버 캠퍼스 핵데이 참여</a>
+* 2019 . 11 . 21 ~ 22 <a href="https://zoomkoding.github.io/codingtest/naver/2019/11/26/2019-naver-hackday-2.html">네이버 캠퍼스 핵데이 참여</a>
 
 * 2019 . 12 . 16 ~ [스타트업 개발 인턴](https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/03/25/start-up-app-development.html)
 
