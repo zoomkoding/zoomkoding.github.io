@@ -54,7 +54,7 @@ Flutter에서 Widget 만들듯이 Widget 내에서 styling까지 다 진행했�
 
 **Atoms/TextField.js**
 
-    export default function(value = '', width = '318px') {
+    export default function TextField(value = '', width = '318px') {
         const textField = document.createElement('input');
         textField.type = 'text';
         textField.value = value;
@@ -94,7 +94,7 @@ Flutter에서 Widget 만들듯이 Widget 내에서 styling까지 다 진행했�
     import Button from '../Atoms/Button.js';
     import TextField from '../Atoms/TextField.js';
 
-    export default function(isAdded = false, name = '') {
+    export default function Task(isAdded = false, name = '') {
         const task = document.createElement('div');
         const textField = isAdded ? TextField(name, '226px') : TextField();
         let isTextFieldEnabled = true;
@@ -164,7 +164,7 @@ Flutter에서 Widget 만들듯이 Widget 내에서 styling까지 다 진행했�
     import Section from '../Molecules/Section.js';
 
 
-    export default function() {
+    export default function AddItemSection() {
         const section = Section('addItem', 'ADD ITEM');
         const task = Task();
         section.appendChild(task);
