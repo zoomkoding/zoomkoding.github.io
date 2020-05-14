@@ -2,59 +2,60 @@ import Checkbox from '../Atoms/CheckBox.js';
 import Button from '../Atoms/Button.js';
 import TextField from '../Atoms/TextField.js';
 
-export default function Task(isCreated = false, name = '') {
+export default function Task(isAdded = false, name = '') {
+    const task = document.createElement('div');
+    const textField = isAdded ? TextField(name, '226px') : TextField();
+    let isTextFieldEnabled = true;
+
+    task.style.height = '41px';
+    task.style.width = '400px';
+    task.style.padding = '20px 0';
+
     function onCheckboxClick(isChecked) {
         if(isChecked) {
             textField.style.textDecorationLine = 'line-through';
             textField.style.color = '#888';
-            document.getElementById('complete').appendChild(div);
+            document.getElementById('complete').appendChild(task);
         }
         else{
             textField.style.textDecorationLine = 'none';
             textField.style.color = '#333';
-            document.getElementById('todo').appendChild(div);
+            document.getElementById('todo').appendChild(task);
         } 
     }
     function onDeleteButtonClick() {
-        console.log('delete');
-        div.remove();
+        task.remove();
     }
-    
+
+    function onEditButtonClick() {
+        if(isTextFieldEnabled) textField.enable();
+        else textField.disable();
+        isTextFieldEnabled = !isTextFieldEnabled;
+    }
+
     function onAddButtonClick() {
         document.getElementById('todo').appendChild(Task(true, textField.value));
         textField.value = '';
     }
 
-    function onEditButtonClick() {
-        if(isLabel) textField.becomeTextField();
-        else textField.becomeText();
-        isLabel = !isLabel;
-    }
-    let isLabel = true;
-    const div = document.createElement('div');
-    const textField = isCreated ? TextField(name, '226px') : TextField();
-    
-    if(isCreated){
-        textField.becomeText();
+    //A Task added to TODO or COMPLETED list
+    if(isAdded){
+        textField.disable();
         const checkbox = Checkbox(onCheckboxClick);
         const editButton = Button('Edit', onEditButtonClick);
         const deleteButton = Button('Delete', onDeleteButtonClick, '#CF2323');
-        div.appendChild(checkbox);
-        div.appendChild(textField);
-        div.appendChild(editButton);
-        div.appendChild(deleteButton);
-        div.style.borderBottom = '1px solid #eee';
+        task.appendChild(checkbox);
+        task.appendChild(textField);
+        task.appendChild(editButton);
+        task.appendChild(deleteButton);
+        task.style.borderBottom = '1px solid #eee';
     }
+    //A Task under ADD ITEM section
     else {
         const addButton = Button('Add', onAddButtonClick);
-        div.appendChild(textField);
-        div.appendChild(addButton);
+        task.appendChild(textField);
+        task.appendChild(addButton);
 
     }
-    
-    div.style.height = '41px';
-    div.style.width = '400px';
-    div.style.padding = '20px 0';
-
-    return div;
+    return task;
 }

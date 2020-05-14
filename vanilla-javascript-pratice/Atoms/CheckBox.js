@@ -1,4 +1,4 @@
-export default function Checkbox(onclick) {
+export default function CheckBox (onclick) {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = false;

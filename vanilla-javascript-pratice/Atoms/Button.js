@@ -1,18 +1,18 @@
 export default function Button(text, onclick, overColor = '#333') {
-    const input = document.createElement('input');
-    input.type = 'button';
-    input.value = text;
+    const button = document.createElement('input');
+    button.type = 'button';
+    button.value = text;
 
-    input.style.background = 'none';
-    input.style.border = 'none';
-    input.style.color = '#888';
-    input.style.fontSize = '15px';
-    input.style.width = '60px';
-    input.style.margin = '10px 0 0';
+    button.style.background = 'none';
+    button.style.border = 'none';
+    button.style.color = '#888';
+    button.style.fontSize = '15px';
+    button.style.width = '60px';
+    button.style.margin = '10px 0 0';
 
-    input.onmouseover = () => input.style.color = overColor;
-    input.onmouseleave = () => input.style.color = '#888';
-    input.onclick = onclick;
+    button.onmouseover = () => button.style.color = overColor;
+    button.onmouseleave = () => button.style.color = '#888';
+    button.onclick = onclick;
     
-    return input;
+    return button;
 }

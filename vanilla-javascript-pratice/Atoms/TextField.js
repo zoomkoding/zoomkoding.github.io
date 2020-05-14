@@ -1,30 +1,27 @@
 export default function TextField(value = '', width = '318px') {
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.value = value;
-    input.style.width = width;
-    input.style.height = '18px';
-    input.style.padding = '10px';
-    input.style.border = '1px solid #ddd';
-    input.style.borderRadius = '6px';
-    input.style.fontSize = '18px';
-    input.style.color = '#888';
-    input.onfocus = () => input.style.color = '#333';
-    input.onblur = () => input.style.color = '#888';
-    input.onchange = () => {
-        console.log('hi');
-    }
-    input.becomeText = () => {
-        console.log('become text');
-        input.disabled = 'true';
-        input.style.border = 'none';
-        input.style.color = '#333';
+    const textField = document.createElement('input');
+    textField.type = 'text';
+    textField.value = value;
+    textField.style.width = width;
+    textField.style.height = '18px';
+    textField.style.padding = '10px';
+    textField.style.border = '1px solid #ddd';
+    textField.style.borderRadius = '6px';
+    textField.style.fontSize = '18px';
+    textField.style.color = '#888';
+    textField.onfocus = () => textField.style.color = '#333';
+    textField.onblur = () => textField.style.color = '#888';
+    
+    textField.disable = () => {
+        textField.disabled = true;
+        textField.style.border = 'none';
+        textField.style.color = '#333';
     
     }
-    input.becomeTextField = () => {
-        input.disabled = 'false';
-        input.style.border = '1px solid #ddd';
-        input.style.color = '#888';
+    textField.enable = () => {
+        textField.disabled = false;
+        textField.style.border = '1px solid #ddd';
+        textField.style.color = '#888';
     }
-    return input;
+    return textField;
 }

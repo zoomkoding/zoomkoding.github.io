@@ -1,4 +1,4 @@
-import Title from '../Molecules/Title.js';
+import Title from './Title.js';
 
 export default function Section(id, title) {
     const section = document.createElement('div');
