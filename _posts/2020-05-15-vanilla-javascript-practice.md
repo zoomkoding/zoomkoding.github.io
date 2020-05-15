@@ -1,7 +1,7 @@
 ---
 title: 바닐라 자바스크립트로 Widget 기반 To Do List Web Page 클론코딩하기
 layout: post
-date: '2020-03-25 02:00:00'
+date: '2020-05-15 02:00:00'
 author: 줌코딩
 tags: javascript atomic_design
 cover: "/assets/instacode.png"
