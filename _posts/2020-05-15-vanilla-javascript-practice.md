@@ -16,6 +16,10 @@ categories: javascript
 
 [To Do List Page](https://codepen.io/erinmars/pen/JJObjE) 클론하기!
 
+[문제 링크](https://github.com/zoomKoding/vanilla-javascript-practice)
+
+**내 소스 코드는 `solution/zoomkoding` branch에 있다.**
+
 **수행 방법**
 
 - Plain Javascript를 활용해서 Web Page를 구축해보자.
