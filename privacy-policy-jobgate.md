@@ -1,6 +1,6 @@
 ## Privacy Policy
 
-Protecting your private information is an important priority for JobGate. This Privacy Policy applies to the App (the “Service”) operated by JobGate (“us, “we”, or “our”) and governs data collection and usage. By using our Service, you consent to the data practices described in this statement.
+Protecting your private information is an important priority for JobGate. This Privacy Policy applies to the App (the “Service”) operated by JobGate and governs data collection and usage. By using our Service, you consent to the data practices described in this statement.
 
 ## Information that we collect
 
