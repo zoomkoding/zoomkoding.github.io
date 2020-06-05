@@ -1,5 +1,5 @@
 ---
-title: Node 백엔드 개발 기본 개념잡기
+title: Node 개발자라면 알아야 할 기본 지식(Javascript, Node, Express)
 layout: post
 date: '2020-06-04 02:00:00'
 author: 줌코딩
