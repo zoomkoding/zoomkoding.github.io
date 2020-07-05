@@ -126,7 +126,7 @@ asyncRun(baseData, idx =>console.log(idx))
 
 ### 클래스 관계도 그림
 
-![그림](woowa-tech-camp-day-3-diagram.HEIC)
+![그림](/assets/woowa-tech-camp-day-3-diagram.HEIC)
 
 ### 초기 클래스와 이벤트 설계
 
