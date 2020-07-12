@@ -46,16 +46,12 @@ Test Driven Development : 말그대로 **테스트가 이끌어 나가는 개발
 
 구현을 고려하기 전에 입출력부터 생각해보자.
 
----
-
 - 입력값: 비밀번호
 - 출력값: Boolean(강도가 세면 true 아니면 false)
 
 ### 2. 함수 시그니처 선택하기
 
 함수의 매개변수와 반환값을 정의한다.
-
----
 
 ```jsx
 var strong = isStrongPassword('password string goes here')
@@ -67,8 +63,6 @@ var strong = isStrongPassword('password string goes here')
 
 내부 구현을 최대한 신경쓰지 말고 어떻게 동작하는지에만 집중하라.
 
----
-
 비밀번호 강도를 생각해보면, 특수문자, 숫자, 길이, 등등 다양한 규칙들이 있을 것이다. 이 모든 것을 포함하는 테스트를 생각하는 건 당연히 어렵다!
 
 비밀번호 강도에 관해 가장 단순한 규칙은 빈 문자열이다. 이건 매우 쉽다 
@@ -78,8 +72,6 @@ var strong = isStrongPassword('password string goes here')
 ### 4. 테스트 구현
 
 함수의 한줄 한줄을 모른채 테스트 코드 만을 작성해보자.
-
----
 
 ```jsx
 describe('isPasswordStrong', function() {

@@ -115,6 +115,8 @@ app.use(morgan('common', {
 // ···
 ```
 
+<br/>
+
 ### [express-session](https://www.npmjs.com/package/express-session)
 
 express-session은 서버가 세션을 이용하게 해주고 유저 쿠키에 세션 정보를 담을 수 있게 해주는 매우 유용한 미들 웨어이다.
@@ -180,6 +182,8 @@ express-sesssion은 req.headers.cookie에 주어진 sid를 sessionID를 번역�
 
 **즉, 세션의 정보 값은 쿠키에 전달되지 않고  해쉬화된 sid만 유저의 쿠키에 저장되고 요청이 들어오면 sid를 번역하고 얻은 session ID에 해당하는 session 값을 req.session에 넣어주어 next함수에서 사용할 수 있게 해준다!!(이제 좀 알겠다...ㅋㅋㅋ)**
 
+<br/>
+
 ## 🤝 본격 express로 로그인 구현하기
 
 그럼 이제 로그인 구현의 express의 middleware을 알아보고 로그인 페이지를 구현해보자.
@@ -236,6 +240,8 @@ app.post('/login',
 
 passport.authentication 함수가 성공하면 req.user에 유저 정보를 넣어서 콜백 함수를 실행하지만 로그인 실패시 바로 401 authentication error 메시지를 전달한다.
 
+<br/>
+
 **❓그럼 로그인 여부는 어디서 결정 될까?**
 
 위의 코드에서  username, password, done을 파라미터로 받는 함수는 verify callback라고 하는데 여기서 authentication 성공과 실패 여부를 **done함수**로 전달한다. (이때 전달된 값이 req.user에 넣어진다.)
@@ -243,6 +249,8 @@ passport.authentication 함수가 성공하면 req.user에 유저 정보를 넣�
 성공시에는 done의 두번째 인자로 유저 정보로 실패시에는 false를 반환한다.
 
 에러 발생시에는 첫번째 인자에 에러를 넣어서 반환한다. // done(err);
+
+<br/>
 
 **❓로그인 세션을 사용하고 싶다면?**
 
@@ -270,27 +278,33 @@ passport.deserializeUser(function(id, done) {
 });
 ```
 
+<br/>
+
 📩 **serializeUser**
 
 verify callback가 유저 정보를 전달하면 실행되는 함수로, 성공한 유저의 정보를 session에 추가한다.
 
+<br/>
+
 📤 **deserializeUser**
 
-deserializeUser은 Cookie에 저장된 passport session 정보를 이용해서 User정보를 가져오는 함수이다.
-
-앞에서 session과 같이 cookie에는 구체적인 유저정보가 담기지 않고 passport session id가 저장되어 있다. pass
+deserializeUser은 Cookie에 저장된 passport session 정보를 이용해서 User정보를 가져오는 함수이다.  
+앞에서 session과 같이 cookie에는 구체적인 유저정보가 담기지 않고 passport session id가 저장되어 있다.
 
 🎈session 사용량을 줄이기 위해서 user의 id만 저장하고 요청이 오면 id에 해당하는 유저정보를 가져와서 쓰면 좋다.
 
-**⁉️ 그럼 passport session은 유저에게 어떻게 저장될까?**
+<br/>
 
-passport용 세션이 새로 생기는 게 아니라 express session에 하나의 property로 들어가게 된다.
+**❓그럼 passport session은 유저에게 어떻게 저장될까?**
 
+passport용 세션이 새로 생기는 게 아니라 express session에 하나의 property로 들어가게 된다.  
 cookie에 들어있는 express session이 생성한 connect.sid을 풀면 그 안에 passport session 정보가 들어있는 걸 볼 수 있다.
 
 ![express-middleware-5](/assets/express-middleware-5.png)
 
-**⁉️로그인 상태에 따라 페이지 접근 제어하기!**
+<br/>
+
+**❓로그인 상태에 따라 페이지 접근 제어하기!**
 
 마이페이지와 같은 페이지에 접근할 때는 유저의 로그인 상태에 따라서 페이지를 달리 해줘야 한다. 
 
@@ -320,6 +334,8 @@ function isAuthenticated(req, res, next){
 router.get('/mypage', isAuthenticated, (req, res) => res.render('mypage', { user: req.user }));
 ```
 
+<br/>
+
 ### [bcrypt](https://www.npmjs.com/package/bcrypt)
 
 bcrpyt는 비밀번호를 쉽게 암호화해주는 미들웨어이다.
@@ -332,19 +348,26 @@ user.passwordHash = await bcrypt.hash(password, saltRounds);
 const match = await bcrypt.compare(password, user.passwordHash);
 ```
 
-**⁉️bcrpyt가 근데 뭐지요? [비밀번호 암호화 관련 사진 출처 및 참고자료](https://d2.naver.com/helloworld/318732)** 
+<br/>
+
+**❓bcrpyt가 근데 뭐지요? [비밀번호 암호화 관련 사진 출처 및 참고자료](https://d2.naver.com/helloworld/318732)** 
 
 비밀번호를 단방향으로 hashing 만으로 생길 수 있는 유추 가능성이나 빠른 속도로 인해 해커들에게 편의성을 제공할 수 있다.
 
-이를 해결하기 위해 salt를 비밀번호에 더한 후에 hashing을 진행하여 다이제스트를 생성하도록 하는데 bcrypt는 이에 더해 다이제스트를 생성하는 과정을 몇번 진행할지 결정하는 'work factor'(여기서는 **saltRounds**이다)를 조정하는 것 만으로 **시스템 보안성을 증가**시킨다고 한다.
+이를 해결하기 위해 salt를 비밀번호에 더한 후에 hashing을 진행하여 다이제스트를 생성한다.  
+bcrypt는 이에 더해 다이제스트를 생성하는 과정을 몇번 진행할지 결정하는 'work factor'(여기서는 **saltRounds**이다)를 조정하는 것 만으로 **시스템 보안성을 증가**시킨다고 한다.
 
 ![express-middleware-6](/assets/express-middleware-6.png)
+
+<br/>
 
 ### [flash](https://www.npmjs.com/package/connect-flash)
 
 flash는 세션에서 메시지를 저장할 때 사용하는 특별한 공간이다. 
 
 flash에 작성된 메시지는 한번 유저한테 display되면 바로 삭제된다.
+
+<br/>
 
 **❓어디에 쓸까? 로그인 실패 메시지 전달에!**
 
@@ -461,7 +484,7 @@ class Model {
 module.exports = Model;
 ```
 
-User table을 위의 모델를 기반으로 만들어 보았다!
+그리고 User table을 위의 모델를 기반으로 만들었다:)
 
 ```jsx
 const Model = require('./model');
@@ -488,15 +511,19 @@ class Users extends Model {
 module.exports = Users;
 ```
 
+<br/>
+
 ## 📽️ 프로젝트 깃헙 레포지토리
 
 [[우아한테크캠프] 배민상회 회원가입/로그인 구현 프로젝트](https://github.com/woowa-techcamp-2020/market-8)
+
+<br/>
 
 ## 💭 회고
 
 - 이번 기회를 통해서 세션이 어떻게 동작하고 특히 passport에서 세션이 어떻게 이용되는지 좀더 잘 이해할 수 있었던 것 같다.
 - 다음에는 morgan을 파일로 로깅하는데 까지 사용해봐야겠다.
 - 모르고 사용해서 사실 불안한 부분들이 많았는데 이번 기회에 그런 불안함이 많이 해소된 것 같아 보람차다.
-- **⁉️무엇보다 프론트엔드는 너무 부족하니 다음 기회에는 프론트엔드 공부에도 더 많이 신경써봐야겠다!**
+- **❓무엇보다 프론트엔드는 너무 부족하니 다음 기회에는 프론트엔드 공부에도 더 많이 신경써봐야겠다!**
 
 ## 잘못 정리된 점이나 피드백 있으면 말씀해주세요!
