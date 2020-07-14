@@ -3,9 +3,9 @@ title: (우아한테크캠프 3기) Express 미들웨어 제대로 사용하기 
 layout: post
 date: '2020-07-12 20:00:00'
 author: 줌코딩
-tags: javascript node express 우아한테크캠프
+tags: javascript node express 우아한테크캠프 백엔드개발 노드 익스프레스 미들웨어
 cover: "/assets/instacode.png"
-categories: node 우아한테크캠프
+categories: nodejs 우아한테크캠프
 ---
 
 ## 🧩 목적

@@ -12,15 +12,19 @@ categories: web 우아한테크캠프
 
 css를 진짜 많이 얕봤다.. flutter를 이용해서 UI 구현해내는 일에 이제 익숙해졌기 때문에 스타일링 하는 것은 진짜 가볍게 여겼다가  큰코 다쳤다. 이번에 겸손한 마음으로 css 기초부터 반응형으로 레이아웃을 잡는 여러 좋은 방법들에 대해 조사해봤고 마지막으로 간단하게 github project를 따라하며 실습을 진행했다.
 
+<br>
+
 ## 📗 참고 자료
 
 [poiemaweb 튜토리얼](https://poiemaweb.com/)
 
 [flex box로 만들 수 있는 10가지 레이아웃(네이버 D2)](https://d2.naver.com/helloworld/8540176)
 
+<br>
+
 ## 📦 Box Sizing
 
-![css-layout-1.png](/assetes/css-layout-1.png)
+![css-layout-1.png](/assets/css-layout-1.png)
 
 브라우저는 박스모델의 정보를 근거로 렌더링을 진행한다.
 
@@ -30,15 +34,19 @@ css를 진짜 많이 얕봤다.. flutter를 이용해서 UI 구현해내는 일�
 
 이 상태에서 박스의 사이즈를 제대로 측정하려면  contents 너비 + 양쪽 padding 값 + 양쪽 border 값을 구해야 한다... 이걸 계산해서 레이아웃을 잡기란 쉽지 않다. 😭
 
+<br>
+
 **❓ 그렇다면 박스를 이용해서 레이아웃을 잡으려면 어떻게 해야할까?**
 
 이럴 때 사용하면 좋은게  **border-box** 이다! 
 
 contents의 size만으로 width를 설정했던 box-sizing은 content-box로 box-sizing의 default 값이다.
 
+<br>
+
 **border-box는 아래 그림과 같이 박스의 margin을 제외한 양쪽 border 값 + 양쪽 padding 값 + contents  너비를 width로 표현하기 때문에 박스끼리의 레이아웃을 잡기 상당히 편하다.** 🍏
 
-![css-layout-2.png](/assetes/css-layout-2.png)
+![css-layout-2.png](/assets/css-layout-2.png)
 
 그래서 웹에서 다음과 같이 default box-sizing을 border-box로 바꿔놓기도 한다.**(github도 마찬가지이다.**🐙**)** 
 
@@ -48,6 +56,8 @@ contents의 size만으로 width를 설정했던 box-sizing은 content-box로 box
 }
 ```
 
+<br>
+
 ## 💪 Flex Box
 
 **❓ 만일 3개의 박스를 웹 페이지의 너비에 맞춰서 1:1:1 비율로 띄우고 싶다면?**
@@ -56,11 +66,13 @@ contents의 size만으로 width를 설정했던 box-sizing은 content-box로 box
 
 **이럴 때 쓸 수 있는게 바로바로 Flex Box이다.**
 
+<br>
+
 **Flex box**는 실제 width와 height를 주지 않고도 비율로 layout을 구성할 수 있기 때문에 동적으로 페이지를 보여주고 싶은 레이아웃에서 아주 유용하게 사용된다.
 
 flex는 크개 두가지로 구성되어 있다. 바로 비율로 이루어진 **Flex Item**과 이들을 포함하고 있는 **Flex-container**이다.
 
-![css-layout-3.png](/assetes/css-layout-3.png)
+![css-layout-3.png](/assets/css-layout-3.png)
 
 이미지 출처: [http://book.mixu.net/css/4-flexbox.html](http://book.mixu.net/css/4-flexbox.html)
 
@@ -99,7 +111,7 @@ flex-grow, shrink는 주어진 flex container에 따라 줄어들지 늘어날�
 
 flex-basis는 기존 사이즈를 어떻게 할지 정하는 것으로 flex-base를 0으로 하면 무조건 비율로, auto이면 각 flex item의 contents 너비에 맞춰 사이즈를 달리한다.
 
-![css-layout-4.png](/assetes/css-layout-4.png)
+![css-layout-4.png](/assets/css-layout-4.png)
 
 이미지 출처: [https://d2.naver.com/helloworld/8540176](https://d2.naver.com/helloworld/8540176)
 
@@ -129,6 +141,7 @@ flex-basis는 기존 사이즈를 어떻게 할지 정하는 것으로 flex-base
   margin-left: auto;
 }
 ```
+<br>
 
 ## 📱viewport & media query
 
@@ -161,23 +174,25 @@ viewport는 사용자에게 보여지는 영역을 말한다. 웹을 모바일 �
 }
 ```
 
+<br>
+
 ## github project page 클론하기
 
  그럼 깃헙 프로젝트 페이지를 여때까지 공부한 방법을 이용해서 layout을 잡아보자. 
 
-![css-layout-5.png](/assetes/css-layout-5.png)
+![css-layout-5.png](/assets/css-layout-5.png)
 
 일단 css를 [http://meyerweb.com/eric/tools/css/reset/](http://meyerweb.com/eric/tools/css/reset/)를 참고해서 초기화 해줬고, 이어서 간단하게 페이지를 구현했다. 
 
 간단하게 따라 구현한 결과 페이지이다.
 
-![css-layout-6.png](/assetes/css-layout-6.png)
+![css-layout-6.png](/assets/css-layout-6.png)
 
 <br>
 
 **페이지 너비에 따라 다음과 같이 반응하기도 한다.** 👏
 
-![css-layout-7.png](/assetes/css-layout-7.png)
+![css-layout-7.png](/assets/css-layout-7.png)
 
 <br>
 

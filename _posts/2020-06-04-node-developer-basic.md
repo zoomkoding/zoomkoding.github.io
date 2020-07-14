@@ -3,9 +3,9 @@ title: Node 개발자라면 알아야 할 기본 지식(Javascript, Node, Expres
 layout: post
 date: '2020-06-04 02:00:00'
 author: 줌코딩
-tags: javascript node express
+tags: javascript nodejs express 노드 익스프레스 백엔드개발 기초
 cover: "/assets/instacode.png"
-categories: node
+categories: nodejs
 ---
 
 ## 배경
