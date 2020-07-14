@@ -3,9 +3,9 @@ title: (우아한테크캠프 3기) Atomic Design Pattern이 뭐지?
 layout: post
 date: '2020-07-09 20:00:00'
 author: 줌코딩
-tags: javascript designpattern
+tags: javascript designpattern 우아한테크캠프 atomicdesign
 cover: "/assets/instacode.png"
-categories: frontend
+categories: frontend 우아한테크캠프
 ---
 
 ## 🤔 목적

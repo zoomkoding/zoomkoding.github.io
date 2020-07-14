@@ -3,9 +3,9 @@ title: (우아한테크캠프 3기) 어렵지 않게 CSS 레이아웃 잡기
 layout: post
 date: '2020-07-14 20:00:00'
 author: 줌코딩
-tags: web css
+tags: web css 우아한테크캠프
 cover: "/assets/instacode.png"
-categories: web
+categories: web 우아한테크캠프
 ---
 
 ## 🤔 목적

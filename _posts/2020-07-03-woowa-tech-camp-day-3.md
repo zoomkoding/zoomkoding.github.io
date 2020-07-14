@@ -3,9 +3,9 @@ title: (우아한테크캠프 3기) Day3 JS 객체 지향형 프로그래밍 & �
 layout: post
 date: '2020-07-03 23:00:00'
 author: 줌코딩
-tags: 우아한테크캠프
+tags: 우아한테크캠프 OOP 카페만들기
 cover: "/assets/instacode.png"
-categories: 우아한테크캠프
+categories: web 우아한테크캠프
 ---
 
 출근 시간이 9시가 아니라 9시 반이었기에 30분 더 자고 넉넉히 출발했다 ㅎㅎ
