@@ -178,7 +178,7 @@ app.use(function(req, res, next) {
 
 🗒️**정리** 🗒️
 
-express-sesssion은 req.headers.cookie에 주어진 sid를 sessionID를 번역하고 그 해당 sessionID에 해당하는 session 값을 req.session에 저장하게 된다! 
+express-sesssion은 req.headers.cookie에 주어진 sid를 sessionID로 번역하고 그 sessionID에 해당하는 session 값을 req.session에 저장하게 된다! 
 
 **즉, 세션의 정보 값은 쿠키에 전달되지 않고  해쉬화된 sid만 유저의 쿠키에 저장되고 요청이 들어오면 sid를 번역하고 얻은 session ID에 해당하는 session 값을 req.session에 넣어주어 next함수에서 사용할 수 있게 해준다!!(이제 좀 알겠다...ㅋㅋㅋ)**
 
