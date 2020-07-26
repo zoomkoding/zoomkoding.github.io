@@ -3,9 +3,9 @@ title: (우아한테크캠프 3기) Test Driven Development란?
 layout: post
 date: '2020-07-10 20:00:00'
 author: 줌코딩
-tags: tdd 
+tags: tdd 우아한테크캠프
 cover: "/assets/instacode.png"
-categories: tdd
+categories: tdd 우아한테크캠프
 ---
 
 ## 🧪 TDD란

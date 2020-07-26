@@ -3,18 +3,22 @@ title: (우아한테크캠프 3기) Express 미들웨어 제대로 사용하기 
 layout: post
 date: '2020-07-12 20:00:00'
 author: 줌코딩
-tags: javascript node express
+tags: javascript node express 우아한테크캠프 백엔드개발 노드 익스프레스 미들웨어
 cover: "/assets/instacode.png"
-categories: node
+categories: nodejs 우아한테크캠프
 ---
 
 ## 🧩 목적
 
 express의 특징에 대해서는 [Node 개발자라면 알아야 할 기본 지식 포스팅](https://zoomkoding.github.io/node/2020/06/04/node-developer-basic.html)을 통해 정리했으니 이번에는 express generator로 생성되는 여러 미들웨어와 로그인 프로그램 구현에 사용된 미들웨어를 정리해보려고 한다.
 
+<br>
+
 ## 📽️ 프로젝트 깃헙 레포지토리
 
 [[우아한테크캠프] 배민상회 회원가입/로그인 구현 프로젝트](https://github.com/woowa-techcamp-2020/market-8)
+
+<br>
 
 ## 🏭 Express 주요 미들웨어
 
@@ -24,7 +28,9 @@ Express는 런타임에 템플릿 엔진을 이용해서 여러 변수가 있는
 
 Pug는 가장 대표적인 템플릿엔진으로 템플릿이 있는 디렉토리를  views에 정해주고 view engine으로 pug로 설정해주면 사용할 수 있다.
 
-**app.js에 view engine 종류와 template directory를 정해주고**
+<br>
+
+app.js에 view engine 종류와 template directory를 정해주고
 
 ```jsx
 app.set('views', './views');
@@ -51,13 +57,11 @@ router.get('/', function(req, res, next) {
 
 template에 변수 값을 넣어서 해당하는 페이지를 유저에게 전달된다.
 
-![express-middleware-0](/assets/express-middleware-0.png)
+<br>
 
 ### [morgan](https://www.npmjs.com/package/morgan)
 
 morgan은 이름에서 바로 알 수 없지만 request를 logging을 해주는 아주 유용한 미들웨어이다. 
-
-Express generator를 이용하면 자동으로 app.js에 다음과 같은 내용이 생성되는 걸 확인할 수 있다.
 
 ```jsx
 var logger = require('morgan');
@@ -67,6 +71,8 @@ var logger = require('morgan');
 app.use(logger('dev');
 ```
 
+<br>
+
 morgan을 사용할 때 parameter로 format 값을 보내줄 수 있다.(이 미리 정해진 format은 tiny, common, short 등 다양하다.)
 
 dev format는 request를 다음과 같은 형식으로 console에 기록해준다.
@@ -75,11 +81,17 @@ dev format는 request를 다음과 같은 형식으로 console에 기록해준�
 :method :url :status :response-time ms - :res[content-length]
 ```
 
+<br>
+
 dev format을 사용했을 때의 모습이다.
 
 ![express-middleware-0](/assets/express-middleware-1.png)
 
+<br>
+
 morgan을 사용하면 에러가 어떤 요청에서 발생했는지 확인할 수 있어서 매우 유용하다. 근데 만일 실제 서비스를 배포한 상태에서 서버의 상태를 콘솔로만 확인한다면 로그를 모두 확인하는데 어려움이 있다.
+
+<br>
 
 🍯**꿀팁** 🍯 
 
@@ -115,7 +127,7 @@ app.use(morgan('common', {
 // ···
 ```
 
-<br/>
+<br>
 
 ### [express-session](https://www.npmjs.com/package/express-session)
 
@@ -172,17 +184,21 @@ app.use(function(req, res, next) {
 // ···
 ```
 
+<br>
+
 출력 결과는 다음과 같다.
 
 ![express-middleware-3](/assets/express-middleware-3.png)
 
+<br>
+
 🗒️**정리** 🗒️
 
-express-sesssion은 req.headers.cookie에 주어진 sid를 sessionID를 번역하고 그 해당 sessionID에 해당하는 session 값을 req.session에 저장하게 된다! 
+express-sesssion은 req.headers.cookie에 주어진 sid를 sessionID로 번역하고 그 sessionID에 해당하는 session 값을 req.session에 저장하게 된다! 
 
 **즉, 세션의 정보 값은 쿠키에 전달되지 않고  해쉬화된 sid만 유저의 쿠키에 저장되고 요청이 들어오면 sid를 번역하고 얻은 session ID에 해당하는 session 값을 req.session에 넣어주어 next함수에서 사용할 수 있게 해준다!!(이제 좀 알겠다...ㅋㅋㅋ)**
 
-<br/>
+<br>
 
 ## 🤝 본격 express로 로그인 구현하기
 
@@ -240,7 +256,7 @@ app.post('/login',
 
 passport.authentication 함수가 성공하면 req.user에 유저 정보를 넣어서 콜백 함수를 실행하지만 로그인 실패시 바로 401 authentication error 메시지를 전달한다.
 
-<br/>
+<br>
 
 **❓그럼 로그인 여부는 어디서 결정 될까?**
 
@@ -250,7 +266,7 @@ passport.authentication 함수가 성공하면 req.user에 유저 정보를 넣�
 
 에러 발생시에는 첫번째 인자에 에러를 넣어서 반환한다. // done(err);
 
-<br/>
+<br>
 
 **❓로그인 세션을 사용하고 싶다면?**
 
@@ -278,13 +294,13 @@ passport.deserializeUser(function(id, done) {
 });
 ```
 
-<br/>
+<br>
 
 📩 **serializeUser**
 
 verify callback가 유저 정보를 전달하면 실행되는 함수로, 성공한 유저의 정보를 session에 추가한다.
 
-<br/>
+<br>
 
 📤 **deserializeUser**
 
@@ -293,7 +309,7 @@ deserializeUser은 Cookie에 저장된 passport session 정보를 이용해서 U
 
 🎈session 사용량을 줄이기 위해서 user의 id만 저장하고 요청이 오면 id에 해당하는 유저정보를 가져와서 쓰면 좋다.
 
-<br/>
+<br>
 
 **❓그럼 passport session은 유저에게 어떻게 저장될까?**
 
@@ -302,7 +318,7 @@ cookie에 들어있는 express session이 생성한 connect.sid을 풀면 그 �
 
 ![express-middleware-5](/assets/express-middleware-5.png)
 
-<br/>
+<br>
 
 **❓로그인 상태에 따라 페이지 접근 제어하기!**
 
@@ -334,7 +350,7 @@ function isAuthenticated(req, res, next){
 router.get('/mypage', isAuthenticated, (req, res) => res.render('mypage', { user: req.user }));
 ```
 
-<br/>
+<br>
 
 ### [bcrypt](https://www.npmjs.com/package/bcrypt)
 
@@ -348,7 +364,7 @@ user.passwordHash = await bcrypt.hash(password, saltRounds);
 const match = await bcrypt.compare(password, user.passwordHash);
 ```
 
-<br/>
+<br>
 
 **❓bcrpyt가 근데 뭐지요? [비밀번호 암호화 관련 사진 출처 및 참고자료](https://d2.naver.com/helloworld/318732)** 
 
@@ -359,7 +375,7 @@ bcrypt는 이에 더해 다이제스트를 생성하는 과정을 몇번 진행�
 
 ![express-middleware-6](/assets/express-middleware-6.png)
 
-<br/>
+<br>
 
 ### [flash](https://www.npmjs.com/package/connect-flash)
 
@@ -367,7 +383,7 @@ flash는 세션에서 메시지를 저장할 때 사용하는 특별한 공간�
 
 flash에 작성된 메시지는 한번 유저한테 display되면 바로 삭제된다.
 
-<br/>
+<br>
 
 **❓어디에 쓸까? 로그인 실패 메시지 전달에!**
 
@@ -398,6 +414,8 @@ router.get('/login', (req, res) => req.isAuthenticated()
 ```
 
 ![express-middleware-7](/assets/express-middleware-7.png)
+
+<br>
 
 ## 📄 로그인 정보 저장용 파일 기반 디비 구현하기
 
@@ -511,13 +529,13 @@ class Users extends Model {
 module.exports = Users;
 ```
 
-<br/>
+<br>
 
 ## 📽️ 프로젝트 깃헙 레포지토리
 
 [[우아한테크캠프] 배민상회 회원가입/로그인 구현 프로젝트](https://github.com/woowa-techcamp-2020/market-8)
 
-<br/>
+<br>
 
 ## 💭 회고
 

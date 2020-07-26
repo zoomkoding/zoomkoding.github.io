@@ -1,11 +1,11 @@
 ---
-title: (웹입문기-2) 도메인 변경과 Ubuntu에 Wordpress로 웹페이지 개설하기
+title: (워드프레스-2) 도메인 변경과 Ubuntu에 Wordpress로 웹페이지 개설하기
 layout: post
 date: '2018-05-14 02:00:00'
 author: 줌코딩
 tags: DNS 도메인바꾸기 Wordpress설치 웹개설 워드프레스설치 Web개설
 cover: "/assets/instacode.png"
-categories: web개발 wordpress linux
+categories: wordpress
 ---
 
 

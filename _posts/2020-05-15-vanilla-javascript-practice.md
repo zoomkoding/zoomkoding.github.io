@@ -3,9 +3,9 @@ title: 바닐라 자바스크립트로 Widget 기반 To Do List Web Page 클론�
 layout: post
 date: '2020-05-15 02:00:00'
 author: 줌코딩
-tags: javascript atomic_design
+tags: javascript atomicdesign
 cover: "/assets/instacode.png"
-categories: javascript
+categories: web
 ---
 
 나는 Express를 활용해서 백엔드 개발을 해본 경험은 있기에 자바스크립트가 조금은 익숙하지만 React, Vue, Angular와 같은 프론트엔드 프레임워크는 익숙치 않다. 하지만 Flutter을 활용해서 앱의 UI를 개발해 본 경험이 있기에 Flutter에서 사용하는 Widget 기반 UI 개발 방식에 익숙하다.
