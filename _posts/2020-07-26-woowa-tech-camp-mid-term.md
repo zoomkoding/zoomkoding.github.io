@@ -46,7 +46,7 @@ categories: 회고 우아한테크캠프
 
 부담감 속에서 잠실행 버스를 타고 출근했다. 첫날에 괜찮겠지 하고 반바지를 입고 출발했는데 막상 가보니 나만 반바지를 입어서 당황했지만 알고보니 우아한 버킷리스트에 다음 내용에 체크가 되어있는 걸 보고 안심했다 ㅋㅋ
 
-![/assets/woowa-tech-camp-mid-term-2.png](/assets/woowa-tech-camp-mid-term-2.png)
+![/assets/woowa-tech-camp-mid-term-2.png](/assets/woowa-tech-camp-mid-term-10.png)
 
 <br>
 
