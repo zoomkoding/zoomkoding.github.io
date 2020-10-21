@@ -33,21 +33,19 @@ permalink: /about/
 
 * 2019 . 9 . 1 <a href="#trafficJam">제 6회 대한민국 SW 융합 해커톤 대회 우수상</a>
 
-* 2019 . 9 . 10 <a href="https://zoomkoding.github.io/codingtest/2019/09/08/2020-kakao-blind.html">2020 카카오 블라인드 신입 공채 1차 코딩 테스트 통과</a>
-  
 * 2019 . 10 . 5 <a href="https://zoomkoding.github.io/codingtest/2019/10/05/2019-ACM-ICPC-1.html">2019 ACM-ICPC 지역예선 교내 1위</a>
-
-* 2019 . 10 . 12 <a href="https://zoomkoding.github.io/codingtest/naver/2019/10/12/2019-naver-hackday-1.html">네이버 캠퍼스 핵데이 코테 1시간 컷</a>
-
-* 2019 . 11 . 9 <a href="https://zoomkoding.github.io/codingtest/2019/11/09/2019-kakao-winter-intern-1.html">카카오 겨울 인턴십 코테 2시간 컷</a>
 
 * 2019 . 11 . 17 <a href="https://zoomkoding.github.io/codeforces/2019/11/17/codeforces-600.html">코드포스 블루 등극</a>
 
 * 2019 . 11 . 21 ~ 22 <a href="https://zoomkoding.github.io/codingtest/naver/2019/11/26/2019-naver-hackday-2.html">네이버 캠퍼스 핵데이 참여</a>
 
-* 2019 . 12 . 16 ~ [스타트업 개발 인턴](https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/03/25/start-up-app-development.html)
+* 2019 . 12 . 16 [스타트업 개발 인턴 시작](https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/03/25/start-up-app-development.html)
 
-* 2020 . 3 . 24 [Picky Skin Care App 배포](https://apps.apple.com/kr/app/picky-skincare-made-smarter/id1504197356)
+* 2020 . 3 . 24 [앱 Picky Skin Care App 배포](https://apps.apple.com/kr/app/picky-skincare-made-smarter/id1504197356)
+
+* 2020 . 6 . 28 [스타트업 퇴사](https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/06/30/start-up-retrospection.html)
+
+* 2020 . 7 . 1 ~ [우아한테크캠프 진행중](https://zoomkoding.github.io/category/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BA%A0%ED%94%84/)
 
 <br>
 
