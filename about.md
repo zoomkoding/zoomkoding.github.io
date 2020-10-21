@@ -23,7 +23,7 @@ permalink: /about/
 
 * 2018 . 7 ~ 2018 . 12 <a href="#JPI">자존감 랩실(X-ray 그리드 라인 제거 개선 기법 연구)</a>
 
-* 2018 . 9 ~ 2018. 12 <a href="#oneBite">한입만(한동대학교 전용 배달 어플리케이션) 개발</a>
+* 2018 . 9 ~ 2018 . 12 <a href="#oneBite">한입만(한동대학교 전용 배달 어플리케이션) 개발</a>
 
 * 2018 . 11 . 22 <a href="#connect6">교내 인공지능 경진대회 우승</a>
 
@@ -37,15 +37,15 @@ permalink: /about/
 
 * 2019 . 11 . 17 <a href="https://zoomkoding.github.io/codeforces/2019/11/17/codeforces-600.html">코드포스 블루 등극</a>
 
-* 2019 . 11 . 21 ~ 22 <a href="https://zoomkoding.github.io/codingtest/naver/2019/11/26/2019-naver-hackday-2.html">네이버 캠퍼스 핵데이 참여</a>
+* 2019 . 11 . 21 <a href="https://zoomkoding.github.io/codingtest/naver/2019/11/26/2019-naver-hackday-2.html">네이버 캠퍼스 핵데이 참여</a>
 
-* 2019 . 12 . 16 [스타트업 개발 인턴 시작](https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/03/25/start-up-app-development.html)
+* 2019 . 12 . 16 [스타트업 인턴 시작](https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/03/25/start-up-app-development.html)
 
 * 2020 . 3 . 24 [앱 Picky Skin Care App 배포](https://apps.apple.com/kr/app/picky-skincare-made-smarter/id1504197356)
 
 * 2020 . 6 . 28 [스타트업 퇴사](https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/06/30/start-up-retrospection.html)
 
-* 2020 . 7 . 1 ~ [우아한테크캠프 진행중](https://zoomkoding.github.io/category/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BA%A0%ED%94%84/)
+* 2020 . 7 ~ 2020 . 8 [우아한테크캠프 참여](https://zoomkoding.github.io/%ED%9A%8C%EA%B3%A0/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BA%A0%ED%94%84/2020/07/26/woowa-tech-camp-mid-term.html)
 
 <br>
 
