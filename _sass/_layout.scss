@@ -124,7 +124,6 @@ pre code.hljs {
 		float: right;
 		margin: 0;
 		font-size: 1.5em;
-		padding-top: 0.5em;
 
 		@include media ($tablet) {
 			display: none;
@@ -133,14 +132,17 @@ pre code.hljs {
 
 	// Nav menu
 	.navigation-wrapper {
+		display: flex;
+		align-items: center;
 		@include outer-container;
 		@include clearfix;
 		position: relative;
 	}
 
 	.logo {
-		float: left;
+		margin-right: auto;
 		height: 4em;
+
 
 		@include media ($tablet) {
 			padding-left: $em-base;
@@ -158,8 +160,9 @@ pre code.hljs {
 	}
 
 	nav {
+		display: flex;
 		float: none;
-		padding: 1.25em 0;
+		padding: 0.75em 0;
 
 		@include media ($tablet) {
 			float: right;
@@ -205,7 +208,7 @@ pre code.hljs {
 		a {
 			display: inline-block;
 			font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-size: 16px;
+			font-size: 18px;
 			font-weight: 500;
 			line-height: 20px;
 			color: #6e6d7a;
@@ -230,66 +233,7 @@ pre code.hljs {
 			}
 		}
 
-		&.new-blog {
-			button {
-				display: inline-block;
-				margin-top: 0px;
-				padding: 5px 10px;
-				cursor: pointer;
-				border: 1px solid rgba(0, 0, 0, .12);
-				text-decoration: none;
-				background: #fff;
-				color: black;
-				-webkit-transition: color 200ms ease;
-				transition: color 200ms ease;
-				border-radius: 8px;
-				-webkit-appearance: none;
-				-moz-appearance: none;
-				appearance: none;
-				position: relative;
-				outline: none;
 
-				height: 50px;
-				-webkit-box-sizing: border-box;
-				box-sizing: border-box;
-				text-align: center;
-
-				.button-text {
-					display: flex;
-					align-items: center;
-
-					.thumbnail {
-						margin-right: 5px;
-						width: 30px;
-						height: 100%;
-					}
-
-					.label {
-						display: flex;
-						flex-direction: column;
-						align-items: flex-end;
-						font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-						.name {
-							font-size: 14px;
-							font-weight: 700;
-							margin-bottom: 3px;
-						}
-
-						.description {
-							display: flex;
-							align-items: center;
-
-							font-size: 10px;
-							font-weight: 500;
-							color: #6e6d7a;
-						}
-					}
-				}
-
-			}
-
-		}
 	}
 }
 
@@ -599,4 +543,82 @@ pre code.hljs {
 	&:hover {
 		color: darken($dark-gray, 10%);
 	}
+}
+
+.nav-link.new-blog {
+	button {
+		display: inline-block;
+		margin-top: 0px;
+		padding: 5px 10px;
+		cursor: pointer;
+		border: 1px solid rgba(0, 0, 0, .12);
+		text-decoration: none;
+		background: #fff;
+		color: black;
+		-webkit-transition: color 200ms ease;
+		transition: color 200ms ease;
+		border-radius: 8px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		position: relative;
+		outline: none;
+
+		height: 50px;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		text-align: center;
+
+		.button-text {
+			display: flex;
+			align-items: center;
+
+			.thumbnail {
+				margin-right: 5px;
+				width: 30px;
+				height: 100%;
+			}
+
+			.label {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+				.name {
+					font-size: 14px;
+					font-weight: 700;
+					margin-bottom: 3px;
+				}
+
+				.description {
+					display: flex;
+					align-items: center;
+
+					font-size: 10px;
+					font-weight: 500;
+					color: #6e6d7a;
+				}
+			}
+		}
+	}
+
+	&.inner {
+		display: none;
+	}
+
+	&.outer {
+		display: block;
+	}
+
+	@include media ($tablet) {
+		&.inner {
+			display: inline;
+		}
+
+		&.outer {
+			display: none;
+		}
+	}
+
 }
