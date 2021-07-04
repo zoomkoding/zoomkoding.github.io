@@ -3,6 +3,7 @@ gems:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-paginate
+plugins: [jekyll-paginate]
 exclude:
   - "/vendor/"
 title: 줌코딩의 코딩일기
