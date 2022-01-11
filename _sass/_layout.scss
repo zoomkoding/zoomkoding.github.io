@@ -424,6 +424,25 @@ pre code.hljs {
 	}
 }
 
+.coupang-partners {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 15px;
+
+	.items {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	.description {
+		font-size: 15px;
+	}
+}
+
+
 /*
 *	Footer
 */
